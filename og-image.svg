@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f4ef"/>
+      <stop offset="100%" stop-color="#e8dfd2"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151515"/>
+      <stop offset="100%" stop-color="#2d2418"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1020" cy="120" r="140" fill="#b89a5f" fill-opacity="0.12"/>
+  <circle cx="120" cy="540" r="160" fill="#151515" fill-opacity="0.05"/>
+  <rect x="70" y="70" width="1060" height="490" rx="34" fill="#fbf8f2" stroke="#d3c3aa"/>
+  <rect x="120" y="120" width="148" height="148" rx="28" fill="url(#panel)"/>
+  <path d="M214 171c-8-12-21-20-38-20-29 0-49 20-49 44 0 25 19 45 49 45 16 0 30-7 39-19l-13-10c-6 8-15 13-27 13-18 0-31-13-31-29 0-17 13-29 31-29 12 0 22 5 28 15z" fill="#f5f2ec"/>
+  <path d="M224 233h-38l-8 22h-19l36-94h20l36 94h-19zm-6-14-13-37-13 37z" fill="#b89a5f"/>
+  <text x="320" y="204" fill="#151515" font-family="'Playfair Display', 'Times New Roman', serif" font-size="64" font-weight="600">Carolina Abril</text>
+  <text x="320" y="254" fill="#5f5a52" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="4">ESTRATEGIA DE EVENTOS Y ARQUITECTURA</text>
+  <path d="M120 320H1080" stroke="#b89a5f" stroke-width="2" stroke-linecap="round"/>
+  <text x="120" y="400" fill="#151515" font-family="'Playfair Display', 'Times New Roman', serif" font-size="48" font-weight="600">Eventos concebidos para elevar reputacion,</text>
+  <text x="120" y="458" fill="#151515" font-family="'Playfair Display', 'Times New Roman', serif" font-size="48" font-weight="600">autoridad y posicionamiento sectorial.</text>
+  <text x="120" y="525" fill="#5f5a52" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="25">Direccion creativa, curaduria y networking para marcas, ferias y plataformas de diseno.</text>
+</svg>

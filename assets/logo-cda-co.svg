@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Logo de Carolina Abril</title>
+  <desc id="logoDesc">Wordmark tipografico de Carolina Abril con monograma CA y subtitulo de estrategia de eventos.</desc>
+  <rect width="720" height="180" rx="24" fill="none"/>
+  <g transform="translate(18 24)">
+    <rect x="0" y="0" width="116" height="116" rx="20" fill="#151515"/>
+    <path d="M76 40c-6-10-17-16-30-16-22 0-38 16-38 34 0 20 15 34 38 34 12 0 24-5 31-15l-10-8c-4 6-12 10-21 10-14 0-24-10-24-21 0-12 10-21 24-21 9 0 17 4 22 11z" fill="#f5f2ec"/>
+    <path d="M83 88H54l-6 18H33l28-76h16l28 76H89zm-4-12-11-31-10 31z" fill="#b89a5f"/>
+  </g>
+  <g fill="#151515">
+    <text x="162" y="78" font-family="'Playfair Display', 'Times New Roman', serif" font-size="42" font-weight="600" letter-spacing="-0.5">Carolina Abril</text>
+    <text x="164" y="112" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3.5" text-transform="uppercase">ESTRATEGIA DE EVENTOS Y POSICIONAMIENTO</text>
+    <path d="M164 130H466" stroke="#b89a5f" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carolina Abril | Estratega de Eventos de Diseño y Arquitectura</title>
+  <meta name="description" content="Directora creativa especializada en la conceptualización y ejecución de ferias internacionales de diseño y arquitectura. Creadora de Design Week Marbella.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.carolinaabril.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Carolina Abril | Estratega de Eventos de Diseño y Arquitectura">
+  <meta property="og:description" content="Directora creativa especializada en la conceptualización y ejecución de ferias internacionales de diseño y arquitectura. Creadora de Design Week Marbella.">
+  <meta property="og:url" content="https://www.carolinaabril.com/">
+  <meta property="og:site_name" content="Carolina Abril">
+  <meta property="og:image" content="https://www.carolinaabril.com/og-image.svg">
+  <meta property="og:image:alt" content="Landing premium de Carolina Abril sobre estrategia de eventos de arquitectura, interiorismo y diseño">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Carolina Abril | Estratega de Eventos de Diseño y Arquitectura">
+  <meta property="twitter:description" content="Directora creativa especializada en la conceptualización y ejecución de ferias internacionales de diseño y arquitectura. Creadora de Design Week Marbella.">
+  <meta property="twitter:image" content="https://www.carolinaabril.com/og-image.svg">
+  <meta property="twitter:image:alt" content="Landing premium de Carolina Abril sobre estrategia de eventos de arquitectura, interiorismo y diseño">
+  <!-- Favicon de marca -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f2ec;
+      --surface: rgba(255, 252, 246, 0.9);
+      --surface-strong: #fbf8f2;
+      --text: #151515;
+      --muted: #5f5a52;
+      --line: rgba(21, 21, 21, 0.12);
+      --line-strong: rgba(21, 21, 21, 0.22);
+      --line-soft: rgba(21, 21, 21, 0.08);
+      --gold: #b89a5f;
+      --gold-soft: rgba(184, 154, 95, 0.12);
+      --gold-glow: rgba(184, 154, 95, 0.12);
+      --shadow: 0 18px 48px rgba(17, 17, 17, 0.06);
+      --shadow-soft: 0 18px 36px rgba(17, 17, 17, 0.04);
+      --radius-lg: 32px;
+      --radius-md: 22px;
+      --radius-sm: 999px;
+      --container: min(1180px, calc(100vw - 2rem));
+      --serif: "Playfair Display", "Times New Roman", serif;
+      --sans: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+      --transition: 320ms cubic-bezier(.2,.7,0,1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        linear-gradient(180deg, #f7f4ef 0%, #f3efe8 46%, #efe9e1 100%);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      z-index: 1000;
+      padding: 0.85rem 1rem;
+      color: #fff;
+      background: #111;
+      border-radius: 999px;
+      transition: top var(--transition);
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(245, 242, 236, 0.88);
+      border-bottom: 1px solid rgba(21, 21, 21, 0.06);
+    }
+
+    .nav {
+      width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      min-height: 5.85rem;
+    }
+
+    .brand {
+      display: inline-grid;
+      align-items: center;
+      min-width: 17rem;
+      gap: 0;
+      padding: 0.55rem 0;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      min-height: 3.2rem;
+    }
+
+    .brand-logo picture,
+    .brand-logo img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .brand-logo img {
+      max-height: 3.25rem;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 100%;
+      height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .nav-cta {
+      min-height: 2.75rem;
+      padding: 0.75rem 1.05rem;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 3rem;
+      height: 3rem;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.58);
+      color: var(--text);
+      cursor: pointer;
+      transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background-color var(--transition);
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(184, 154, 95, 0.3);
+      background: rgba(255, 251, 243, 0.9);
+    }
+
+    .menu-toggle-bar {
+      position: relative;
+      width: 1.1rem;
+      height: 1px;
+      background: currentColor;
+      transition: background-color var(--transition);
+    }
+
+    .menu-toggle-bar::before,
+    .menu-toggle-bar::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 1.1rem;
+      height: 1px;
+      background: currentColor;
+      transition: transform var(--transition), top var(--transition), bottom var(--transition);
+    }
+
+    .menu-toggle-bar::before {
+      top: -0.35rem;
+    }
+
+    .menu-toggle-bar::after {
+      bottom: -0.35rem;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-bar {
+      background: transparent;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-bar::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-bar::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+
+    .mobile-menu {
+      display: none;
+      width: var(--container);
+      margin: 0 auto 1rem;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 1.5rem;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(249, 245, 238, 0.96)),
+        linear-gradient(135deg, rgba(184, 154, 95, 0.12), transparent 60%);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .mobile-menu[hidden] {
+      display: none;
+    }
+
+    .mobile-menu.is-open {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .mobile-menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 3.15rem;
+      padding: 0.95rem 1rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.55);
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition:
+        border-color var(--transition),
+        background-color var(--transition),
+        transform var(--transition);
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(184, 154, 95, 0.3);
+      background: rgba(255, 251, 243, 0.88);
+    }
+
+    .mobile-menu a::after {
+      content: "01";
+      font-size: 0.72rem;
+      color: var(--gold);
+    }
+
+    .mobile-menu a[href="#portfolio"]::after {
+      content: "02";
+    }
+
+    .mobile-menu a[href="#networking"]::after {
+      content: "03";
+    }
+
+    .mobile-menu a[href="#contacto"]::after {
+      content: "04";
+    }
+
+    main {
+      overflow: clip;
+    }
+
+    .section {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 5.5rem 0;
+    }
+
+    .hero {
+      min-height: calc(100vh - 4.75rem);
+      display: grid;
+      align-items: center;
+      padding-top: 4.8rem;
+      padding-bottom: 5.2rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.82fr);
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .hero-content {
+      position: relative;
+      padding-top: 1rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.3rem;
+      font-size: 0.77rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 3rem;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: var(--serif);
+      line-height: 1.05;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 5.7rem);
+      max-width: 12ch;
+      text-wrap: balance;
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 4vw, 3.25rem);
+      margin-bottom: 1rem;
+      text-wrap: balance;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-copy {
+      max-width: 43rem;
+      margin-top: 1.6rem;
+      font-size: 1.03rem;
+      color: var(--muted);
+    }
+
+    .hero-copy strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+      max-width: 44rem;
+      margin-top: 2.35rem;
+    }
+
+    .hero-meta-item {
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--line);
+      border-radius: 0.95rem;
+      background: rgba(255, 255, 255, 0.52);
+      box-shadow: none;
+    }
+
+    .hero-meta-item strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .hero-meta-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.25rem;
+      padding: 0.9rem 1.4rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition:
+        transform var(--transition),
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #faf7f0;
+      background: linear-gradient(135deg, #111111 0%, #1f1b16 100%);
+      box-shadow: var(--shadow);
+    }
+
+    .button-secondary {
+      color: var(--text);
+      border-color: var(--line-strong);
+      background: rgba(255, 255, 255, 0.38);
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      border-color: rgba(184, 154, 95, 0.34);
+      background: rgba(255, 251, 243, 0.82);
+      box-shadow: 0 16px 36px rgba(17, 17, 17, 0.05);
+    }
+
+    .hero-panel {
+      position: relative;
+      padding: 2.2rem;
+      border: 1px solid rgba(21, 21, 21, 0.08);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(251, 248, 242, 0.94));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-panel::before,
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto auto 0 0;
+      width: 54%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(21, 21, 21, 0.14), transparent);
+    }
+
+    .hero-panel::after {
+      inset: 0 0 auto auto;
+      width: 1px;
+      height: 54%;
+      background: linear-gradient(180deg, rgba(21, 21, 21, 0.14), transparent);
+    }
+
+    .panel-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .panel-title {
+      margin: 1rem 0;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3vw, 2.75rem);
+    }
+
+    .panel-copy {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .panel-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .metric {
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 1.45rem;
+      font-family: var(--serif);
+      color: var(--text);
+    }
+
+    .metric span {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 0.7fr);
+      gap: 2rem;
+      align-items: end;
+      margin-bottom: 2.4rem;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 38rem;
+    }
+
+    .strategic-grid,
+    .portfolio-grid,
+    .network-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .strategic-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      position: relative;
+      padding: 2rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: 0 10px 24px rgba(17, 17, 17, 0.03);
+      transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-4px);
+      border-color: rgba(21, 21, 21, 0.16);
+      box-shadow: 0 16px 28px rgba(17, 17, 17, 0.05);
+    }
+
+    .icon-frame {
+      width: 3.2rem;
+      height: 3.2rem;
+      display: inline-grid;
+      place-items: center;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(184, 154, 95, 0.32);
+      border-radius: 50%;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .icon-frame svg {
+      width: 1.15rem;
+      height: 1.15rem;
+      fill: currentColor;
+    }
+
+    .card p,
+    .portfolio-body p,
+    .network-copy p,
+    .closing-copy p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .portfolio-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .portfolio-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .portfolio-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, transparent 62%, rgba(17, 17, 17, 0.02) 100%);
+      pointer-events: none;
+    }
+
+    .portfolio-visual {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background: #e9e2d7;
+    }
+
+    .portfolio-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 900ms cubic-bezier(.2,.7,0,1), filter 900ms cubic-bezier(.2,.7,0,1);
+    }
+
+    .portfolio-card:hover .portfolio-visual img,
+    .portfolio-card:focus-within .portfolio-visual img {
+      transform: scale(1.03);
+      filter: saturate(1.04);
+    }
+
+    .portfolio-body {
+      padding: 1.75rem;
+    }
+
+    .portfolio-body h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1.25rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      padding: 0.32rem 0.75rem;
+      border: 1px solid rgba(21, 21, 21, 0.12);
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .network-grid {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      align-items: stretch;
+    }
+
+    .network-panel,
+    .closing-panel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(251, 248, 242, 0.9));
+      box-shadow: var(--shadow);
+    }
+
+    .network-panel {
+      padding: 2rem;
+      min-height: 100%;
+    }
+
+    .network-diagram {
+      height: 100%;
+      min-height: 23rem;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      background:
+        linear-gradient(135deg, rgba(184, 154, 95, 0.14), transparent 48%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(243, 238, 230, 0.94));
+    }
+
+    .diagram-frame {
+      position: relative;
+      width: min(100%, 28rem);
+      aspect-ratio: 1 / 1;
+      border: 1px solid rgba(21, 21, 21, 0.08);
+      border-radius: 2rem;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.7), rgba(250,247,241,0.92)),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 23%,
+          rgba(21, 21, 21, 0.04) 23%,
+          rgba(21, 21, 21, 0.04) 24%
+        );
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+    }
+
+    .diagram-node {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.6rem;
+      padding: 0.55rem 0.9rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(21, 21, 21, 0.08);
+      background: rgba(255, 255, 255, 0.86);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      backdrop-filter: blur(12px);
+    }
+
+    .diagram-node.center {
+      inset: 50% auto auto 50%;
+      transform: translate(-50%, -50%);
+      color: var(--text);
+      border-color: rgba(184, 154, 95, 0.26);
+      background: rgba(255, 250, 241, 0.94);
+    }
+
+    .diagram-node.top {
+      top: 14%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .diagram-node.left {
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+    }
+
+    .diagram-node.right {
+      top: 50%;
+      right: 8%;
+      transform: translateY(-50%);
+    }
+
+    .diagram-node.bottom {
+      bottom: 14%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .diagram-line {
+      position: absolute;
+      background: linear-gradient(180deg, rgba(184, 154, 95, 0.42), rgba(184, 154, 95, 0.1));
+    }
+
+    .diagram-line.vertical {
+      width: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .diagram-line.vertical.top {
+      top: 25%;
+      height: 18%;
+    }
+
+    .diagram-line.vertical.bottom {
+      bottom: 25%;
+      height: 18%;
+    }
+
+    .diagram-line.horizontal {
+      height: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .diagram-line.horizontal.left {
+      left: 22%;
+      width: 20%;
+    }
+
+    .diagram-line.horizontal.right {
+      right: 22%;
+      width: 20%;
+    }
+
+    .network-copy {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .network-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .network-item {
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .network-item strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .closing-panel {
+      padding: 0;
+    }
+
+    .closing-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 0;
+    }
+
+    .closing-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      padding: 2.8rem;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(250, 246, 239, 0.94));
+    }
+
+    .closing-copy {
+      max-width: 42rem;
+    }
+
+    .closing-copy p + p {
+      margin-top: 1rem;
+    }
+
+    .closing-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .contact-panel {
+      padding: 2.8rem 2rem;
+      border-left: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(17, 17, 17, 0.98), rgba(24, 24, 24, 0.96));
+      color: #f6f1e8;
+    }
+
+    .contact-panel .panel-label,
+    .contact-panel p,
+    .contact-links span,
+    .contact-note {
+      color: rgba(246, 241, 232, 0.76);
+    }
+
+    .contact-title {
+      margin: 0.75rem 0 1rem;
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      line-height: 1.08;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 0.85rem;
+      margin: 1.75rem 0;
+    }
+
+    .contact-link {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0.75rem;
+      padding: 1rem 1.05rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background-color var(--transition);
+    }
+
+    .contact-link-placeholder {
+      cursor: default;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(184, 154, 95, 0.38);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .contact-link-placeholder:hover,
+    .contact-link-placeholder:focus-visible {
+      transform: none;
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.03);
+      box-shadow: none;
+      outline: none;
+    }
+
+    .contact-link strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .contact-link span {
+      font-size: 0.9rem;
+    }
+
+    .contact-arrow {
+      align-self: center;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .contact-note {
+      margin: 0;
+      font-size: 0.84rem;
+    }
+
+    .footer-note {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 1.15rem 0 2.5rem;
+      border-top: 1px solid var(--line-soft);
+    }
+
+    .footer-shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+    }
+
+    .footer-brand picture,
+    .footer-brand img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .footer-brand img {
+      max-height: 1.8rem;
+      object-fit: contain;
+      opacity: 0.94;
+    }
+
+    .footer-copy {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition:
+        opacity 720ms cubic-bezier(.2,.7,0,1),
+        transform 720ms cubic-bezier(.2,.7,0,1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .section-head,
+      .network-grid,
+      .closing-layout,
+      .closing-shell,
+      .portfolio-grid,
+      .strategic-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .panel-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+        max-width: 34rem;
+      }
+
+      .contact-panel {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        min-height: 5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .section {
+        padding: 4.5rem 0;
+      }
+
+      .hero {
+        padding-top: 3.4rem;
+      }
+
+      .hero-panel,
+      .network-panel,
+      .card {
+        padding: 1.5rem;
+      }
+
+      .closing-layout,
+      .contact-panel {
+        padding: 1.5rem;
+      }
+
+      .portfolio-card {
+        padding: 0;
+      }
+
+      .portfolio-body {
+        padding: 1.35rem;
+      }
+
+      .panel-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .mobile-menu {
+        margin-bottom: 0.85rem;
+        width: min(100vw - 1rem, var(--container));
+      }
+
+      .brand {
+        min-width: 0;
+        max-width: 12.25rem;
+        padding: 0.35rem 0;
+      }
+
+      .brand-logo img {
+        max-height: 2.4rem;
+      }
+
+      h1 {
+        font-size: clamp(2.7rem, 14vw, 4.2rem);
+      }
+
+      h2 {
+        font-size: clamp(1.95rem, 8vw, 2.75rem);
+      }
+
+      .hero-copy {
+        font-size: 0.98rem;
+      }
+
+      .hero-meta-item,
+      .contact-link {
+        padding: 0.95rem 1rem;
+      }
+
+      .diagram-frame {
+        border-radius: 1.5rem;
+      }
+
+      .footer-shell {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-copy {
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 721px) {
+      .mobile-menu {
+        display: none !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.carolinaabril.com/#person",
+          "name": "Carolina Abril",
+          "jobTitle": "Directora y estratega de eventos de lujo en arquitectura, interiorismo y diseño",
+          "description": "Profesional especializada en la conceptualización, dirección y posicionamiento de eventos premium vinculados a arquitectura, interiorismo, diseño expositivo y ferias de diseño. Creadora de Design Week Marbella.",
+          "url": "https://www.carolinaabril.com/",
+          "email": "mailto:c.abril2025@gmail.com",
+          "knowsAbout": [
+            "Arquitectura",
+            "Interiorismo",
+            "Diseño Expositivo",
+            "Ferias de Diseño",
+            "Networking profesional",
+            "Curaduría de contenido"
+          ],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Estratega de eventos de lujo"
+          },
+          "affiliation": {
+            "@type": "Organization",
+            "name": "Design Week Marbella"
+          }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.carolinaabril.com/#service",
+          "name": "Carolina Abril",
+          "url": "https://www.carolinaabril.com/",
+          "email": "c.abril2025@gmail.com",
+          "description": "Dirección estratégica y conceptualización de ferias internacionales, congresos y encuentros profesionales para arquitectura, interiorismo y diseño.",
+          "areaServed": "Internacional",
+          "founder": {
+            "@id": "https://www.carolinaabril.com/#person"
+          },
+          "serviceType": [
+            "Arquitectura",
+            "Interiorismo",
+            "Diseño Expositivo",
+            "Ferias de Diseño"
+          ],
+          "brand": {
+            "@type": "Brand",
+            "name": "Design Week Marbella"
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="#inicio" aria-label="Inicio Carolina Abril">
+        <span class="brand-logo" aria-hidden="true">
+          <!-- Logo principal horizontal en fondo claro -->
+          <picture>
+            <img src="/assets/logo-cda-co.svg" alt="Carolina Abril">
+          </picture>
+        </span>
+      </a>
+      <div class="nav-actions">
+        <div class="nav-links">
+          <a href="#ejes">Ejes</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#networking">Networking</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <a class="button button-secondary nav-cta" href="#contacto">Agenda una conversación</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menú principal">
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" hidden>
+      <a href="#ejes">Ejes estratégicos</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#networking">Networking</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="section hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Dirección estratégica y posicionamiento sectorial</p>
+          <h1 id="hero-title">Carolina Abril: Transformando Eventos en Plataformas de Alto Nivel</h1>
+          <p class="hero-copy">
+            Carolina Abril dirige experiencias que convierten la presencia sectorial en <strong>autoridad, negocio y posicionamiento</strong>. Como creadora de <strong>Design Week Marbella</strong>, articula una visión donde los eventos de arquitectura, interiorismo y diseño expositivo se convierten en plataformas con criterio para atraer marcas, líderes de opinión y audiencias con capacidad real de decisión.
+          </p>
+          <div class="hero-meta" aria-label="Claves de posicionamiento">
+            <div class="hero-meta-item">
+              <strong>Posicionamiento</strong>
+              <span>Eventos concebidos para elevar reputación y visibilidad sectorial.</span>
+            </div>
+            <div class="hero-meta-item">
+              <strong>Curaduría</strong>
+              <span>Contenido, ponentes y marcas seleccionados con lectura estratégica.</span>
+            </div>
+            <div class="hero-meta-item">
+              <strong>Networking</strong>
+              <span>Entornos profesionales diseñados para relación, influencia y continuidad.</span>
+            </div>
+          </div>
+          <div class="cta-row">
+            <a class="button button-primary" href="#contacto">Solicitar propuesta estratégica</a>
+            <a class="button button-secondary" href="#portfolio">Ver portfolio de autor</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Resumen estratégico">
+          <span class="panel-label">Creadora de Design Week Marbella</span>
+          <p class="panel-title">Dirección editorial, estructura expositiva y presencia corporativa</p>
+          <p class="panel-copy">
+            Su enfoque integra narrativa de marca, selección de agentes clave, dirección expositiva y un marco relacional que eleva cada edición por encima de la agenda convencional.
+          </p>
+          <div class="panel-metrics" aria-label="Pilares de posicionamiento">
+            <div class="metric">
+              <strong>Arquitectura</strong>
+              <span>Programas y encuentros que refuerzan reputación profesional y lectura de marca.</span>
+            </div>
+            <div class="metric">
+              <strong>Interiorismo</strong>
+              <span>Experiencias donde contenido y escenografía hablan el mismo lenguaje.</span>
+            </div>
+            <div class="metric">
+              <strong>Diseño</strong>
+              <span>Selección precisa de marcas, ponentes y conversaciones con valor sectorial.</span>
+            </div>
+            <div class="metric">
+              <strong>Networking</strong>
+              <span>Networking profesional que amplifica impacto, negocio y continuidad.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="ejes" aria-labelledby="ejes-title">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Ejes estratégicos</p>
+          <h2 id="ejes-title">Una dirección que ordena el evento desde la visión hasta la experiencia final</h2>
+        </div>
+        <p>
+          Cada proyecto se construye desde una arquitectura estratégica clara: definir una visión diferencial, curar el contenido adecuado y traducirlo en un dispositivo expositivo coherente, legible y memorable.
+        </p>
+      </div>
+
+      <div class="strategic-grid">
+        <article class="card reveal">
+          <div class="icon-frame" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 3 7.5v9L12 21l9-4.5v-9L12 3Zm0 2.2 6.43 3.21L12 11.63 5.57 8.41 12 5.2Zm-7 4.86 6 3v5.35l-6-3V10.06Zm8 8.35v-5.35l6-3v5.35l-6 3Z"/></svg>
+          </div>
+          <h3>Visión Estratégica</h3>
+          <p>
+            Carolina define el propósito competitivo de cada evento, su narrativa institucional y el tipo de interlocutores que deben converger para generar relevancia real en el sector.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon-frame" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 4h14v2H5V4Zm0 7h9v2H5v-2Zm0 7h14v2H5v-2Zm11.3-7.7 1.4-1.4 3 3-6.5 6.5H11v-3.2l5.3-5.3Z"/></svg>
+          </div>
+          <h3>Curaduría de Contenido</h3>
+          <p>
+            Selecciona temas, perfiles y formatos que no solo informan, sino que consolidan la reputación del encuentro como referencia en arquitectura, interiorismo y diseño contemporáneo.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon-frame" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2v10h4V7H5Zm6 0v10h8V7h-8Z"/></svg>
+          </div>
+          <h3>Diseño Expositivo</h3>
+          <p>
+            Organiza los espacios como una experiencia editorial en tres dimensiones, donde circulación, visibilidad y atmósfera refuerzan el posicionamiento premium del proyecto.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Portfolio de autor</p>
+          <h2 id="portfolio-title">Ferias, congresos y encuentros profesionales con firma estratégica</h2>
+        </div>
+        <p>
+          Su portfolio responde a una misma lógica de excelencia: proyectos donde el contenido tiene peso, la experiencia expositiva está pensada con precisión y el networking profesional ocurre en un marco de alta afinidad entre arquitectura, interiorismo, diseño y marca.
+        </p>
+      </div>
+
+      <div class="portfolio-grid">
+        <article class="card portfolio-card reveal">
+          <figure class="portfolio-visual">
+            <img
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 900'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23171717'/%3E%3Cstop offset='100%25' stop-color='%23b89a5f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='900' fill='%23ebe3d8'/%3E%3Crect x='90' y='90' width='1020' height='720' rx='36' fill='url(%23g1)' opacity='0.12'/%3E%3Crect x='160' y='170' width='880' height='560' rx='28' fill='none' stroke='%23202020' stroke-opacity='0.25'/%3E%3Cpath d='M240 610h720' stroke='%23b89a5f' stroke-opacity='0.45' stroke-width='2'/%3E%3Cpath d='M240 490h720' stroke='%23202020' stroke-opacity='0.12' stroke-width='2'/%3E%3Cpath d='M240 370h500' stroke='%23202020' stroke-opacity='0.12' stroke-width='2'/%3E%3Ccircle cx='884' cy='332' r='82' fill='%23b89a5f' fill-opacity='0.16'/%3E%3C/svg%3E"
+              alt="Espacio de ferias de interiorismo con composición editorial y atmósfera premium"
+              loading="lazy">
+          </figure>
+          <div class="portfolio-body">
+            <h3>Ferias de diseño con lectura internacional</h3>
+            <p>
+              Conceptualización de ferias de diseño donde la selección de expositores, la experiencia espacial y la agenda profesional se alinean para elevar la percepción de la marca anfitriona.
+            </p>
+            <div class="pill-row" aria-label="Etiquetas del proyecto">
+              <span class="pill">Arquitectura</span>
+              <span class="pill">Interiorismo</span>
+              <span class="pill">Ferias de Diseño</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card portfolio-card reveal">
+          <figure class="portfolio-visual">
+            <img
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 900'%3E%3Crect width='1200' height='900' fill='%23efe7dc'/%3E%3Crect x='110' y='120' width='980' height='660' rx='32' fill='%23ffffff' fill-opacity='0.45' stroke='%23202020' stroke-opacity='0.12'/%3E%3Cpath d='M280 690V220' stroke='%23b89a5f' stroke-opacity='0.45' stroke-width='2'/%3E%3Cpath d='M470 690V220' stroke='%23202020' stroke-opacity='0.12' stroke-width='2'/%3E%3Cpath d='M660 690V220' stroke='%23202020' stroke-opacity='0.12' stroke-width='2'/%3E%3Cpath d='M850 690V220' stroke='%23b89a5f' stroke-opacity='0.35' stroke-width='2'/%3E%3Crect x='215' y='290' width='760' height='92' rx='18' fill='%23171717' fill-opacity='0.07'/%3E%3Crect x='215' y='470' width='560' height='92' rx='18' fill='%23b89a5f' fill-opacity='0.16'/%3E%3C/svg%3E"
+              alt="Diseño de espacios expositivos para congresos de arquitectura y contenido sectorial"
+              loading="lazy">
+          </figure>
+          <div class="portfolio-body">
+            <h3>Congresos con contenido diferencial</h3>
+            <p>
+              Programas diseñados para reunir prescriptores, estudios, marcas y expertos en conversaciones con profundidad, criterio editorial y utilidad para el ecosistema profesional.
+            </p>
+            <div class="pill-row" aria-label="Etiquetas del proyecto">
+              <span class="pill">Congresos</span>
+              <span class="pill">Contenido</span>
+              <span class="pill">Liderazgo Sectorial</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card portfolio-card reveal">
+          <figure class="portfolio-visual">
+            <img
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 900'%3E%3Crect width='1200' height='900' fill='%23e8ded1'/%3E%3Ccircle cx='600' cy='450' r='260' fill='%23ffffff' fill-opacity='0.5'/%3E%3Ccircle cx='600' cy='450' r='170' fill='none' stroke='%23202020' stroke-opacity='0.12' stroke-width='2'/%3E%3Ccircle cx='600' cy='450' r='330' fill='none' stroke='%23b89a5f' stroke-opacity='0.28' stroke-width='2'/%3E%3Ccircle cx='600' cy='170' r='46' fill='%23171717' fill-opacity='0.08'/%3E%3Ccircle cx='930' cy='450' r='46' fill='%23171717' fill-opacity='0.08'/%3E%3Ccircle cx='600' cy='730' r='46' fill='%23171717' fill-opacity='0.08'/%3E%3Ccircle cx='270' cy='450' r='46' fill='%23171717' fill-opacity='0.08'/%3E%3Cpath d='M600 216v148M600 536v148M316 450h148M736 450h148' stroke='%23b89a5f' stroke-opacity='0.4' stroke-width='2'/%3E%3C/svg%3E"
+              alt="Encuentro de networking arquitectura con conexiones profesionales de alto valor"
+              loading="lazy">
+          </figure>
+          <div class="portfolio-body">
+            <h3>Encuentros profesionales con valor relacional</h3>
+            <p>
+              Activaciones pensadas para facilitar conexiones relevantes entre decisión, influencia y oportunidad, en contextos donde la afinidad entre perfiles es parte del diseño del networking profesional.
+            </p>
+            <div class="pill-row" aria-label="Etiquetas del proyecto">
+              <span class="pill">Networking</span>
+              <span class="pill">Relaciones Estratégicas</span>
+              <span class="pill">Diseño</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="networking" aria-labelledby="networking-title">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Dimensión académica y networking</p>
+          <h2 id="networking-title">Cuando el contenido está bien dirigido, el evento gana prestigio, conversación y continuidad</h2>
+        </div>
+        <p>
+          La propuesta de Carolina no se limita a producir encuentros visualmente impecables. Su valor está en diseñar marcos donde la conversación sectorial adquiere densidad, el networking se vuelve útil y la autoridad del evento se consolida edición tras edición.
+        </p>
+      </div>
+
+      <div class="network-grid">
+        <div class="network-panel reveal">
+          <div class="network-copy">
+            <h3>Contenido diferencial, conversación sectorial y networking de valor</h3>
+            <p>
+              La capa académica aporta legitimidad. Convocar voces con capacidad de lectura, debate y prescripción transforma el evento en una plataforma de referencia y no solo en una cita de calendario.
+            </p>
+            <div class="network-list">
+              <div class="network-item">
+                <strong>Autoridad intelectual</strong>
+                <p>Mesas, ponencias y formatos curatoriales que refuerzan la relevancia cultural y profesional del proyecto.</p>
+              </div>
+              <div class="network-item">
+                <strong>Relación entre perfiles clave</strong>
+                <p>Arquitectos, interioristas, promotores, marcas y medios conectan en un contexto diseñado para generar continuidad.</p>
+              </div>
+              <div class="network-item">
+                <strong>Valor para marcas y partners</strong>
+                <p>La conversación cualificada aumenta el retorno reputacional del evento y mejora su capacidad de atracción futura.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="network-diagram reveal" aria-hidden="true">
+          <div class="diagram-frame">
+            <span class="diagram-node top">Contenido</span>
+            <span class="diagram-node left">Arquitectura</span>
+            <span class="diagram-node center">Carolina Abril</span>
+            <span class="diagram-node right">Networking</span>
+            <span class="diagram-node bottom">Posicionamiento</span>
+            <span class="diagram-line vertical top"></span>
+            <span class="diagram-line vertical bottom"></span>
+            <span class="diagram-line horizontal left"></span>
+            <span class="diagram-line horizontal right"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto" aria-labelledby="contacto-title">
+      <div class="closing-panel reveal">
+        <div class="closing-shell">
+          <div class="closing-layout">
+            <div class="closing-copy">
+              <p class="eyebrow">Colaboración y posicionamiento final</p>
+              <h2 id="contacto-title">Una dirección estratégica para proyectos que necesitan presencia, criterio y autoridad</h2>
+              <p>
+                Carolina Abril desarrolla eventos para marcas, instituciones y plataformas que entienden el diseño como un territorio de influencia. Su trabajo conecta visión, excelencia operativa y una puesta en escena capaz de sostener una marca personal o corporativa en un nivel alto.
+              </p>
+              <p>
+                La colaboración puede orientarse a la conceptualización de ferias de diseño, congresos de interiorismo, encuentros de arquitectura o programas de networking profesional con ambición editorial e impacto reputacional.
+              </p>
+            </div>
+            <div class="closing-actions">
+              <a class="button button-primary" href="mailto:c.abril2025@gmail.com?subject=Proyecto%20premium%20para%20Carolina%20Abril">Solicitar reunión inicial</a>
+              <a class="button button-secondary" href="https://www.linkedin.com/in/carolina-abril-182088840/" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil de LinkedIn de Carolina Abril en una nueva pestaña">LinkedIn</a>
+            </div>
+          </div>
+          <aside class="contact-panel" aria-label="Canales de contacto">
+            <!-- Logo claro opcional para fondos oscuros: /assets/logo-cda-co-light.svg -->
+            <span class="panel-label">Contacto directo</span>
+            <p class="contact-title">Un punto de contacto claro, premium y listo para activación comercial</p>
+            <p>
+              El bloque integra ya el correo directo y el perfil profesional de LinkedIn, y conserva una estructura limpia para incorporar dossier corporativo o formulario externo cuando estén disponibles.
+            </p>
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:c.abril2025@gmail.com?subject=Consulta%20estrat%C3%A9gica%20desde%20la%20web">
+                <span>
+                  <strong>Email</strong>
+                  c.abril2025@gmail.com
+                </span>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="contact-link" href="https://www.linkedin.com/in/carolina-abril-182088840/" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil de LinkedIn de Carolina Abril en una nueva pestaña">
+                <span>
+                  <strong>LinkedIn</strong>
+                  Perfil profesional y red sectorial
+                </span>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="contact-link contact-link-placeholder" role="note" aria-label="Dossier corporativo próximamente">
+                <span>
+                  <strong>Dossier</strong>
+                  Preparado para versión PDF o presentación ejecutiva
+                </span>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="contact-link contact-link-placeholder" role="note" aria-label="Formulario externo próximamente">
+                <span>
+                  <strong>Formulario externo</strong>
+                  Integrable con Typeform, HubSpot o sistema equivalente
+                </span>
+                <span class="contact-arrow" aria-hidden="true">↗</span>
+              </div>
+            </div>
+            <p class="contact-note">Pendiente únicamente conectar dossier final, formulario externo y los assets visuales definitivos de marca.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-note">
+    <div class="footer-shell">
+      <span class="footer-brand" aria-hidden="true">
+        <!-- Marca en footer sobre fondo claro -->
+        <picture>
+          <img src="/assets/logo-cda-co.svg" alt="Carolina Abril">
+        </picture>
+      </span>
+      <span class="footer-copy">Carolina Abril, dirección estratégica de eventos de lujo en arquitectura, interiorismo y diseño. Creadora de Design Week Marbella.</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var doc = document;
+      var body = doc.body;
+      var mobileToggle = doc.querySelector(".menu-toggle");
+      var mobileMenu = doc.getElementById("mobile-menu");
+      var mobileLinks = mobileMenu ? mobileMenu.querySelectorAll("a") : [];
+      var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function setMenuState(isOpen) {
+        if (!mobileToggle || !mobileMenu) {
+          return;
+        }
+
+        mobileToggle.setAttribute("aria-expanded", String(isOpen));
+        mobileToggle.setAttribute("aria-label", isOpen ? "Cerrar menú principal" : "Abrir menú principal");
+        mobileMenu.hidden = !isOpen;
+        mobileMenu.classList.toggle("is-open", isOpen);
+        body.classList.toggle("menu-open", isOpen && window.innerWidth <= 720);
+      }
+
+      if (mobileToggle && mobileMenu) {
+        setMenuState(false);
+
+        mobileToggle.addEventListener("click", function () {
+          var isOpen = mobileToggle.getAttribute("aria-expanded") === "true";
+          setMenuState(!isOpen);
+        });
+
+        Array.prototype.forEach.call(mobileLinks, function (link) {
+          link.addEventListener("click", function () {
+            setMenuState(false);
+          });
+        });
+
+        doc.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            setMenuState(false);
+            mobileToggle.focus();
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 720) {
+            setMenuState(false);
+          }
+        });
+      }
+
+      if (reducedMotion) {
+        return;
+      }
+
+      var elements = doc.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window) || !elements.length) {
+        Array.prototype.forEach.call(elements, function (element) {
+          element.classList.add("is-visible");
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.18,
+        rootMargin: "0px 0px -8% 0px"
+      });
+
+      Array.prototype.forEach.call(elements, function (element) {
+        observer.observe(element);
+      });
+    }());
+  </script>
+</body>
+</html>

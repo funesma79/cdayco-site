@@ -1,17 +1,15 @@
-// /api/contact — Vercel Serverless Function (Node.js runtime)
+﻿// /api/contact — Vercel Serverless Function (Node.js runtime)
 //
-// SETUP (hazlo una vez en el proyecto de Vercel):
-//   1. Crea una cuenta en https://resend.com (tiene plan gratuito, 100 emails/día).
-//   2. Verifica el dominio cdayco.com en Resend (añade los registros DNS que te den, en IONOS).
-//   3. Genera una API key en Resend y añádela en Vercel:
-//      Project Settings → Environment Variables → RESEND_API_KEY = re_xxxxxxxx
-//   4. Cambia el "from" de abajo a un remitente de tu dominio verificado,
-//      por ejemplo "CDA & Co. <web@cdayco.com>".
-//   5. Redeploy. El formulario de index.html ya apunta a POST /api/contact.
+// SETUP:
+//   1. Cuenta creada en https://resend.com [OK]
+//   2. Dominio de envio verificado: contacto.cdayco.com (subdominio dedicado,
+//      para no tocar los registros MX/SPF del correo real en @cdayco.com) [OK]
+//   3. API key en Resend anadida en Vercel como RESEND_API_KEY [OK]
+//   4. Redeploy en Vercel para que la variable de entorno se aplique.
 //
-// Mientras RESEND_API_KEY no esté configurada, este endpoint devolverá error 500
-// y el formulario del front-end mostrará automáticamente el aviso con el mailto
-// de respaldo — no hay ningún estado roto de cara al visitante.
+// Mientras RESEND_API_KEY no este configurada, este endpoint devolvera error 500
+// y el formulario del front-end mostrara automaticamente el aviso con el mailto
+// de respaldo -- no hay ningun estado roto de cara al visitante.
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -26,7 +24,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ ok: true });
   }
 
-  // Validación básica de servidor (el front-end ya valida, pero nunca hay que fiarse solo del cliente).
+  // Validacion basica de servidor (el front-end ya valida, pero nunca hay que fiarse solo del cliente).
   if (!nombre || !email || !mensaje || !privacidad) {
     return res.status(400).json({ error: 'missing_fields' });
   }
@@ -51,15 +49,15 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'CDA & Co. <web@cdayco.com>',
+        from: 'CDA & Co. <contacto@contacto.cdayco.com>',
         to: ['c.abril@cdayco.com'],
         reply_to: email,
-        subject: `Nuevo contacto — ${nombre}${empresa ? ' · ' + empresa : ''}`,
+        subject: `Nuevo contacto -- ${nombre}${empresa ? ' . ' + empresa : ''}`,
         text: [
           `Nombre: ${nombre}`,
           `Email: ${email}`,
-          `Empresa / marca: ${empresa || '—'}`,
-          `Tipo de proyecto: ${tipo || '—'}`,
+          `Empresa / marca: ${empresa || '-'}`,
+          `Tipo de proyecto: ${tipo || '-'}`,
           '',
           mensaje
         ].join('\n')

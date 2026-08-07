@@ -3,26 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carolina Abril · CDA & Co. — From Design to Installation</title>
-<meta name="description" content="Carolina Abril dirige CDA & Co., un estudio de dirección creativa, arquitectura, interiorismo y diseño expositivo. De la estrategia a la instalación: proyectos, contenido y networking de alto nivel.">
+<title>CDA & Co. — Diseño y organización de ferias y eventos estratégicos</title>
+<meta name="description" content="CDA & Co. diseña y dirige ferias y eventos estratégicos para arquitectos y diseñadores. Conectamos innovación, espacios y talento creativo — de la estrategia a la instalación.">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#14140F">
 <link rel="canonical" href="https://cdayco.com/">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CDA & Co.">
-<meta property="og:title" content="Carolina Abril · CDA & Co. — From Design to Installation">
-<meta property="og:description" content="Dirección creativa, arquitectura, interiorismo y diseño expositivo. Un mismo criterio, de la estrategia a la instalación.">
+<meta property="og:title" content="CDA & Co. — Ferias y eventos estratégicos">
+<meta property="og:description" content="Diseño y organización de ferias · Eventos estratégicos para arquitectos y diseñadores · Conectando innovación, espacios y talento creativo.">
 <meta property="og:url" content="https://cdayco.com/">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image" content="https://cdayco.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Carolina Abril · CDA & Co.">
-<meta name="twitter:description" content="Dirección creativa, arquitectura, interiorismo y diseño expositivo. From Design to Installation.">
+<meta name="twitter:title" content="CDA & Co. — Ferias y eventos estratégicos">
+<meta name="twitter:description" content="Diseño y organización de ferias para arquitectos y diseñadores. Conectando innovación, espacios y talento creativo.">
 <meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -30,9 +29,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,500;1,9..144,420&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,500;0,9..144,600;1,9..144,420&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,7 +41,7 @@
       "name": "Carolina Abril",
       "url": "https://cdayco.com/",
       "email": "c.abril@cdayco.com",
-      "jobTitle": "Directora creativa y estratega de proyectos",
+      "jobTitle": "Diseño y organización de ferias · Eventos estratégicos para arquitectos y diseñadores",
       "sameAs": ["https://www.linkedin.com/in/carolina-abril-18208840"],
       "worksFor": { "@id": "https://cdayco.com/#cda-co" }
     },
@@ -52,6 +50,7 @@
       "@id": "https://cdayco.com/#cda-co",
       "name": "CDA & Co.",
       "alternateName": "Carolina Abril · CDA & Co.",
+      "description": "Diseño y organización de ferias y eventos estratégicos para arquitectos y diseñadores. Conectando innovación, espacios y talento creativo.",
       "url": "https://cdayco.com/",
       "email": "c.abril@cdayco.com",
       "slogan": "From Design to Installation",
@@ -83,17 +82,13 @@
   *,*::before,*::after{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--sans);
-    font-size:16px;
-    line-height:1.6;
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-size:16px;line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
   img{max-width:100%;display:block;}
   a{color:inherit;}
-  h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.08;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.06;}
   p{margin:0;}
   ul{list-style:none;margin:0;padding:0;}
   button{font-family:inherit;}
@@ -102,77 +97,52 @@
   @media (max-width:640px){.wrap{padding:0 20px;}}
 
   .eyebrow{
-    font-family:var(--mono);
-    font-size:.72rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--gold);
-    display:flex;
-    align-items:center;
-    gap:10px;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--gold);
+    display:flex;align-items:center;gap:10px;
   }
   .eyebrow .code{color:var(--ink-soft);}
-  .eyebrow::before{
-    content:"";
-    width:22px;height:1px;background:var(--gold);
-    display:inline-block;
-  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
 
-  /* Skip link */
   .skip-link{
-    position:absolute;left:-999px;top:0;
-    background:var(--ink);color:var(--white);
-    padding:12px 20px;z-index:1000;
-    font-family:var(--mono);font-size:.85rem;
+    position:absolute;left:-999px;top:0;background:var(--ink);color:var(--white);
+    padding:12px 20px;z-index:1000;font-family:var(--mono);font-size:.85rem;
     border-radius:0 0 4px 0;
   }
   .skip-link:focus{left:0;}
-
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
 
-  /* Ambient plan line — desktop only, purely atmospheric */
-  .plan-line{
-    position:fixed;top:0;bottom:0;left:14px;width:1px;
-    background:var(--line);z-index:1;pointer-events:none;
-  }
+  .plan-line{position:fixed;top:0;bottom:0;left:14px;width:1px;background:var(--line);z-index:1;pointer-events:none;}
   @media (max-width:900px){.plan-line{display:none;}}
 
   /* Header */
   header{
     position:sticky;top:0;z-index:100;
-    background:rgba(246,243,236,.88);
-    backdrop-filter:blur(8px);
+    background:rgba(246,243,236,.9);backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
   }
-  .header-inner{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:18px 32px;max-width:var(--maxw);margin:0 auto;
-  }
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--maxw);margin:0 auto;}
   .logo{display:flex;flex-direction:column;text-decoration:none;line-height:1;}
   .logo strong{font-family:var(--serif);font-size:1.3rem;font-weight:500;letter-spacing:.01em;}
   .logo span{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--ink-soft);margin-top:3px;}
 
   nav.primary-nav{display:flex;align-items:center;gap:36px;}
-  nav.primary-nav a{
-    text-decoration:none;font-size:.92rem;font-weight:500;
-    position:relative;padding:4px 0;
-  }
+  nav.primary-nav a{text-decoration:none;font-size:.92rem;font-weight:500;position:relative;padding:4px 0;}
   nav.primary-nav a:not(.cta)::after{
-    content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;
-    background:var(--gold);transform:scaleX(0);transform-origin:left;
-    transition:transform .3s ease;
+    content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--gold);
+    transform:scaleX(0);transform-origin:left;transition:transform .3s ease;
   }
   nav.primary-nav a:not(.cta):hover::after{transform:scaleX(1);}
   .cta-btn,.cta{
-    font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;
-    text-decoration:none;text-transform:uppercase;
-    border:1px solid var(--ink);padding:10px 18px;
-    transition:background var(--dur) ease,color var(--dur) ease;
+    font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-decoration:none;text-transform:uppercase;
+    border:1px solid var(--ink);padding:10px 18px;transition:background var(--dur) ease,color var(--dur) ease;
     display:inline-block;white-space:nowrap;
   }
   .cta-btn:hover,.cta:hover{background:var(--ink);color:var(--white);}
   .cta-btn.gold,.cta.gold{border-color:var(--gold);}
   .cta-btn.gold:hover,.cta.gold:hover{background:var(--gold);color:var(--ink);}
+  .cta-btn.ghost{border-color:var(--line);}
+  .cta-btn.ghost:hover{background:var(--ink);color:var(--white);border-color:var(--ink);}
 
   .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
   .menu-toggle span{display:block;width:22px;height:1px;background:var(--ink);margin:5px 0;transition:transform .25s ease,opacity .25s ease;}
@@ -183,17 +153,14 @@
   @media (max-width:900px){
     .menu-toggle{display:block;}
     nav.primary-nav{
-      position:fixed;inset:0 0 0 auto;width:min(320px,80vw);height:100vh;
-      background:var(--paper);border-left:1px solid var(--line);
-      flex-direction:column;align-items:flex-start;justify-content:center;
-      gap:28px;padding:32px;transform:translateX(100%);
-      transition:transform .35s ease;
+      position:fixed;inset:0 0 0 auto;width:min(320px,80vw);height:100vh;background:var(--paper);
+      border-left:1px solid var(--line);flex-direction:column;align-items:flex-start;justify-content:center;
+      gap:28px;padding:32px;transform:translateX(100%);transition:transform .35s ease;
     }
     nav.primary-nav.is-open{transform:translateX(0);}
     nav.primary-nav a{font-size:1.1rem;}
   }
 
-  /* Sections */
   section{padding:110px 0;border-bottom:1px solid var(--line);}
   section:last-of-type{border-bottom:none;}
   @media (max-width:640px){section{padding:72px 0;}}
@@ -205,42 +172,97 @@
     html{scroll-behavior:auto;}
   }
 
-  /* Hero */
-  .hero{padding-top:88px;}
-  .hero-grid{
-    display:grid;grid-template-columns:1.35fr 1fr;gap:64px;align-items:start;
+  /* Hero — editorial, full width, single column */
+  .hero{
+    padding-top:100px;padding-bottom:0;position:relative;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:56px 56px;
+    background-position:center -1px;
+    -webkit-mask-image:linear-gradient(to bottom, black 0%, black 55%, transparent 92%);
+    mask-image:linear-gradient(to bottom, black 0%, black 55%, transparent 92%);
+    opacity:1;
   }
-  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:48px;}}
-  .hero h1{
-    font-size:clamp(2.3rem,4.6vw,3.6rem);
-    margin:22px 0 26px;
-    max-width:15ch;
+  .hero::before{
+    content:"";position:absolute;inset:0;background:var(--paper);opacity:.86;z-index:0;
   }
+  .hero > *{position:relative;z-index:1;}
+  .hero-top{max-width:900px;}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin:24px 0 28px;max-width:15ch;}
   .hero h1 em{font-style:italic;color:var(--gold);}
-  .hero p.lede{font-size:1.08rem;color:var(--ink-soft);max-width:52ch;margin-bottom:34px;}
+  .hero p.lede{font-size:1.12rem;color:var(--ink-soft);max-width:56ch;margin-bottom:36px;}
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
 
-  .hero-panel{
-    border:1px solid var(--line);background:var(--white);
+  .hero-rule{border:none;border-top:1px solid var(--line);margin:64px 0 0;}
+
+  .hero-plan{margin:8px 0 0;}
+  .hero-plan svg{display:block;width:100%;height:auto;}
+  .hero-plan .plan-draw{transition:stroke-dashoffset 1.5s ease .3s;}
+  .hero-plan .plan-fade{opacity:0;transition:opacity .9s ease 1s;}
+  .hero-plan.is-visible .plan-draw{stroke-dashoffset:0;}
+  .hero-plan.is-visible .plan-fade{opacity:1;}
+  @media (prefers-reduced-motion:reduce){
+    .hero-plan .plan-draw{stroke-dashoffset:0 !important;transition:none;}
+    .hero-plan .plan-fade{opacity:1 !important;transition:none;}
   }
-  .hero-panel ul li{
-    display:flex;align-items:baseline;justify-content:space-between;
-    padding:20px 24px;border-bottom:1px solid var(--line);
-    font-family:var(--serif);font-size:1.15rem;
+
+  /* Legend row — services as a technical drawing key */
+  .legend{
+    display:flex;flex-wrap:wrap;gap:0;
+    border-bottom:1px solid var(--line);
   }
-  .hero-panel ul li:last-child{border-bottom:none;}
-  .hero-panel ul li span.code{font-family:var(--mono);font-size:.7rem;color:var(--gold);letter-spacing:.1em;}
-  .hero-panel .panel-foot{
-    padding:18px 24px;font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);
-    letter-spacing:.04em;line-height:1.6;
+  .legend-item{
+    flex:1 1 220px;display:flex;align-items:flex-start;gap:14px;
+    padding:26px 24px;border-right:1px solid var(--line);border-top:1px solid var(--line);
+    transition:background .3s ease;
   }
+  .legend-item:hover{background:var(--paper-alt);}
+  .legend-item:hover .legend-mark.sq,.legend-item:hover .legend-mark.ci{background:var(--gold);}
+  .legend-item:hover .legend-mark.tr{border-bottom-color:var(--ink);}
+  .legend-item:last-child{border-right:none;}
+  .legend-mark{
+    flex:none;width:14px;height:14px;margin-top:4px;border:1.5px solid var(--gold);
+  }
+  .legend-mark.sq{border-radius:0;}
+  .legend-mark.ci{border-radius:50%;}
+  .legend-mark.tr{width:0;height:0;border:none;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:13px solid var(--gold);margin-top:2px;}
+  .legend-mark.rh{transform:rotate(45deg);}
+  .legend-text strong{display:block;font-family:var(--serif);font-size:1.05rem;font-weight:500;margin-bottom:3px;}
+  .legend-text span{font-size:.85rem;color:var(--ink-soft);}
+  @media (max-width:820px){.legend-item{flex:1 1 45%;}}
+  @media (max-width:560px){.legend-item{flex:1 1 100%;border-right:none;}}
+
+  /* Title block — architectural drawing footer strip */
+  .titleblock{
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.2fr;
+    background:var(--paper-alt);border-bottom:1px solid var(--line);
+  }
+  .titleblock div{padding:18px 22px;border-right:1px solid var(--line);border-top:1px solid var(--line);}
+  .titleblock div:last-child{border-right:none;}
+  .titleblock dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin:0 0 6px;}
+  .titleblock dd{margin:0;font-family:var(--mono);font-size:.78rem;color:var(--ink);letter-spacing:.02em;}
+  @media (max-width:820px){.titleblock{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.titleblock{grid-template-columns:1fr;}}
 
   /* Section headers */
   .section-head{max-width:640px;margin-bottom:56px;}
   .section-head h2{font-size:clamp(1.7rem,3vw,2.35rem);margin-top:16px;}
   .section-head p{color:var(--ink-soft);margin-top:14px;max-width:58ch;}
 
-  /* Ejes */
+  /* Qué hacemos — partidas list */
+  .partidas{border:1px solid var(--line);}
+  .partida{
+    display:grid;grid-template-columns:120px 1fr;gap:24px;
+    padding:30px 28px;border-bottom:1px solid var(--line);
+  }
+  .partida:last-child{border-bottom:none;}
+  .partida .num{font-family:var(--mono);font-size:.78rem;color:var(--gold);letter-spacing:.06em;padding-top:4px;}
+  .partida h3{font-size:1.25rem;margin-bottom:8px;}
+  .partida p{color:var(--ink-soft);font-size:.95rem;max-width:62ch;}
+  @media (max-width:640px){.partida{grid-template-columns:1fr;gap:8px;}}
+
+  /* Ejes / metodología */
   .ejes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   @media (max-width:820px){.ejes-grid{grid-template-columns:1fr;}}
   .eje{background:var(--paper);padding:36px 30px;}
@@ -248,21 +270,12 @@
   .eje h3{font-size:1.3rem;margin:16px 0 12px;}
   .eje p{color:var(--ink-soft);font-size:.95rem;}
 
-  /* Portfolio */
-  .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-  @media (max-width:900px){.portfolio-grid{grid-template-columns:1fr;}}
-  .card{border:1px solid var(--line);background:var(--white);display:flex;flex-direction:column;height:100%;}
-  .card-media{aspect-ratio:4/3;background:var(--paper-alt);position:relative;overflow:hidden;}
-  .card-media img{width:100%;height:100%;object-fit:cover;}
-  .card-body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1;}
-  .card-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;}
-  .card h3{font-size:1.2rem;}
-  .card p{color:var(--ink-soft);font-size:.92rem;flex:1;}
-  .card-meta{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);letter-spacing:.03em;padding-top:8px;border-top:1px solid var(--line);}
-  .card.placeholder{display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 28px;}
-  .card.placeholder p{color:var(--ink-soft);font-size:.95rem;}
-  .card.placeholder .eyebrow{margin:0 auto 14px;justify-content:center;}
-  .card.placeholder .eyebrow::before{display:none;}
+  /* Para quién */
+  .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  @media (max-width:820px){.audience-grid{grid-template-columns:1fr;}}
+  .audience-card{border-left:2px solid var(--gold);padding:6px 0 6px 22px;}
+  .audience-card h3{font-size:1.1rem;margin-bottom:8px;}
+  .audience-card p{color:var(--ink-soft);font-size:.92rem;}
 
   /* Networking flow */
   .flow{display:flex;align-items:center;flex-wrap:wrap;gap:0;font-family:var(--serif);font-size:1.15rem;margin-bottom:48px;}
@@ -291,9 +304,8 @@
   .field{display:flex;flex-direction:column;gap:6px;}
   .field label{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-soft);text-transform:uppercase;}
   .field input,.field select,.field textarea{
-    font-family:var(--sans);font-size:.95rem;padding:12px 14px;
-    background:var(--white);border:1px solid var(--line);color:var(--ink);
-    border-radius:0;
+    font-family:var(--sans);font-size:.95rem;padding:12px 14px;background:var(--white);
+    border:1px solid var(--line);color:var(--ink);border-radius:0;
   }
   .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);}
   .field textarea{resize:vertical;min-height:120px;}
@@ -303,9 +315,8 @@
   .hp-field{position:absolute;left:-9999px;top:-9999px;}
   .form-submit{
     font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;
-    background:var(--ink);color:var(--white);border:1px solid var(--ink);
-    padding:14px 22px;cursor:pointer;align-self:flex-start;
-    transition:background .25s ease,color .25s ease;
+    background:var(--ink);color:var(--white);border:1px solid var(--ink);padding:14px 22px;cursor:pointer;
+    align-self:flex-start;transition:background .25s ease,color .25s ease;
   }
   .form-submit:hover{background:transparent;color:var(--ink);}
   .form-status{font-family:var(--mono);font-size:.82rem;min-height:1.2em;}
@@ -337,9 +348,9 @@
       <span>From Design to Installation</span>
     </a>
     <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
-      <a href="#ejes">Ejes</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#networking">Networking</a>
+      <a href="#que-hacemos">Qué hacemos</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#para-quien">Para quién</a>
       <a href="#contacto">Contacto</a>
       <a class="cta gold" href="#contacto">Hablemos</a>
     </nav>
@@ -352,110 +363,175 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero" id="inicio">
+  <section class="hero" id="inicio" style="border-bottom:none;">
     <div class="wrap">
-      <div class="hero-grid">
-        <div data-reveal>
-          <div class="eyebrow"><span class="code">A—00</span> CDA &amp; Co. — Madrid · Marbella</div>
-          <h1>Carolina Abril: transformando eventos en <em>plataformas de alto nivel</em>.</h1>
-          <p class="lede">Carolina no organiza eventos ni decora espacios: los convierte en posicionamiento, autoridad y negocio. Directora y estratega de proyectos, arquitectura, interiorismo y diseño — y creadora de Design Week Marbella.</p>
-          <div class="hero-ctas">
-            <a class="cta-btn gold" href="#portfolio">Ver portfolio</a>
-            <a class="cta-btn" href="#contacto">Hablemos</a>
+      <div class="hero-top" data-reveal>
+        <div class="eyebrow"><span class="code">A—00</span> Portada</div>
+        <h1>Ferias y eventos que convierten el espacio en <em>autoridad</em>.</h1>
+        <p class="lede">CDA &amp; Co. diseña y dirige ferias y eventos estratégicos para arquitectos y diseñadores: conectamos innovación, espacios y talento creativo, de la estrategia a la instalación.</p>
+        <div class="hero-ctas">
+          <a class="cta-btn gold" href="#que-hacemos">Qué hacemos</a>
+          <a class="cta-btn ghost" href="#contacto">Hablemos</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-plan" data-reveal aria-hidden="true">
+      <svg viewBox="0 0 1160 220" preserveAspectRatio="xMidYMid meet" focusable="false">
+        <rect x="8" y="8" width="1144" height="204" fill="none" stroke="#14140F" stroke-opacity=".3" stroke-width="1"/>
+        <g stroke="#14140F" stroke-opacity=".22" stroke-width="1">
+          <line x1="160" y1="8" x2="160" y2="100"/>
+          <line x1="340" y1="8" x2="340" y2="100"/>
+          <line x1="480" y1="8" x2="480" y2="100"/>
+          <line x1="700" y1="8" x2="700" y2="100"/>
+          <line x1="900" y1="8" x2="900" y2="100"/>
+          <line x1="220" y1="124" x2="220" y2="216"/>
+          <line x1="380" y1="124" x2="380" y2="216"/>
+          <line x1="620" y1="124" x2="620" y2="216"/>
+          <line x1="820" y1="124" x2="820" y2="216"/>
+          <line x1="1000" y1="124" x2="1000" y2="216"/>
+        </g>
+        <line x1="8" y1="112" x2="1152" y2="112" stroke="#A8905C" stroke-opacity=".5" stroke-width="1" stroke-dasharray="2 6"/>
+        <rect class="plan-draw" x="340" y="8" width="140" height="92" fill="none" stroke="#A8905C" stroke-width="1.6" stroke-dasharray="464" stroke-dashoffset="464"/>
+        <circle class="plan-draw" cx="410" cy="54" r="3" fill="none" stroke="#A8905C" stroke-width="1.6" stroke-dasharray="19" stroke-dashoffset="19"/>
+        <text class="plan-fade" x="350" y="24" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="1" fill="#A8905C">STAND &#183; A&#8212;01</text>
+        <g stroke="#14140F" stroke-opacity=".4" stroke-width="1">
+          <line x1="160" y1="2" x2="160" y2="8"/>
+          <line x1="340" y1="2" x2="340" y2="8"/>
+          <line x1="480" y1="2" x2="480" y2="8"/>
+        </g>
+        <g transform="translate(1108,190)" opacity=".5">
+          <line x1="0" y1="14" x2="0" y2="-10" stroke="#14140F" stroke-width="1"/>
+          <path d="M -3 -6 L 0 -12 L 3 -6 Z" fill="#14140F"/>
+          <text x="4" y="-8" font-family="IBM Plex Mono, monospace" font-size="8" fill="#14140F">N</text>
+        </g>
+      </svg>
+    </div>
+    <hr class="hero-rule">
+    <div class="legend" data-reveal>
+      <div class="legend-item">
+        <span class="legend-mark sq" aria-hidden="true"></span>
+        <div class="legend-text"><strong>Diseño de ferias</strong><span>Concepto y espacio expositivo</span></div>
+      </div>
+      <div class="legend-item">
+        <span class="legend-mark ci" aria-hidden="true"></span>
+        <div class="legend-text"><strong>Dirección de eventos</strong><span>Producción de principio a fin</span></div>
+      </div>
+      <div class="legend-item">
+        <span class="legend-mark tr" aria-hidden="true"></span>
+        <div class="legend-text"><strong>Curaduría de contenido</strong><span>Selección con criterio propio</span></div>
+      </div>
+      <div class="legend-item">
+        <span class="legend-mark rh" aria-hidden="true"></span>
+        <div class="legend-text"><strong>Networking sectorial</strong><span>Conexión entre perfiles clave</span></div>
+      </div>
+    </div>
+    <div class="titleblock" data-reveal>
+      <div><dt>Proyecto</dt><dd>CDA &amp; Co. — Identidad digital</dd></div>
+      <div><dt>Plano</dt><dd>A—00 · Portada</dd></div>
+      <div><dt>Escala</dt><dd>S/E</dd></div>
+      <div><dt>Fecha</dt><dd id="tb-date">—</dd></div>
+      <div><dt>Dibujado</dt><dd>C. Abril</dd></div>
+    </div>
+  </section>
+
+  <!-- QUÉ HACEMOS -->
+  <section id="que-hacemos">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow"><span class="code">A—01</span> Qué hacemos</div>
+        <h2>Diseño y dirección de ferias y eventos estratégicos</h2>
+        <p>Cuatro líneas de trabajo con un mismo criterio: convertir un espacio temporal en una plataforma de negocio, contenido y contactos reales para arquitectura y diseño.</p>
+      </div>
+      <div class="partidas" data-reveal>
+        <div class="partida">
+          <span class="num">01</span>
+          <div>
+            <h3>Diseño de ferias</h3>
+            <p>Concepto espacial, circulación y experiencia de una feria o evento desde cero — pensado para cómo se mueve y qué busca un visitante profesional.</p>
           </div>
         </div>
-        <aside class="hero-panel" data-reveal>
-          <ul>
-            <li><span>Arquitectura</span><span class="code">01</span></li>
-            <li><span>Interiorismo</span><span class="code">02</span></li>
-            <li><span>Diseño</span><span class="code">03</span></li>
-            <li><span>Networking</span><span class="code">04</span></li>
-          </ul>
-          <div class="panel-foot">Creadora de Design Week Marbella — plataforma de referencia para diseño, arquitectura y contenido en el sur de España.</div>
-        </aside>
+        <div class="partida">
+          <span class="num">02</span>
+          <div>
+            <h3>Dirección de eventos</h3>
+            <p>Producción y dirección creativa de principio a fin: de la estrategia inicial a la instalación final, con un único criterio sosteniendo cada decisión.</p>
+          </div>
+        </div>
+        <div class="partida">
+          <span class="num">03</span>
+          <div>
+            <h3>Diseño expositivo</h3>
+            <p>Stands, escenografía y señalética diseñados para comunicar en segundos, con materialidad y lenguaje visual propios de arquitectura y diseño.</p>
+          </div>
+        </div>
+        <div class="partida">
+          <span class="num">04</span>
+          <div>
+            <h3>Curaduría y networking</h3>
+            <p>Selección de contenido, perfiles y marcas que construyen autoridad sectorial real — no solo asistentes, sino las conexiones correctas.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- EJES -->
-  <section id="ejes">
+  <!-- METODOLOGÍA -->
+  <section id="metodologia">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <div class="eyebrow"><span class="code">A—01</span> Metodología</div>
+        <div class="eyebrow"><span class="code">A—02</span> Metodología</div>
         <h2>Tres ejes, un mismo criterio</h2>
-        <p>Lo que diferencia a CDA &amp; Co. de un proveedor de producción o interiorismo es que cada proyecto se sostiene sobre la misma dirección estratégica, del concepto al espacio construido.</p>
+        <p>Lo que diferencia a CDA &amp; Co. de una productora de eventos al uso es que cada feria o evento se sostiene sobre la misma dirección estratégica — pensada para conectar a arquitectos, diseñadores y marcas del sector.</p>
       </div>
       <div class="ejes-grid" data-reveal>
         <div class="eje">
-          <span class="code">A—01</span>
+          <span class="code">A—02.1</span>
           <h3>Visión Estratégica</h3>
           <p>Conceptualización global, propósito del proyecto, posicionamiento y selección de agentes implicados.</p>
         </div>
         <div class="eje">
-          <span class="code">A—02</span>
+          <span class="code">A—02.2</span>
           <h3>Curaduría de Contenido</h3>
           <p>Selección de temáticas, perfiles, formatos y contenidos capaces de construir autoridad real.</p>
         </div>
         <div class="eje">
-          <span class="code">A—03</span>
+          <span class="code">A—02.3</span>
           <h3>Diseño Expositivo</h3>
-          <p>Traducción de estrategia y contenido al espacio físico: circulación, atmósfera y experiencia.</p>
+          <p>Traducción de estrategia y contenido al espacio físico: diseño de stands y ferias, circulación, atmósfera y experiencia.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
+  <!-- PARA QUIÉN -->
+  <section id="para-quien">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <div class="eyebrow"><span class="code">A—04</span> Portfolio de autor</div>
-        <h2>Proyectos con dirección propia</h2>
-        <p>Una selección de trabajos que combinan arquitectura, interiorismo, diseño expositivo y dirección estratégica.</p>
+        <div class="eyebrow"><span class="code">A—03</span> Para quién</div>
+        <h2>Pensado para quienes mueven el sector</h2>
       </div>
-      <div class="portfolio-grid" data-reveal>
-
-        <article class="card">
-          <div class="card-media">
-            <img src="/assets/proyecto-betanzos.svg" alt="Composición del proyecto Centro Médico Betanzos 60, Madrid" loading="lazy">
-          </div>
-          <div class="card-body">
-            <span class="card-tag">Interiorismo sanitario</span>
-            <h3>Centro Médico Betanzos 60</h3>
-            <p>Rediseño de sala de espera y recepción bajo el concepto «Caja de Salud»: materialidad cálida, señalética propia y un tótem central como elemento singular.</p>
-            <div class="card-meta">Madrid — CDA &amp; Co. para Dr. Igor Goria</div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media">
-            <img src="/assets/proyecto-dwm.svg" alt="Composición del proyecto Design Week Marbella" loading="lazy">
-          </div>
-          <div class="card-body">
-            <span class="card-tag">Dirección de evento</span>
-            <h3>Design Week Marbella</h3>
-            <p>Concepto, dirección y curaduría de una plataforma de diseño, arquitectura y contenido que conecta marcas, estudios y profesionales del sector.</p>
-            <div class="card-meta">Marbella — Fundadora y directora</div>
-          </div>
-        </article>
-
-        <article class="card placeholder">
-          <div>
-            <div class="eyebrow"><span class="code">A—0X</span> Próximo caso</div>
-            <p>Cada proyecto nuevo suma una entidad más a este portfolio. Si el tuyo encaja con esta dirección, hablemos.</p>
-            <div style="margin-top:18px;"><a class="cta-btn" href="#contacto">Proponer un proyecto</a></div>
-          </div>
-        </article>
-
+      <div class="audience-grid" data-reveal>
+        <div class="audience-card">
+          <h3>Arquitectos y estudios de diseño</h3>
+          <p>Visibilidad real y contacto directo con marcas, prensa especializada y otros profesionales del sector.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Marcas y fabricantes</h3>
+          <p>Conexión con los prescriptores que realmente deciden — no solo asistencia, sino la audiencia correcta.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Instituciones y colegios profesionales</h3>
+          <p>Una plataforma de contenido y networking con criterio editorial, no un espacio de alquiler más.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- NETWORKING / CONTENIDO -->
+  <!-- NETWORKING -->
   <section id="networking">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <div class="eyebrow"><span class="code">A—05</span> Contenido y networking</div>
+        <div class="eyebrow"><span class="code">A—04</span> Contenido y networking</div>
         <h2>Autoridad que se construye en conversación</h2>
       </div>
       <div class="flow" data-reveal>
@@ -466,8 +542,8 @@
         <span>Posicionamiento</span>
       </div>
       <div class="networking-copy" data-reveal>
-        <p>Esta sección es más estratégica que comercial: conversación sectorial, contenido diferencial y relaciones entre perfiles clave del sector.</p>
-        <p>El objetivo no es solo mostrar proyectos, sino construir un espacio de referencia donde marcas, estudios y partners encuentran valor real en participar.</p>
+        <p>Conectar innovación, espacios y talento creativo es el criterio detrás de cada feria y evento: conversación sectorial, contenido diferencial y relaciones entre los perfiles que mueven arquitectura y diseño.</p>
+        <p>El objetivo no es solo llenar un espacio, sino construir un punto de encuentro donde arquitectos, diseñadores, marcas y estudios encuentran valor real en participar.</p>
       </div>
     </div>
   </section>
@@ -476,8 +552,8 @@
   <section id="contacto">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <div class="eyebrow"><span class="code">A—06</span> Contacto</div>
-        <h2>Hablemos del próximo proyecto</h2>
+        <div class="eyebrow"><span class="code">A—05</span> Contacto</div>
+        <h2>Hablemos de tu próxima feria o evento</h2>
       </div>
       <div class="contact-grid">
         <div class="contact-info" data-reveal>
@@ -489,10 +565,6 @@
             <div>
               <dt>LinkedIn</dt>
               <dd><a href="https://www.linkedin.com/in/carolina-abril-18208840" target="_blank" rel="noopener">linkedin.com/in/carolina-abril-18208840</a></dd>
-            </div>
-            <div>
-              <dt>Dossier CDA &amp; Co.</dt>
-              <dd><a href="/dossier-cda-co.pdf" target="_blank" rel="noopener">Descargar dossier (PDF)</a></dd>
             </div>
           </dl>
           <div class="contact-links">
@@ -521,9 +593,9 @@
               <div class="field">
                 <label for="f-tipo">Tipo de proyecto</label>
                 <select id="f-tipo" name="tipo">
-                  <option value="arquitectura">Arquitectura</option>
-                  <option value="interiorismo">Interiorismo</option>
+                  <option value="feria">Diseño de feria</option>
                   <option value="evento">Dirección de evento</option>
+                  <option value="expositivo">Diseño expositivo</option>
                   <option value="contenido">Contenido / networking</option>
                   <option value="otro">Otro</option>
                 </select>
@@ -534,7 +606,6 @@
               <textarea id="f-mensaje" name="mensaje" required></textarea>
             </div>
 
-            <!-- honeypot -->
             <div class="hp-field" aria-hidden="true">
               <label for="f-website">No rellenar</label>
               <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
@@ -566,9 +637,9 @@
         <div>
           <h4>Estudio</h4>
           <ul>
-            <li><a href="#ejes">Ejes</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#networking">Networking</a></li>
+            <li><a href="#que-hacemos">Qué hacemos</a></li>
+            <li><a href="#metodologia">Metodología</a></li>
+            <li><a href="#para-quien">Para quién</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
@@ -598,8 +669,8 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('tb-date').textContent = new Date().toLocaleDateString('es-ES', { month: '2-digit', year: 'numeric' }).replace('/', ' / ');
 
-  // Mobile nav
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('primary-nav');
   toggle.addEventListener('click', () => {
@@ -612,7 +683,6 @@
     toggle.setAttribute('aria-expanded', 'false');
   }));
 
-  // Scroll reveal
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealEls = document.querySelectorAll('[data-reveal]');
   if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -629,31 +699,20 @@
     revealEls.forEach(el => io.observe(el));
   }
 
-  // Contact form — posts to /api/contact (Vercel Function). Falls back to mailto if the
-  // endpoint isn't deployed yet, so the form never dead-ends for the visitor.
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     status.dataset.state = '';
     status.textContent = '';
-
-    if (form.website.value) return; // honeypot triggered — silently drop
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
+    if (form.website.value) return;
+    if (!form.checkValidity()) { form.reportValidity(); return; }
     const payload = Object.fromEntries(new FormData(form).entries());
     const submitBtn = form.querySelector('.form-submit');
     submitBtn.disabled = true;
-
     try {
       const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
       });
       if (!res.ok) throw new Error('bad-response');
       status.dataset.state = 'ok';

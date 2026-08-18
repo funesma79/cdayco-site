@@ -16,8 +16,8 @@
 
 <style>
   :root{
-    --ink:#14140F;--ink-soft:#4B4A42;--paper:#F6F3EC;--paper-alt:#EEEAE0;
-    --line:#D9D3C3;--gold:#A8905C;--gold-soft:#C9B98D;--white:#FBFAF7;
+    --ink:#14140F;--ink-soft:#4B4A42;--paper:#F5F5F3;--paper-alt:#EAEAE7;
+    --line:#D8D8D5;--gold:#A8905C;--gold-soft:#C9B98D;--white:#FBFAF7;
     --serif:'Fraunces',Georgia,serif;--sans:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace;
     --maxw:1180px;
   }
@@ -28,10 +28,11 @@
   @media (max-width:640px){.wrap{padding:0 20px;}}
 
   .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;}
+  .eyebrow span,.eyebrow .code{white-space:nowrap;}
   .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
   .eyebrow .code{color:var(--ink-soft);}
 
-  header{position:sticky;top:0;z-index:100;background:rgba(246,243,236,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  header{position:sticky;top:0;z-index:100;background:rgba(245,245,243,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--maxw);margin:0 auto;}
   .logo{display:flex;flex-direction:column;text-decoration:none;line-height:1;}
   .logo strong{font-family:var(--serif);font-size:1.3rem;font-weight:500;}
@@ -81,10 +82,7 @@
 
 <header>
   <div class="header-inner">
-    <a class="logo" href="/">
-      <strong>CDA &amp; Co.</strong>
-      <span>From Design to Installation</span>
-    </a>
+    <a class="logo" href="/"><img src="/assets/logo-cda-co-display.png" alt="CDA & Co." style="height:28px;width:auto;display:block;"></a>
     <nav><a href="/#contacto">Hablemos</a></nav>
   </div>
 </header>

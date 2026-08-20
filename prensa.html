@@ -28,11 +28,10 @@
   @media (max-width:640px){.wrap{padding:0 20px;}}
 
   .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;}
-  .eyebrow span,.eyebrow .code{white-space:nowrap;}
   .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
   .eyebrow .code{color:var(--ink-soft);}
 
-  header{position:sticky;top:0;z-index:100;background:rgba(245,245,243,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  header{position:sticky;top:0;z-index:100;background:rgba(246,243,236,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--maxw);margin:0 auto;}
   .logo{display:flex;flex-direction:column;text-decoration:none;line-height:1;}
   .logo strong{font-family:var(--serif);font-size:1.3rem;font-weight:500;}
@@ -77,12 +76,24 @@
   footer a{text-decoration:none;color:var(--paper);opacity:.85;}
   footer a:hover{opacity:1;text-decoration:underline;}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://cdayco.com/prensa#page",
+  "url": "https://cdayco.com/prensa",
+  "name": "Prensa — Design Week Marbella en los medios | CDA & Co.",
+  "description": "Selección de cobertura de prensa de Design Week Marbella 2021–2022 relacionada con Carolina Abril.",
+  "about": {"@id": "https://cdayco.com/#carolina-abril"},
+  "isPartOf": {"@id": "https://cdayco.com/#cda-co"}
+}
+</script>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <a class="logo" href="/"><img src="/assets/logo-cda-co-display.png" alt="CDA & Co." style="height:28px;width:auto;display:block;"></a>
+    <a class="logo" href="/"><img src="/assets/logo-cda-co-official.png" alt="CDA & Co." style="height:28px;width:auto;display:block;"></a>
     <nav><a href="/#contacto">Hablemos</a></nav>
   </div>
 </header>

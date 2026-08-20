@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CDA & Co. — Diseño, dirección y producción de proyectos</title>
-<meta name="description" content="CDA & Co. es un estudio multidisciplinar de diseño, dirección y producción. Ferias, exposiciones y grandes eventos. Interiorismo y contract.">
+<title>CDA & Co. | Diseño Expositivo, Ferias, Eventos e Interiorismo Contract</title>
+<meta name="description" content="CDA & Co., estudio en Madrid de diseño expositivo, dirección y producción de ferias y eventos, e interiorismo contract. Del concepto a la instalación.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#14140F">
 <link rel="canonical" href="https://cdayco.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CDA & Co.">
-<meta property="og:title" content="CDA & Co. — From Design to Installation">
-<meta property="og:description" content="Estudio multidisciplinar de diseño, dirección y producción. Ferias, exposiciones y grandes eventos. Interiorismo y contract.">
+<meta property="og:title" content="CDA & Co. | Diseño Expositivo, Ferias, Eventos e Interiorismo Contract">
+<meta property="og:description" content="Estudio en Madrid de diseño expositivo, ferias y eventos, e interiorismo contract. Del concepto a la instalación.">
 <meta property="og:url" content="https://cdayco.com/">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image" content="https://cdayco.com/og-image.jpg">
@@ -20,7 +20,7 @@
 <meta property="og:image:height" content="630">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CDA & Co. — From Design to Installation">
+<meta name="twitter:title" content="CDA & Co. | Diseño Expositivo, Ferias, Eventos e Interiorismo Contract">
 <meta name="twitter:description" content="Diseño, dirección y producción. Ferias, exposiciones, grandes eventos, interiorismo y contract.">
 <meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
 
@@ -50,12 +50,21 @@
       "@id": "https://cdayco.com/#cda-co",
       "name": "CDA & Co.",
       "alternateName": "CDA & Co. — From Design to Installation",
-      "description": "Estudio multidisciplinar de diseño, dirección y producción. Ferias, exposiciones y grandes eventos. Interiorismo y contract.",
+      "description": "Estudio multidisciplinar en Madrid especializado en diseño expositivo, dirección y producción de ferias y eventos, e interiorismo contract.",
       "url": "https://cdayco.com/",
       "email": "c.abril@cdayco.com",
       "slogan": "From Design to Installation",
       "founder": { "@id": "https://cdayco.com/#carolina-abril" },
       "areaServed": ["Madrid", "España"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de CDA & Co.",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@id":"https://cdayco.com/diseno-expositivo#service"}},
+          {"@type":"Offer","itemOffered":{"@id":"https://cdayco.com/direccion-produccion-eventos#service"}},
+          {"@type":"Offer","itemOffered":{"@id":"https://cdayco.com/interiorismo-contract#service"}}
+        ]
+      },
       "sameAs": ["https://www.linkedin.com/in/carolina-abril-18208840"]
     }
   ]
@@ -81,7 +90,6 @@
 
   *,*::before,*::after{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  html,body{overflow-x:hidden;}
   body{
     margin:0;background:var(--paper);color:var(--ink);
     font-family:var(--sans);font-size:16px;line-height:1.65;
@@ -103,7 +111,6 @@
     display:flex;align-items:center;gap:10px;
   }
   .eyebrow .code{color:var(--ink-soft);}
-  .eyebrow span,.eyebrow .code{white-space:nowrap;}
   .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
 
   .skip-link{
@@ -244,7 +251,7 @@
 
   /* Metodologia */
   .method-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-  @media (max-width:980px){.method-grid{grid-template-columns:repeat(2,1fr);}.method-grid .method:last-child:nth-child(odd){grid-column:1 / -1;}}
+  @media (max-width:980px){.method-grid{grid-template-columns:repeat(2,1fr);}}
   @media (max-width:560px){.method-grid{grid-template-columns:1fr;}}
   .method{background:var(--white);padding:24px 20px;}
   .method .code{font-family:var(--mono);font-size:.66rem;color:var(--gold);letter-spacing:.1em;}
@@ -329,7 +336,7 @@
 <header>
   <div class="header-inner">
     <a class="logo-link" href="#inicio" aria-label="CDA & Co. — inicio">
-      <img src="/assets/logo-cda-co-display.png" alt="CDA & Co. — From Design to Installation">
+      <img src="/assets/logo-cda-co-official.png" alt="CDA & Co. — From Design to Installation">
     </a>
     <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
       <a href="#que-hacemos">Qué hacemos</a>
@@ -351,7 +358,7 @@
     <div class="wrap">
       <div class="hero-top" data-reveal>
         <div class="eyebrow"><span class="code">A—00</span> CDA &amp; Co.</div>
-        <h1>Diseño, dirección y producción de proyectos.</h1>
+        <h1>Diseño expositivo, ferias, eventos e interiorismo contract.</h1>
         <p class="lede">Somos un estudio multidisciplinar especializado en ferias, exposiciones y grandes eventos, y en interiorismo y contract. Para cada proyecto reunimos y coordinamos el equipo adecuado, bajo una misma dirección.</p>
         <div class="hero-ctas">
           <a class="cta-btn gold" href="#que-hacemos">Qué hacemos</a>
@@ -592,7 +599,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="logo-plate"><img src="/assets/logo-cda-co-display.png" alt="CDA & Co."></span>
+        <span class="logo-plate"><img src="/assets/logo-cda-co-official.png" alt="CDA & Co."></span>
         <p>From Design to Installation</p>
       </div>
       <div class="footer-nav">

@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dirección y Producción de Eventos y Ferias | CDA & Co.</title>
-<meta name="description" content="Dirección creativa y producción integral de ferias, exposiciones y grandes eventos. Del concepto a la instalación: equipos, proveedores, logística y montaje.">
+<title>Coordinación de Ferias, Exposiciones y Eventos | CDA & Co.</title>
+<meta name="description" content="Dirección, coordinación y producción de ferias, exposiciones y eventos en Madrid y España. Estrategia, proveedores, logística, montaje e instalación.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#14140F">
 <link rel="canonical" href="https://cdayco.com/direccion-produccion-eventos">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CDA & Co.">
-<meta property="og:title" content="Dirección y Producción de Eventos y Ferias | CDA & Co.">
-<meta property="og:description" content="Concepto, formato, espacio, contenido y producción — ferias y grandes eventos dirigidos de principio a fin.">
+<meta property="og:title" content="Coordinación de Ferias, Exposiciones y Eventos | CDA & Co.">
+<meta property="og:description" content="Dirección y coordinación integral de ferias, exposiciones y eventos, del concepto a la producción, montaje e instalación.">
 <meta property="og:url" content="https://cdayco.com/direccion-produccion-eventos">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image" content="https://cdayco.com/og-image.jpg">
@@ -26,12 +26,18 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Dirección y producción de eventos",
-  "name": "Dirección & Producción de Ferias y Grandes Eventos",
-  "description": "Concepción y dirección integral de ferias, exposiciones y encuentros profesionales: concepto, formato, coordinación de proveedores, producción técnica y montaje.",
-  "provider": { "@type": "ProfessionalService", "name": "CDA & Co.", "url": "https://cdayco.com/", "email": "c.abril@cdayco.com" },
-  "areaServed": ["Madrid", "España"],
-  "url": "https://cdayco.com/direccion-produccion-eventos"
+  "serviceType": "Dirección, coordinación y producción de ferias y eventos",
+  "name": "Coordinación de Ferias, Exposiciones y Grandes Eventos",
+  "description": "Dirección y coordinación integral de ferias, exposiciones y eventos profesionales: estrategia, expositores, proveedores, producción técnica, logística, montaje e instalación.",
+  "provider": {
+    "@id": "https://cdayco.com/#cda-co"
+  },
+  "areaServed": [
+    "Madrid",
+    "España"
+  ],
+  "url": "https://cdayco.com/direccion-produccion-eventos",
+  "@id": "https://cdayco.com/direccion-produccion-eventos#service"
 }
 </script>
 
@@ -40,18 +46,16 @@
     --serif:'Fraunces',Georgia,serif;--sans:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace;--maxw:1180px;}
   *,*::before,*::after{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  html,body{overflow-x:hidden;}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
   a{color:inherit;} img{max-width:100%;display:block;}
   h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.1;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
   @media (max-width:640px){.wrap{padding:0 20px;}}
   .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;}
-  .eyebrow span,.eyebrow .code{white-space:nowrap;}
   .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
 
-  header{position:sticky;top:0;z-index:100;background:rgba(245,245,243,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  header{position:sticky;top:0;z-index:100;background:rgba(246,243,236,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--maxw);margin:0 auto;flex-wrap:wrap;gap:12px;}
   .logo{display:flex;flex-direction:column;text-decoration:none;line-height:1;}
   .logo strong{font-family:var(--serif);font-size:1.2rem;font-weight:500;}
@@ -65,8 +69,8 @@
   section:last-of-type{border-bottom:none;}
   @media (max-width:640px){section{padding:56px 0;}}
 
-  .hero{padding-top:80px;position:relative;}
-  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px, transparent 1px),linear-gradient(90deg, var(--line) 1px, transparent 1px);background-size:56px 56px;opacity:.14;-webkit-mask-image:linear-gradient(to bottom, black 0%, black 55%, transparent 92%);mask-image:linear-gradient(to bottom, black 0%, black 55%, transparent 92%);}
+  .hero{padding-top:80px;position:relative;background-image:linear-gradient(var(--line) 1px, transparent 1px),linear-gradient(90deg, var(--line) 1px, transparent 1px);background-size:56px 56px;-webkit-mask-image:linear-gradient(to bottom, black 0%, black 55%, transparent 92%);mask-image:linear-gradient(to bottom, black 0%, black 55%, transparent 92%);}
+  .hero::before{content:"";position:absolute;inset:0;background:var(--paper);opacity:.86;}
   .hero > *{position:relative;z-index:1;}
   .hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);margin:20px 0 22px;max-width:17ch;}
   .hero p{font-size:1.06rem;color:var(--ink-soft);max-width:58ch;margin-bottom:26px;}
@@ -123,11 +127,11 @@
 
 <header>
   <div class="header-inner">
-    <a class="logo" href="/"><img src="/assets/logo-cda-co-display.png" alt="CDA &amp; Co." style="height:28px;width:auto;display:block;"></a>
+    <a class="logo" href="/"><img src="/assets/logo-cda-co-official.png" alt="CDA &amp; Co." style="height:28px;width:auto;display:block;"></a>
     <nav>
       <a href="/#que-hacemos">Qué hacemos</a>
       <a href="/#trayectoria">Trayectoria</a>
-      
+      <a href="/prensa">Prensa</a>
       <a class="cta-btn" href="#contacto">Hablemos</a>
     </nav>
   </div>
@@ -137,8 +141,8 @@
   <section class="hero">
     <div class="wrap">
       <div class="eyebrow"><span>C—01</span> Dirección &amp; Producción</div>
-      <h1>Ferias y grandes eventos, dirigidos de principio a fin.</h1>
-      <p>Concebimos y desarrollamos ferias, exposiciones y encuentros profesionales desde una visión global: concepto, formato, espacio, contenido, experiencia y producción — coordinando equipos, proveedores, fabricación, logística, montaje e instalación.</p>
+      <h1>Dirección y coordinación de ferias, exposiciones y grandes eventos.</h1>
+      <p>Concebimos, coordinamos y producimos ferias, exposiciones y encuentros profesionales desde una visión global: estrategia, formato, espacio, contenido y experiencia, coordinando expositores, equipos, proveedores, fabricación, logística, montaje e instalación.</p>
       <div class="legend">
         <span>Concepto y formato</span><span>Diseño de recorridos</span><span>Coordinación de marcas</span><span>Producción técnica</span><span>Montaje e instalación</span>
       </div>
@@ -149,8 +153,9 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow"><span>C—02</span> Qué dirigimos</div>
-        <h2>Un evento como un sistema completo.</h2>
+        <h2>Coordinación integral de ferias y exposiciones, del concepto al montaje.</h2>
         <p>Analizamos cómo llega el visitante, qué encuentra, cómo se mueve y con quién conecta. Definimos espacios, puntos de encuentro, contenidos y experiencia — y coordinamos el proyecto para que todo funcione como una única pieza.</p>
+      <p>La <strong>coordinación de ferias y exposiciones</strong> se plantea como un proceso integral: estrategia, experiencia del visitante, coordinación de marcas, expositores y proveedores, producción técnica, logística, montaje e instalación. CDA & Co. dirige estas disciplinas desde Madrid para proyectos en España.</p>
       </div>
       <div class="why-grid">
         <div class="why"><span>Antes</span><strong>Estrategia</strong><p>Objetivos, públicos, formato y concepto del evento o feria.</p></div>
@@ -164,7 +169,7 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow"><span>C—03</span> Por qué CDA &amp; Co.</div>
-        <h2>Visión completa del evento, no solo del espacio.</h2>
+        <h2>Dirección estratégica y producción integral, no solo organización del espacio.</h2>
       </div>
       <div class="why-grid">
         <div class="why"><strong>25+</strong><span>Años de trayectoria</span><p>Dirigiendo ferias, exposiciones y grandes encuentros profesionales.</p></div>
@@ -179,7 +184,7 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow"><span>C—04</span> Contacto</div>
-        <h2>Hablemos de tu próxima feria o evento.</h2>
+        <h2>Hablemos de tu próxima feria, exposición o evento.</h2>
       </div>
       <div class="contact-grid">
         <div class="contact-info">

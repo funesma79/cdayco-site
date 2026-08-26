@@ -3,104 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prensa — Design Week Marbella en los medios | CDA & Co.</title>
-<meta name="description" content="Cobertura de prensa de Design Week Marbella, dirigido por Carolina Abril (CDA & Co.): ABC, OKDIARIO, Revista CIC, ViviMarbella y otros medios.">
+<title>Prensa — Marbella Design en los medios | CDA & Co.</title>
+<meta name="description" content="Cobertura de prensa de Marbella Design (antes Design Week Marbella), feria dirigida por Carolina Abril desde 2010: ABC, OKDIARIO, Revista CIC, ViviMarbella y otros medios.">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#111111">
 <link rel="canonical" href="https://cdayco.com/prensa">
-<meta name="theme-color" content="#14140F">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CDA & Co.">
+<meta property="og:title" content="Prensa — Marbella Design en los medios | CDA & Co.">
+<meta property="og:description" content="Cobertura de prensa de Marbella Design, feria dirigida por Carolina Abril desde 2010.">
+<meta property="og:url" content="https://cdayco.com/prensa">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://cdayco.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="stylesheet" href="base.css">
 
 <style>
-  :root{
-    --ink:#14140F;--ink-soft:#4B4A42;--paper:#F5F5F3;--paper-alt:#EAEAE7;
-    --line:#D8D8D5;--gold:#A8905C;--gold-soft:#C9B98D;--white:#FBFAF7;
-    --serif:'Fraunces',Georgia,serif;--sans:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace;
-    --maxw:1180px;
-  }
-  *,*::before,*::after{box-sizing:border-box;}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;}
-  a{color:inherit;}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
-  @media (max-width:640px){.wrap{padding:0 20px;}}
-
-  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;}
-  .eyebrow span,.eyebrow .code{white-space:nowrap;}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block;}
-  .eyebrow .code{color:var(--ink-soft);}
-
-  header{position:sticky;top:0;z-index:100;background:rgba(245,245,243,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
-  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--maxw);margin:0 auto;}
-  .logo{display:flex;flex-direction:column;text-decoration:none;line-height:1;}
-  .logo strong{font-family:var(--serif);font-size:1.3rem;font-weight:500;}
-  .logo span{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--ink-soft);margin-top:3px;}
-  nav a{text-decoration:none;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--ink);padding:10px 18px;transition:background .3s ease,color .3s ease;}
-  nav a:hover{background:var(--ink);color:var(--white);}
-
-  main{padding:88px 0 110px;}
-  .page-head{max-width:720px;margin-bottom:64px;}
-  .page-head h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,2.8rem);margin:20px 0 20px;}
-  .page-head p{color:var(--ink-soft);font-size:1.02rem;max-width:62ch;}
+  .prensa-page main{padding:80px 0 110px;}
+  .page-head{max-width:720px;margin-bottom:56px;}
+  .page-head h1{font-size:clamp(2rem,4vw,2.6rem);margin:16px 0 20px;}
+  .page-head p{font-family:var(--sans);font-weight:300;color:var(--ink-soft);font-size:1rem;max-width:64ch;line-height:1.6;}
   .page-head p+p{margin-top:12px;}
 
-  .titleblock{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;background:var(--paper-alt);border:1px solid var(--line);margin-bottom:72px;}
-  .titleblock div{padding:16px 20px;border-right:1px solid var(--line);}
-  .titleblock div:last-child{border-right:none;}
-  .titleblock dt{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin:0 0 5px;}
-  .titleblock dd{margin:0;font-family:var(--mono);font-size:.75rem;color:var(--ink);}
-  @media (max-width:700px){.titleblock{grid-template-columns:1fr 1fr;}}
+  .year-block{margin-bottom:48px;}
+  .year-label{font-family:var(--mono);font-size:.82rem;letter-spacing:.08em;color:var(--gold);padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:4px;}
 
-  .year-block{margin-bottom:56px;}
-  .year-label{font-family:var(--mono);font-size:.85rem;letter-spacing:.08em;color:var(--gold);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:4px;}
-
-  .clip{display:grid;grid-template-columns:200px 1fr auto;gap:24px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line);}
+  .clip{display:grid;grid-template-columns:200px 1fr auto;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line);}
   .clip:hover{background:var(--paper-alt);}
-  .clip-outlet{font-family:var(--serif);font-size:1.15rem;font-weight:500;}
-  .clip-body h3{font-family:var(--sans);font-weight:500;font-size:.98rem;margin:0 0 4px;color:var(--ink);}
-  .clip-body a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .25s ease;}
+  .clip-outlet{font-family:var(--sans);font-size:1.02rem;font-weight:600;}
+  .clip-body h2{font-family:var(--sans);font-weight:500;font-size:.95rem;margin:0 0 4px;color:var(--ink);}
+  .clip-body a{border-bottom:1px solid transparent;transition:border-color .25s ease;}
   .clip-body a:hover{border-color:var(--gold);}
   .clip-date{font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);}
-  .clip-link{font-family:var(--mono);font-size:.72rem;color:var(--gold);white-space:nowrap;text-decoration:none;}
+  .clip-link{font-family:var(--mono);font-size:.72rem;color:var(--gold-text);white-space:nowrap;}
   @media (max-width:700px){
-    .clip{grid-template-columns:1fr;gap:6px;padding:20px 0;}
-    .clip-outlet{font-size:1.05rem;}
+    .clip{grid-template-columns:1fr;gap:6px;padding:18px 0;}
+    .clip-outlet{font-size:.95rem;}
   }
 
-  .note{margin-top:64px;padding:24px 28px;border:1px dashed var(--line);background:var(--white);}
-  .note p{color:var(--ink-soft);font-size:.88rem;margin:0;}
-
-  footer{background:var(--ink);color:var(--paper);padding:40px 0;margin-top:40px;}
-  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:.72rem;}
-  footer a{text-decoration:none;color:var(--paper);opacity:.85;}
-  footer a:hover{opacity:1;text-decoration:underline;}
+  .note{margin-top:56px;padding:22px 26px;border:1px dashed var(--line);background:var(--paper-alt);max-width:720px;}
+  .note p{font-family:var(--sans);font-weight:300;color:var(--ink-soft);font-size:.85rem;margin:0;line-height:1.6;}
 </style>
 </head>
-<body>
+<body class="prensa-page">
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
 <header>
   <div class="header-inner">
-    <a class="logo" href="/"><img src="/assets/logo-cda-co-display.png" alt="CDA & Co." style="height:28px;width:auto;display:block;"></a>
-    <nav><a href="/#contacto">Hablemos</a></nav>
+    <a class="logo-link" href="/"><img src="assets/logo-cda-co-ink.png" alt="CDA & Co."></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav">
+      <a href="/">Inicio</a>
+      <a href="/estudio">Estudio</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/proyectos">Proyectos</a>
+      <a href="/carolina">Carolina</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
   </div>
 </header>
 
-<main>
+<main id="main">
   <div class="wrap">
     <div class="page-head">
-      <div class="eyebrow"><span class="code">P—00</span> Dossier de prensa</div>
-      <h1>Design Week Marbella en los medios</h1>
-      <p>Selección de cobertura de prensa de Design Week Marbella (2021–2022), la feria internacional de arquitectura, interiorismo y diseño dirigida por Carolina Abril.</p>
+      <div class="eyebrow gold">Dossier de prensa</div>
+      <h1>Marbella Design en los medios</h1>
+      <p>Selección de cobertura de prensa de la feria (2021–2022), dirigida por Carolina Abril desde 2010 bajo el nombre con el que se celebró en esas ediciones, Design Week Marbella — el mismo proyecto que hoy se presenta como Marbella Design.</p>
       <p>Las fotografías de cada artículo son propiedad de su medio o fotógrafo correspondiente — aquí solo se referencia el medio y se enlaza a la publicación original.</p>
-    </div>
-
-    <div class="titleblock">
-      <div><dt>Dossier</dt><dd>Cobertura de prensa DWM</dd></div>
-      <div><dt>Periodo</dt><dd>2021 — 2022</dd></div>
-      <div><dt>Medios</dt><dd>8 publicaciones</dd></div>
-      <div><dt>Hoja</dt><dd>P—00 · Índice</dd></div>
     </div>
 
     <div class="year-block">
@@ -109,7 +85,7 @@
       <article class="clip">
         <div class="clip-outlet">OKDIARIO</div>
         <div class="clip-body">
-          <h3><a href="https://okdiario.com/coolthelifestyle/arquitectura/todo-sobre-design-week-marbella-gran-cita-interiorismo-arquitectura-238523" target="_blank" rel="noopener">Todo sobre la Design Week Marbella, la gran cita con el interiorismo y la arquitectura</a></h3>
+          <h2><a href="https://okdiario.com/coolthelifestyle/arquitectura/todo-sobre-design-week-marbella-gran-cita-interiorismo-arquitectura-238523" target="_blank" rel="noopener">Todo sobre la Design Week Marbella, la gran cita con el interiorismo y la arquitectura</a></h2>
           <span class="clip-date">11 abril 2022 · Coolthelifestyle</span>
         </div>
         <a class="clip-link" href="https://okdiario.com/coolthelifestyle/arquitectura/todo-sobre-design-week-marbella-gran-cita-interiorismo-arquitectura-238523" target="_blank" rel="noopener">Leer ↗</a>
@@ -118,7 +94,7 @@
       <article class="clip">
         <div class="clip-outlet">ViviMarbella</div>
         <div class="clip-body">
-          <h3><a href="https://www.vivimarbella.com/empieza-design-week-marbella-2022-lo-mejor-de-la-arquitectura-el-interiorismo-el-arte-y-el-diseno/" target="_blank" rel="noopener">Empieza Design Week Marbella 2022: lo mejor de la arquitectura, el interiorismo, el arte y el diseño</a></h3>
+          <h2><a href="https://www.vivimarbella.com/empieza-design-week-marbella-2022-lo-mejor-de-la-arquitectura-el-interiorismo-el-arte-y-el-diseno/" target="_blank" rel="noopener">Empieza Design Week Marbella 2022: lo mejor de la arquitectura, el interiorismo, el arte y el diseño</a></h2>
           <span class="clip-date">23 septiembre 2022</span>
         </div>
         <a class="clip-link" href="https://www.vivimarbella.com/empieza-design-week-marbella-2022-lo-mejor-de-la-arquitectura-el-interiorismo-el-arte-y-el-diseno/" target="_blank" rel="noopener">Leer ↗</a>
@@ -127,7 +103,7 @@
       <article class="clip">
         <div class="clip-outlet">Encuentros</div>
         <div class="clip-body">
-          <h3><a href="https://www.encuentroscon.com/2022/09/29/design-week-marbella-2022-lo-de-la-arquitectura-interiorismo-y-arte/" target="_blank" rel="noopener">Design Week Marbella 2022: lo "+" de la arquitectura, interiorismo y arte</a></h3>
+          <h2><a href="https://www.encuentroscon.com/2022/09/29/design-week-marbella-2022-lo-de-la-arquitectura-interiorismo-y-arte/" target="_blank" rel="noopener">Design Week Marbella 2022: lo "+" de la arquitectura, interiorismo y arte</a></h2>
           <span class="clip-date">29 septiembre 2022</span>
         </div>
         <a class="clip-link" href="https://www.encuentroscon.com/2022/09/29/design-week-marbella-2022-lo-de-la-arquitectura-interiorismo-y-arte/" target="_blank" rel="noopener">Leer ↗</a>
@@ -136,7 +112,7 @@
       <article class="clip">
         <div class="clip-outlet">Revista CIC</div>
         <div class="clip-body">
-          <h3><a href="https://www.cicconstruccion.com/texto-diario/mostrar/3926801/exito-participacion-design-week-marbella-2022-12000-visitantes-450-marcas-participantes" target="_blank" rel="noopener">Más de 12.000 visitantes y 450 marcas participaron en la Design Week Marbella 2022</a></h3>
+          <h2><a href="https://www.cicconstruccion.com/texto-diario/mostrar/3926801/exito-participacion-design-week-marbella-2022-12000-visitantes-450-marcas-participantes" target="_blank" rel="noopener">Más de 12.000 visitantes y 450 marcas participaron en la Design Week Marbella 2022</a></h2>
           <span class="clip-date">7 octubre 2022 · Construcción y Arquitectura</span>
         </div>
         <a class="clip-link" href="https://www.cicconstruccion.com/texto-diario/mostrar/3926801/exito-participacion-design-week-marbella-2022-12000-visitantes-450-marcas-participantes" target="_blank" rel="noopener">Leer ↗</a>
@@ -145,7 +121,7 @@
       <article class="clip">
         <div class="clip-outlet">Diario Abierto</div>
         <div class="clip-body">
-          <h3><a href="https://www.diarioabierto.es/578002/abre-sus-puertas-design-week-marbella" target="_blank" rel="noopener">Abre sus puertas Design Week Marbella</a></h3>
+          <h2><a href="https://www.diarioabierto.es/578002/abre-sus-puertas-design-week-marbella" target="_blank" rel="noopener">Abre sus puertas Design Week Marbella</a></h2>
           <span class="clip-date">22 septiembre 2022</span>
         </div>
         <a class="clip-link" href="https://www.diarioabierto.es/578002/abre-sus-puertas-design-week-marbella" target="_blank" rel="noopener">Leer ↗</a>
@@ -154,7 +130,7 @@
       <article class="clip">
         <div class="clip-outlet">Spain Premium Magazine</div>
         <div class="clip-body">
-          <h3><a href="https://spainpremiummagazine.com/spain-premium-en-design-week-marbella-2022/" target="_blank" rel="noopener">Spain Premium en Design Week Marbella 2022</a></h3>
+          <h2><a href="https://spainpremiummagazine.com/spain-premium-en-design-week-marbella-2022/" target="_blank" rel="noopener">Spain Premium en Design Week Marbella 2022</a></h2>
           <span class="clip-date">2022</span>
         </div>
         <a class="clip-link" href="https://spainpremiummagazine.com/spain-premium-en-design-week-marbella-2022/" target="_blank" rel="noopener">Leer ↗</a>
@@ -167,7 +143,7 @@
       <article class="clip">
         <div class="clip-outlet">ABC</div>
         <div class="clip-body">
-          <h3><a href="https://www.abc.es/summum/living/ocio/abci-alejandra-pombo-y-lladro-suman-design-week-marbella-202107121625_noticia.html" target="_blank" rel="noopener">Alejandra Pombo y Lladró se suman a Design Week Marbella</a></h3>
+          <h2><a href="https://www.abc.es/summum/living/ocio/abci-alejandra-pombo-y-lladro-suman-design-week-marbella-202107121625_noticia.html" target="_blank" rel="noopener">Alejandra Pombo y Lladró se suman a Design Week Marbella</a></h2>
           <span class="clip-date">12 julio 2021 · Summum</span>
         </div>
         <a class="clip-link" href="https://www.abc.es/summum/living/ocio/abci-alejandra-pombo-y-lladro-suman-design-week-marbella-202107121625_noticia.html" target="_blank" rel="noopener">Leer ↗</a>
@@ -176,7 +152,7 @@
       <article class="clip">
         <div class="clip-outlet">OKDIARIO</div>
         <div class="clip-body">
-          <h3><a href="https://okdiario.com/coolthelifestyle/arquitectura/design-week-marbella-raquel-oliva-93175" target="_blank" rel="noopener">Design Week Marbella, por Raquel Oliva</a></h3>
+          <h2><a href="https://okdiario.com/coolthelifestyle/arquitectura/design-week-marbella-raquel-oliva-93175" target="_blank" rel="noopener">Design Week Marbella, por Raquel Oliva</a></h2>
           <span class="clip-date">28 mayo 2021 · Coolthelifestyle</span>
         </div>
         <a class="clip-link" href="https://okdiario.com/coolthelifestyle/arquitectura/design-week-marbella-raquel-oliva-93175" target="_blank" rel="noopener">Leer ↗</a>
@@ -185,7 +161,7 @@
       <article class="clip">
         <div class="clip-outlet">Construnario</div>
         <div class="clip-body">
-          <h3><a href="https://www.construnario.com/notiweb/55639/villeroy-boch-presente-en-la-primera-edicion-de-design-week-marbella" target="_blank" rel="noopener">Villeroy &amp; Boch presente en la primera edición de Design Week Marbella</a></h3>
+          <h2><a href="https://www.construnario.com/notiweb/55639/villeroy-boch-presente-en-la-primera-edicion-de-design-week-marbella" target="_blank" rel="noopener">Villeroy &amp; Boch presente en la primera edición de Design Week Marbella</a></h2>
           <span class="clip-date">24 septiembre 2021</span>
         </div>
         <a class="clip-link" href="https://www.construnario.com/notiweb/55639/villeroy-boch-presente-en-la-primera-edicion-de-design-week-marbella" target="_blank" rel="noopener">Leer ↗</a>
@@ -193,20 +169,52 @@
     </div>
 
     <div class="note">
-      <p><strong>Nota de verificación:</strong> este listado recoge la cobertura de las dos primeras ediciones de Design Week Marbella (2021–2022), en las que Carolina Abril aparece nombrada como directora general. Antes de publicar, confirma que el texto sigue siendo exacto respecto a la situación actual del evento.</p>
+      <p><strong>Nota de verificación:</strong> este listado recoge la cobertura de las dos primeras ediciones de la feria (2021–2022), publicada en su momento bajo el nombre Design Week Marbella. Antes de publicar, confirma con Carolina que el enlace con "Marbella Design" y el resto del texto siguen siendo exactos.</p>
     </div>
 
   </div>
 </main>
 
 <footer>
-  <div class="wrap footer-inner">
-    <span>© <span id="y"></span> CDA &amp; Co. — Carolina Abril</span>
-    <a href="/">← Volver a cdayco.com</a>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-cda-co-white.png" alt="CDA & Co.">
+        <span>From Design to Installation</span>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Estudio</h4>
+          <ul><li><a href="/estudio">Estudio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/proyectos">Proyectos</a></li><li><a href="/carolina">Carolina</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul><li><a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a></li><li><a href="tel:+34657213557">657 21 35 57</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul><li><a href="/aviso-legal">Aviso legal</a></li><li><a href="/privacidad">Privacidad</a></li><li><a href="/cookies">Cookies</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="y"></span> CDA & Co. — Madrid · Spain</span>
+      <span>cdayco.com</span>
+    </div>
   </div>
 </footer>
 
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const nav = document.getElementById('primary-nav');
+  const toggle = document.getElementById('menu-toggle');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false');
+  }));
+</script>
 </body>
 </html>

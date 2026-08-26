@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto | CDA & Co.</title>
+<meta name="description" content="¿Tienes un proyecto en mente? Hablemos.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#111111">
+<link rel="canonical" href="https://cdayco.com/contacto">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CDA & Co.">
+<meta property="og:title" content="Contacto | CDA & Co.">
+<meta property="og:description" content="¿Tienes un proyecto en mente? Hablemos.">
+<meta property="og:url" content="https://cdayco.com/contacto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://cdayco.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contacto | CDA & Co.">
+<meta name="twitter:description" content="¿Tienes un proyecto en mente? Hablemos.">
+<meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<link rel="preload" href="/fonts/montserrat-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="base.css">
+<style>
+  .cwrap{padding:88px 0 110px;}
+  .chead{max-width:560px;margin-bottom:56px;}
+  .chead h1{font-size:clamp(2rem,4.6vw,3rem);}
+  .chead p{font-family:var(--sans);font-weight:300;font-size:1.15rem;color:var(--ink-soft);margin-top:16px;}
+
+  form.contact-form{max-width:640px;display:flex;flex-direction:column;gap:26px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  @media (max-width:560px){.form-row{grid-template-columns:1fr;}}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field label{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;}
+  .field input,.field textarea{
+    font-family:var(--sans);font-weight:400;font-size:1rem;padding:12px 0;background:transparent;
+    border:none;border-bottom:1px solid var(--line);color:var(--ink);border-radius:0;
+  }
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--ink);}
+  .field textarea{resize:vertical;min-height:100px;}
+  .hp-field{position:absolute;left:-9999px;}
+  .consent{display:flex;align-items:flex-start;gap:9px;font-size:.82rem;color:var(--ink-soft);font-family:var(--sans);}
+  .consent a{text-decoration:underline;}
+  .form-submit{
+    align-self:flex-start;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+    background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:15px 26px;cursor:pointer;
+  }
+  .form-submit:hover{background:transparent;color:var(--ink);}
+  .form-status{font-family:var(--mono);font-size:.8rem;min-height:1.2em;}
+  .form-status[data-state="ok"]{color:#4C7A4E;}
+  .form-status[data-state="err"]{color:#A3503F;}
+
+  .direct{margin-top:64px;padding-top:36px;border-top:1px solid var(--line);display:flex;gap:56px;flex-wrap:wrap;}
+  .direct div dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
+  .direct div dd{font-size:1.05rem;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header>
+  <div class="header-inner">
+    <a class="logo-link" href="/"><img src="assets/logo-cda-co-ink.png" alt="CDA & Co."></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav">
+      <a href="/">Inicio</a>
+      <a href="/estudio">Estudio</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/proyectos">Proyectos</a>
+      <a href="/carolina">Carolina</a>
+      <a href="/contacto" class="active">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="cwrap">
+    <div class="wrap">
+      <div class="chead">
+        <div class="eyebrow gold" style="margin-bottom:20px;">Contacto</div>
+        <h1>Hablemos.</h1>
+        <p>¿Tienes un proyecto en mente?</p>
+      </div>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="f-mensaje">Mensaje</label><textarea id="f-mensaje" name="mensaje" required></textarea></div>
+        <div class="hp-field" aria-hidden="true"><label for="f-website">No rellenar</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="/privacidad">política de privacidad</a>.</span></label>
+        <button class="form-submit" type="submit">Enviar mensaje</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="direct">
+        <dl><dt>Email</dt><dd><a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a></dd></dl>
+        <dl><dt>Teléfono</dt><dd><a href="tel:+34657213557">657 21 35 57</a></dd></dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-cda-co-white.png" alt="CDA & Co.">
+        <span>From Design to Installation</span>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Estudio</h4>
+          <ul><li><a href="/estudio">Estudio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/proyectos">Proyectos</a></li><li><a href="/carolina">Carolina</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul><li><a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a></li><li><a href="tel:+34657213557">657 21 35 57</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul><li><a href="/aviso-legal">Aviso legal</a></li><li><a href="/privacidad">Privacidad</a></li><li><a href="/cookies">Cookies</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="y"></span> CDA & Co. — Madrid · Spain</span>
+      <span>cdayco.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const nav = document.getElementById('primary-nav');
+  const toggle = document.getElementById('menu-toggle');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false');
+  }));
+
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.dataset.state=''; status.textContent='';
+    if (form.website.value) return;
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const payload = Object.fromEntries(new FormData(form).entries());
+    const btn = form.querySelector('.form-submit'); btn.disabled = true;
+    try {
+      const res = await fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+      if (!res.ok) throw new Error('bad-response');
+      status.dataset.state='ok'; status.textContent='Mensaje enviado. Te responderé lo antes posible.'; form.reset();
+    } catch(err) {
+      status.dataset.state='err'; status.innerHTML='No se pudo enviar. Escribe a <a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a>.';
+    } finally { btn.disabled = false; }
+  });
+</script>
+</body>
+</html>

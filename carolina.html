@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carolina | CDA & Co.</title>
+<meta name="description" content="CDA & Co. está dirigida por Carolina Abril, directora de diseño y eventos.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#111111">
+<link rel="canonical" href="https://cdayco.com/carolina">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="CDA & Co.">
+<meta property="og:title" content="Carolina | CDA & Co.">
+<meta property="og:description" content="CDA & Co. está dirigida por Carolina Abril, directora de diseño y eventos.">
+<meta property="og:url" content="https://cdayco.com/carolina">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://cdayco.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carolina | CDA & Co.">
+<meta name="twitter:description" content="CDA & Co. está dirigida por Carolina Abril, directora de diseño y eventos.">
+<meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<link rel="preload" href="/fonts/montserrat-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="base.css">
+<style>
+  .sig{padding:140px 0;min-height:56vh;display:flex;align-items:center;}
+  @media (max-width:700px){.sig{padding:88px 0;min-height:auto;}}
+  .sig .wrap{max-width:640px;}
+  .sig p{font-family:var(--sans);font-weight:300;font-size:1.35rem;line-height:1.6;color:var(--ink);}
+  .sig p b{font-weight:600;}
+  .sig .link{margin-top:28px;display:inline-block;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header>
+  <div class="header-inner">
+    <a class="logo-link" href="/"><img src="assets/logo-cda-co-ink.png" alt="CDA & Co."></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav">
+      <a href="/">Inicio</a>
+      <a href="/estudio">Estudio</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/proyectos">Proyectos</a>
+      <a href="/carolina" class="active">Carolina</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="sig">
+    <div class="wrap">
+      <div class="eyebrow gold" style="margin-bottom:24px;">Carolina</div>
+      <p>CDA &amp; Co. está dirigida por <b>Carolina Abril</b>, directora de diseño y eventos con más de 25 años de experiencia en arquitectura, interiorismo, ferias y grandes eventos.</p>
+      <a class="link" href="https://www.linkedin.com/in/carolina-abril-18208840" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-cda-co-white.png" alt="CDA & Co.">
+        <span>From Design to Installation</span>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Estudio</h4>
+          <ul><li><a href="/estudio">Estudio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/proyectos">Proyectos</a></li><li><a href="/carolina">Carolina</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul><li><a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a></li><li><a href="tel:+34657213557">657 21 35 57</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul><li><a href="/aviso-legal">Aviso legal</a></li><li><a href="/privacidad">Privacidad</a></li><li><a href="/cookies">Cookies</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="y"></span> CDA & Co. — Madrid · Spain</span>
+      <span>cdayco.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const nav = document.getElementById('primary-nav');
+  const toggle = document.getElementById('menu-toggle');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false');
+  }));
+</script>
+</body>
+</html>

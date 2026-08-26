@@ -6,7 +6,7 @@
 <title>Preguntas Frecuentes | CDA & Co.</title>
 <meta name="description" content="Resolvemos las dudas más habituales sobre diseño expositivo, dirección de eventos, interiorismo & contract y cómo empezar un proyecto con CDA & Co.">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#14140F">
+<meta name="theme-color" content="#111111">
 <link rel="canonical" href="https://cdayco.com/preguntas-frecuentes">
 
 <meta property="og:type" content="website">
@@ -15,11 +15,13 @@
 <meta property="og:description" content="Resolvemos las dudas más habituales sobre nuestros servicios y cómo trabajamos.">
 <meta property="og:url" content="https://cdayco.com/preguntas-frecuentes">
 <meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://cdayco.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="stylesheet" href="base.css">
 
 <script type="application/ld+json">
 {
@@ -59,7 +61,7 @@
     {
       "@type": "Question",
       "name": "¿Qué experiencia tiene CDA & Co. en ferias y grandes eventos?",
-      "acceptedAnswer": { "@type": "Answer", "text": "CDA & Co. reúne más de 25 años de experiencia en diseño, arquitectura e interiorismo, incluyendo el desarrollo y dirección de Marbella Design desde 2010 y proyectos vinculados al Principado de Andorra." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Carolina Abril tiene más de 25 años de trayectoria en diseño, arquitectura e interiorismo, con experiencia directa en proyectos como Marbella Design (desde 2010) y proyectos vinculados al Principado de Andorra." }
     },
     {
       "@type": "Question",
@@ -71,59 +73,107 @@
 </script>
 
 <style>
-  :root{--ink:#14140F;--ink-soft:#4B4A42;--paper:#F5F5F3;--line:#D8D8D5;--gold:#A8905C;--white:#FBFAF7;
-    --serif:'Fraunces',Georgia,serif;--sans:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace;--maxw:900px;}
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-  header{border-bottom:1px solid var(--line);padding:20px 0;position:sticky;top:0;background:rgba(245,245,243,.9);backdrop-filter:blur(8px);z-index:10;}
-  .header-inner{display:flex;justify-content:space-between;align-items:center;max-width:var(--maxw);margin:0 auto;padding:0 24px;flex-wrap:wrap;gap:10px;}
-  .logo{font-family:var(--serif);font-size:1.15rem;text-decoration:none;color:var(--ink);}
-  header a.back{font-family:var(--mono);font-size:.78rem;text-decoration:none;border-bottom:1px solid var(--line);}
-  main{padding:64px 0 96px;}
-  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
-  h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;margin:0 0 16px;}
-  .intro{color:var(--ink-soft);max-width:64ch;margin-bottom:48px;}
-  .faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+  .faq-page main{padding:80px 0 96px;}
+  .faq-page .intro{font-family:var(--sans);font-weight:300;color:var(--ink-soft);max-width:64ch;margin:20px 0 48px;font-size:1.05rem;line-height:1.6;}
+  .faq-item{border-bottom:1px solid var(--line);padding:26px 0;max-width:820px;}
   .faq-item:first-of-type{border-top:1px solid var(--line);}
-  .faq-item h2{font-family:var(--serif);font-weight:500;font-size:1.15rem;margin:0 0 10px;}
-  .faq-item p{color:var(--ink-soft);font-size:.96rem;margin:0;}
-  .cta{margin-top:48px;padding:28px;background:var(--white);border:1px solid var(--line);text-align:center;}
-  .cta p{color:var(--ink-soft);margin:0 0 16px;}
-  .cta a{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);padding:12px 22px;display:inline-block;}
-  .cta a:hover{background:var(--gold);color:var(--ink);}
-  footer{border-top:1px solid var(--line);padding:28px 0;font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);}
+  .faq-item h2{font-family:var(--sans);font-weight:600;font-size:1.1rem;margin:0 0 10px;}
+  .faq-item p{font-family:var(--sans);font-weight:300;color:var(--ink-soft);font-size:.98rem;margin:0;line-height:1.65;}
+  .faq-cta{margin-top:48px;padding:32px;background:var(--paper-alt);text-align:center;max-width:820px;}
+  .faq-cta p{font-family:var(--sans);font-weight:300;color:var(--ink-soft);margin:0 0 16px;}
+  .faq-cta a{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--ink);padding:12px 22px;display:inline-block;}
+  .faq-cta a:hover{background:var(--ink);color:var(--paper);}
 </style>
 </head>
-<body>
-<header><div class="header-inner"><a class="logo" href="/"><img src="/assets/logo-cda-co-display.png" alt="CDA &amp; Co." style="height:26px;width:auto;display:block;"></a><a class="back" href="/">← cdayco.com</a></div></header>
-<main class="wrap">
-  <div class="eyebrow">E—00 · FAQ</div>
-  <h1>Preguntas frecuentes</h1>
-  <p class="intro">Las dudas que más nos preguntan sobre diseño expositivo, dirección de eventos, interiorismo &amp; contract y cómo empezar a trabajar juntos.</p>
+<body class="faq-page">
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <div class="faq-item"><h2>¿Qué hace exactamente CDA &amp; Co.?</h2><p>CDA &amp; Co. es un estudio multidisciplinar de diseño, dirección y producción de espacios, exposiciones y grandes eventos. Trabajamos cuatro líneas principales: exposiciones, ferias y grandes eventos; diseño expositivo y espacios efímeros; interiorismo y contract; y dirección y producción de proyectos, desde el concepto inicial hasta la instalación final.</p></div>
-
-  <div class="faq-item"><h2>¿En qué consiste el diseño expositivo?</h2><p>Diseñamos stands, pabellones, instalaciones, escenografías y showrooms para marcas, instituciones y fabricantes. El objetivo no es solo un espacio bonito, sino un espacio que comunique un mensaje concreto y genere una experiencia que se recuerde, con recorrido, materialidad e iluminación pensados desde el concepto.</p></div>
-
-  <div class="faq-item"><h2>¿Qué diferencia hay entre diseño expositivo e interiorismo &amp; contract?</h2><p>El diseño expositivo se centra en espacios temporales — ferias, eventos, stands — pensados para durar días. El interiorismo &amp; contract trabaja espacios permanentes, con la misma filosofía de identidad y funcionalidad, pero con otra escala de materiales, mobiliario y acabados pensados para durar en el tiempo.</p></div>
-
-  <div class="faq-item"><h2>¿Se encargan también de la producción, no solo del diseño?</h2><p>Sí. Asumimos la dirección y coordinación del proyecto de principio a fin: equipos, proveedores, fabricación, logística, montaje e instalación. Podemos entrar en un proyecto completo o incorporarnos en una fase concreta, según lo que necesite cada cliente.</p></div>
-
-  <div class="faq-item"><h2>¿Trabajan solo en Madrid o en toda España?</h2><p>El estudio tiene base en Madrid, pero la trayectoria de Carolina Abril incluye proyectos en distintos puntos de España y en el Principado de Andorra. Cuéntanos dónde está tu proyecto y lo valoramos.</p></div>
-
-  <div class="faq-item"><h2>¿Cuánto tiempo se tarda en diseñar y montar una feria o stand?</h2><p>Depende mucho del tipo y tamaño del proyecto — no es lo mismo un stand de feria que una exposición completa. Cuando nos escribes con los datos básicos (fecha del evento, tipo de espacio, superficie aproximada), te damos un plazo realista para tu caso concreto.</p></div>
-
-  <div class="faq-item"><h2>¿Qué experiencia tiene CDA &amp; Co. en ferias y grandes eventos?</h2><p>CDA &amp; Co. reúne más de 25 años de experiencia en diseño, arquitectura e interiorismo, incluyendo el desarrollo y dirección de Marbella Design desde 2010 y proyectos vinculados al Principado de Andorra.</p></div>
-
-  <div class="faq-item"><h2>¿Cómo empiezo un proyecto con CDA &amp; Co.?</h2><p>Escribe a <a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a> o rellena el formulario de contacto contándonos qué tienes en mente: el tipo de proyecto, el espacio o evento y una idea de plazos. A partir de ahí concertamos una conversación para entender el proyecto en detalle.</p></div>
-
-  <div class="cta">
-    <p>¿Tu pregunta no está aquí?</p>
-    <a href="mailto:c.abril@cdayco.com">Escríbenos directamente</a>
+<header>
+  <div class="header-inner">
+    <a class="logo-link" href="/"><img src="assets/logo-cda-co-ink.png" alt="CDA & Co."></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav">
+      <a href="/">Inicio</a>
+      <a href="/estudio">Estudio</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/proyectos">Proyectos</a>
+      <a href="/carolina">Carolina</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
   </div>
+</header>
+
+<main id="main">
+  <section class="wrap">
+    <div class="eyebrow gold" style="margin-bottom:20px;">Preguntas frecuentes</div>
+    <h1 style="font-size:clamp(2rem,4.6vw,2.8rem);">Lo que más nos preguntan.</h1>
+    <p class="intro">Dudas habituales sobre diseño expositivo, dirección de eventos, interiorismo &amp; contract y cómo empezar a trabajar juntos.</p>
+
+    <div class="faq-item"><h2>¿Qué hace exactamente CDA &amp; Co.?</h2><p>CDA &amp; Co. es un estudio multidisciplinar de diseño, dirección y producción de espacios, exposiciones y grandes eventos. Trabajamos cuatro líneas principales: exposiciones, ferias y grandes eventos; diseño expositivo y espacios efímeros; interiorismo y contract; y dirección y producción de proyectos, desde el concepto inicial hasta la instalación final.</p></div>
+
+    <div class="faq-item"><h2>¿En qué consiste el diseño expositivo?</h2><p>Diseñamos stands, pabellones, instalaciones, escenografías y showrooms para marcas, instituciones y fabricantes. El objetivo no es solo un espacio bonito, sino un espacio que comunique un mensaje concreto y genere una experiencia que se recuerde, con recorrido, materialidad e iluminación pensados desde el concepto.</p></div>
+
+    <div class="faq-item"><h2>¿Qué diferencia hay entre diseño expositivo e interiorismo &amp; contract?</h2><p>El diseño expositivo se centra en espacios temporales — ferias, eventos, stands — pensados para durar días. El interiorismo &amp; contract trabaja espacios permanentes, con la misma filosofía de identidad y funcionalidad, pero con otra escala de materiales, mobiliario y acabados pensados para durar en el tiempo.</p></div>
+
+    <div class="faq-item"><h2>¿Se encargan también de la producción, no solo del diseño?</h2><p>Sí. Asumimos la dirección y coordinación del proyecto de principio a fin: equipos, proveedores, fabricación, logística, montaje e instalación. Podemos entrar en un proyecto completo o incorporarnos en una fase concreta, según lo que necesite cada cliente.</p></div>
+
+    <div class="faq-item"><h2>¿Trabajan solo en Madrid o en toda España?</h2><p>El estudio tiene base en Madrid, pero la trayectoria de Carolina Abril incluye proyectos en distintos puntos de España y en el Principado de Andorra. Cuéntanos dónde está tu proyecto y lo valoramos.</p></div>
+
+    <div class="faq-item"><h2>¿Cuánto tiempo se tarda en diseñar y montar una feria o stand?</h2><p>Depende mucho del tipo y tamaño del proyecto — no es lo mismo un stand de feria que una exposición completa. Cuando nos escribes con los datos básicos (fecha del evento, tipo de espacio, superficie aproximada), te damos un plazo realista para tu caso concreto.</p></div>
+
+    <div class="faq-item"><h2>¿Qué experiencia tiene CDA &amp; Co. en ferias y grandes eventos?</h2><p>Carolina Abril tiene más de 25 años de trayectoria en diseño, arquitectura e interiorismo, con experiencia directa en proyectos como Marbella Design (desde 2010) y proyectos vinculados al Principado de Andorra.</p></div>
+
+    <div class="faq-item"><h2>¿Cómo empiezo un proyecto con CDA &amp; Co.?</h2><p>Escribe a <a href="mailto:c.abril@cdayco.com" style="text-decoration:underline;">c.abril@cdayco.com</a> o rellena el formulario de contacto contándonos qué tienes en mente: el tipo de proyecto, el espacio o evento y una idea de plazos. A partir de ahí concertamos una conversación para entender el proyecto en detalle.</p></div>
+
+    <div class="faq-cta">
+      <p>¿Tu pregunta no está aquí?</p>
+      <a href="/contacto">Escríbenos →</a>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap">© <span id="y"></span> CDA &amp; Co. — Madrid · Spain</div></footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-cda-co-white.png" alt="CDA & Co.">
+        <span>From Design to Installation</span>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Estudio</h4>
+          <ul><li><a href="/estudio">Estudio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/proyectos">Proyectos</a></li><li><a href="/carolina">Carolina</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul><li><a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a></li><li><a href="tel:+34657213557">657 21 35 57</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul><li><a href="/aviso-legal">Aviso legal</a></li><li><a href="/privacidad">Privacidad</a></li><li><a href="/cookies">Cookies</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="y"></span> CDA & Co. — Madrid · Spain</span>
+      <span>cdayco.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const nav = document.getElementById('primary-nav');
+  const toggle = document.getElementById('menu-toggle');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false');
+  }));
+</script>
 </body>
 </html>

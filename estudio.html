@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estudio | CDA & Co.</title>
+<meta name="description" content="CDA & Co. es un estudio multidisciplinar de diseño: interiorismo, contract, exposiciones, ferias y grandes eventos.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#111111">
+<link rel="canonical" href="https://cdayco.com/estudio">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CDA & Co.">
+<meta property="og:title" content="Estudio | CDA & Co.">
+<meta property="og:description" content="Un estudio multidisciplinar de diseño: interiorismo, contract, exposiciones, ferias y grandes eventos.">
+<meta property="og:url" content="https://cdayco.com/estudio">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://cdayco.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Estudio | CDA & Co.">
+<meta name="twitter:description" content="Un estudio multidisciplinar de diseño: interiorismo, contract, exposiciones, ferias y grandes eventos.">
+<meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<link rel="preload" href="/fonts/montserrat-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/montserrat-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="base.css">
+<style>
+  .intro{padding:88px 0 96px;}
+  .intro h1{font-size:clamp(2rem,4.6vw,3.2rem);max-width:16ch;}
+  .intro p{font-family:var(--sans);font-weight:300;font-size:1.2rem;line-height:1.65;color:var(--ink);max-width:46ch;margin-top:28px;}
+  .intro p + p{margin-top:20px;}
+  .strip{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .strip a{flex:1 1 160px;padding:22px 6px;text-align:center;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;border-right:1px solid var(--line);color:var(--ink-soft);}
+  .strip a:last-child{border-right:none;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header>
+  <div class="header-inner">
+    <a class="logo-link" href="/"><img src="assets/logo-cda-co-ink.png" alt="CDA & Co."></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav">
+      <a href="/">Inicio</a>
+      <a href="/estudio" class="active">Estudio</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/proyectos">Proyectos</a>
+      <a href="/carolina">Carolina</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="intro">
+    <div class="wrap">
+      <div class="eyebrow gold" style="margin-bottom:20px;">Estudio</div>
+      <h1>Un estudio multidisciplinar de diseño.</h1>
+      <p>Trabajamos el espacio: interiorismo, contract, exposiciones, ferias y grandes eventos — especialmente vinculados a arquitectura, diseño y marcas del sector.</p>
+      <p>Cuando una marca necesita presentarse de otra manera, diseñamos el formato físico para conseguirlo.</p>
+    </div>
+  </section>
+
+  <section class="strip" style="padding:0;">
+    <a href="/servicios">Interiorismo</a>
+    <a href="/servicios">Contract</a>
+    <a href="/servicios">Exposiciones</a>
+    <a href="/servicios">Ferias</a>
+    <a href="/servicios">Eventos</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-cda-co-white.png" alt="CDA & Co.">
+        <span>From Design to Installation</span>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Estudio</h4>
+          <ul><li><a href="/estudio">Estudio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/proyectos">Proyectos</a></li><li><a href="/carolina">Carolina</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul><li><a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a></li><li><a href="tel:+34657213557">657 21 35 57</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul><li><a href="/aviso-legal">Aviso legal</a></li><li><a href="/privacidad">Privacidad</a></li><li><a href="/cookies">Cookies</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="y"></span> CDA & Co. — Madrid · Spain</span>
+      <span>cdayco.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const nav = document.getElementById('primary-nav');
+  const toggle = document.getElementById('menu-toggle');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false');
+  }));
+</script>
+</body>
+</html>

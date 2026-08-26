@@ -63,6 +63,7 @@
   .direct div dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
   .direct div dd{font-size:1.05rem;}
 </style>
+<script defer src="/analytics-consent.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -167,7 +168,17 @@
     try {
       const res = await fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
       if (!res.ok) throw new Error('bad-response');
-      status.dataset.state='ok'; status.textContent='Mensaje enviado. Te responderé lo antes posible.'; form.reset();
+      status.dataset.state='ok';
+      status.textContent='Mensaje enviado. Te responderé lo antes posible.';
+
+      if (window.cdaAnalytics) {
+        window.cdaAnalytics.event('generate_lead', {
+          form_name: 'contacto',
+          form_location: window.location.pathname
+        });
+      }
+
+      form.reset();
     } catch(err) {
       status.dataset.state='err'; status.innerHTML='No se pudo enviar. Escribe a <a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a>.';
     } finally { btn.disabled = false; }

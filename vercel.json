@@ -7,21 +7,6 @@
       "has": [{ "type": "host", "value": "www.cdayco.com" }],
       "destination": "https://cdayco.com/:path*",
       "permanent": true
-    },
-    {
-      "source": "/diseno-expositivo",
-      "destination": "/servicios",
-      "permanent": true
-    },
-    {
-      "source": "/direccion-produccion-eventos",
-      "destination": "/servicios",
-      "permanent": true
-    },
-    {
-      "source": "/interiorismo-contract",
-      "destination": "/servicios",
-      "permanent": true
     }
   ],
   "headers": [

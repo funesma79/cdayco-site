@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carolina | CDA & Co.</title>
-<meta name="description" content="CDA & Co. está dirigida por Carolina Abril, directora de diseño y eventos.">
+<title>Carolina Abril | Dirección de Diseño y Eventos | CDA & Co.</title>
+<meta name="description" content="Carolina Abril, directora de diseño y eventos. Trayectoria en Marbella Design, Design Week Marbella, Design Week Málaga y dirección de CDA & Co.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#111111">
 <link rel="canonical" href="https://cdayco.com/carolina">
 
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="CDA & Co.">
-<meta property="og:title" content="Carolina | CDA & Co.">
-<meta property="og:description" content="CDA & Co. está dirigida por Carolina Abril, directora de diseño y eventos.">
+<meta property="og:title" content="Carolina Abril | Dirección de Diseño y Eventos | CDA & Co.">
+<meta property="og:description" content="Trayectoria profesional de Carolina Abril en diseño, interiorismo, ferias y grandes eventos.">
 <meta property="og:url" content="https://cdayco.com/carolina">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image" content="https://cdayco.com/og-image.jpg">
@@ -20,9 +20,38 @@
 <meta property="og:image:height" content="630">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Carolina | CDA & Co.">
-<meta name="twitter:description" content="CDA & Co. está dirigida por Carolina Abril, directora de diseño y eventos.">
+<meta name="twitter:title" content="Carolina Abril | Dirección de Diseño y Eventos | CDA & Co.">
+<meta name="twitter:description" content="Trayectoria profesional de Carolina Abril en diseño, interiorismo, ferias y grandes eventos.">
 <meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://cdayco.com/carolina#person",
+  "name": "Carolina Abril",
+  "url": "https://cdayco.com/carolina",
+  "jobTitle": "Directora de diseño y eventos",
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "https://cdayco.com/#organization",
+    "name": "CDA & Co.",
+    "url": "https://cdayco.com/"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/carolina-abril-18208840"
+  ],
+  "knowsAbout": [
+    "Dirección de diseño",
+    "Dirección y producción de eventos",
+    "Interiorismo",
+    "Contract",
+    "Diseño expositivo",
+    "Ferias y exposiciones",
+    "Arquitectura efímera"
+  ]
+}
+</script>
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon.svg">
@@ -31,12 +60,45 @@
 
 <link rel="stylesheet" href="base.css">
 <style>
-  .sig{padding:140px 0;min-height:56vh;display:flex;align-items:center;}
-  @media (max-width:700px){.sig{padding:88px 0;min-height:auto;}}
-  .sig .wrap{max-width:640px;}
-  .sig p{font-family:var(--sans);font-weight:300;font-size:1.35rem;line-height:1.6;color:var(--ink);}
-  .sig p b{font-weight:600;}
-  .sig .link{margin-top:28px;display:inline-block;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;}
+  .bio-hero{padding:112px 0 88px;}
+  .bio-hero .wrap{max-width:980px;}
+  .bio-hero h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:.95;margin:0 0 28px;}
+  .bio-lead{font-family:var(--sans);font-weight:300;font-size:clamp(1.2rem,2.4vw,1.6rem);line-height:1.55;max-width:760px;color:var(--ink);}
+  .bio-lead strong{font-weight:600;}
+  .bio-links{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;}
+  .bio-link{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px;}
+
+  .authority{padding:88px 0;border-top:1px solid var(--line);}
+  .authority-head{display:grid;grid-template-columns:minmax(320px,1.15fr) minmax(0,1.85fr);gap:72px;align-items:start;margin-bottom:56px;}
+  .authority-head h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.05;}
+  .authority-head p{font-family:var(--sans);font-weight:300;color:var(--ink-soft);line-height:1.7;max-width:700px;}
+
+  .timeline{border-top:1px solid var(--line);}
+  .timeline-row{display:grid;grid-template-columns:110px 1.1fr 2fr auto;gap:28px;align-items:start;padding:26px 0;border-bottom:1px solid var(--line);}
+  .timeline-year{font-family:var(--mono);color:var(--gold-text);font-size:.8rem;letter-spacing:.06em;}
+  .timeline-project{font-family:var(--sans);font-weight:600;}
+  .timeline-role{font-family:var(--sans);font-weight:300;color:var(--ink-soft);line-height:1.55;}
+  .timeline-source{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;border-bottom:1px solid var(--ink);}
+
+  .approach{padding:88px 0;background:var(--ink);color:var(--paper);}
+  .approach .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:72px;}
+  .approach h2{font-size:clamp(1.8rem,4vw,3rem);}
+  .approach p{font-family:var(--sans);font-weight:300;line-height:1.75;color:rgba(255,255,255,.78);max-width:680px;}
+  .approach p+p{margin-top:18px;}
+
+  .bio-cta{padding:72px 0;}
+  .bio-cta p{font-family:var(--sans);font-weight:300;font-size:1.15rem;line-height:1.65;max-width:680px;color:var(--ink-soft);}
+  .bio-cta-links{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;}
+
+  @media (max-width:760px){
+    .bio-hero{padding:84px 0 64px;}
+    .authority{padding:64px 0;}
+    .authority-head,
+    .approach .wrap{grid-template-columns:1fr;gap:24px;}
+    .timeline-row{grid-template-columns:72px 1fr;gap:12px 18px;}
+    .timeline-role{grid-column:2;}
+    .timeline-source{grid-column:2;justify-self:start;margin-top:4px;}
+  }
 </style>
 <script defer src="/analytics-consent.js"></script>
 </head>
@@ -61,13 +123,129 @@
 </header>
 
 <main id="main">
-  <section class="sig">
+
+  <section class="bio-hero">
     <div class="wrap">
-      <div class="eyebrow gold" style="margin-bottom:24px;">Carolina</div>
-      <p>CDA &amp; Co. está dirigida por <b>Carolina Abril</b>, directora de diseño y eventos con más de 25 años de experiencia en arquitectura, interiorismo, ferias y grandes eventos.</p>
-      <a class="link" href="https://www.linkedin.com/in/carolina-abril-18208840" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <div class="eyebrow gold" style="margin-bottom:24px;">Dirección · Diseño · Eventos</div>
+      <h1>Carolina Abril</h1>
+
+      <p class="bio-lead">
+        <strong>Directora de diseño y eventos</strong> y responsable de CDA &amp; Co.
+        Su trayectoria conecta interiorismo, diseño expositivo, ferias,
+        arquitectura efímera y producción de grandes eventos.
+      </p>
+
+      <div class="bio-links">
+        <a class="bio-link" href="https://www.linkedin.com/in/carolina-abril-18208840" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="bio-link" href="/proyectos">Proyectos</a>
+        <a class="bio-link" href="/prensa">Prensa</a>
+      </div>
     </div>
   </section>
+
+
+  <section class="authority">
+    <div class="wrap">
+
+      <div class="authority-head">
+        <div>
+          <div class="eyebrow gold" style="margin-bottom:18px;">Trayectoria seleccionada</div>
+          <h2>Dirección de proyectos de diseño con proyección nacional e internacional.</h2>
+        </div>
+
+        <p>
+          La trayectoria profesional de Carolina Abril incluye la dirección de
+          ferias y eventos vinculados al interiorismo, la arquitectura y el
+          diseño. Esta selección recoge hitos documentados por medios
+          profesionales e instituciones.
+        </p>
+      </div>
+
+      <div class="timeline">
+
+        <article class="timeline-row">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-project">Marbella Design</div>
+          <div class="timeline-role">Directora ejecutiva de la segunda edición de la feria internacional de diseño e interiorismo.</div>
+          <a class="timeline-source" href="https://www.vivimarbella.com/la-segunda-edicion-de-marbella-design-tendra-lugar-del-4-al-15-de-julio/" target="_blank" rel="noopener">Fuente ↗</a>
+        </article>
+
+        <article class="timeline-row">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-project">Marbella Design</div>
+          <div class="timeline-role">Directora ejecutiva de la tercera edición, celebrada en un contexto internacional especialmente complejo.</div>
+          <a class="timeline-source" href="https://www.vivimarbella.com/una-veintena-de-interioristas-de-prestigio-y-casi-dos-centenares-de-primeras-marcas-de-diseno-participan-en-la-tercera-edicion-de-marbella-design-2020/" target="_blank" rel="noopener">Fuente ↗</a>
+        </article>
+
+        <article class="timeline-row">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-project">Design Week Marbella</div>
+          <div class="timeline-role">Directora ejecutiva de Design Week Marbella.</div>
+          <a class="timeline-source" href="https://citmarbella.es/eventos/visita-guiada-para-socios-cit-en-design-week-marbella/" target="_blank" rel="noopener">Fuente ↗</a>
+        </article>
+
+        <article class="timeline-row">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-project">Design Week Marbella</div>
+          <div class="timeline-role">Directora general de Design Week Marbella, encuentro de arquitectura, interiorismo, arte y diseño.</div>
+          <a class="timeline-source" href="https://www.vivimarbella.com/empieza-design-week-marbella-2022-lo-mejor-de-la-arquitectura-el-interiorismo-el-arte-y-el-diseno/" target="_blank" rel="noopener">Fuente ↗</a>
+        </article>
+
+        <article class="timeline-row">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-project">Design Week Málaga</div>
+          <div class="timeline-role">Directora de Design Week Málaga, presentada oficialmente con respaldo institucional del Ayuntamiento de Málaga.</div>
+          <a class="timeline-source" href="https://fycma.com/presentacion-oficial-de-design-week-malaga-2024/?lang=en" target="_blank" rel="noopener">FYCMA ↗</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="approach">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow gold" style="margin-bottom:18px;">CDA &amp; Co.</div>
+        <h2>Del concepto a la instalación.</h2>
+      </div>
+
+      <div>
+        <p>
+          Desde CDA &amp; Co., Carolina desarrolla proyectos en los que diseño,
+          dirección, producción y coordinación forman parte de un mismo proceso.
+          El objetivo no es únicamente definir un espacio, sino construir una
+          experiencia coherente con la identidad de cada marca, institución o
+          proyecto.
+        </p>
+
+        <p>
+          El estudio trabaja en interiorismo y contract, diseño expositivo,
+          ferias, eventos y espacios de marca desde Madrid para proyectos en
+          España y oportunidades de colaboración internacional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bio-cta">
+    <div class="wrap">
+      <div class="eyebrow gold" style="margin-bottom:18px;">Colaboraciones</div>
+
+      <p>
+        Para proyectos de diseño, interiorismo, ferias, exposiciones,
+        dirección creativa o producción de eventos, contacta con CDA &amp; Co.
+      </p>
+
+      <div class="bio-cta-links">
+        <a class="bio-link" href="/contacto">Contactar</a>
+        <a class="bio-link" href="/servicios">Ver servicios</a>
+        <a class="bio-link" href="/proyectos">Ver proyectos</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>

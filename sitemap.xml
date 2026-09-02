@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://cdayco.com/direccion-produccion-eventos</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -129,6 +129,13 @@
 
   <url>
     <loc>https://cdayco.com/en/exhibition-design</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cdayco.com/en/event-design-production</loc>
     <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

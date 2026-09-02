@@ -84,7 +84,7 @@
   </url>
   <url>
     <loc>https://cdayco.com/interiorismo-contract</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -136,6 +136,13 @@
 
   <url>
     <loc>https://cdayco.com/en/event-design-production</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cdayco.com/en/interior-design-contract</loc>
     <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -5,6 +5,34 @@
   const STORAGE_KEY = 'cda_analytics_consent_v1';
   const CONSENT_MAX_AGE = 730 * 24 * 60 * 60 * 1000; // 24 meses aprox.
 
+  const isEnglish =
+    (document.documentElement.lang || '')
+      .toLowerCase()
+      .startsWith('en');
+
+  const COPY = isEnglish
+    ? {
+        settingsAria: 'Change cookie preferences',
+        dialogAria: 'Cookie preferences',
+        body:
+          'We use Google Analytics only if you accept it ' +
+          'to measure visits and pages viewed and improve cdayco.com.',
+        more: 'More information (Spanish)',
+        reject: 'Reject analytics',
+        accept: 'Accept analytics'
+      }
+    : {
+        settingsAria: 'Cambiar preferencias de cookies',
+        dialogAria: 'Preferencias de cookies',
+        body:
+          'Utilizamos Google Analytics únicamente si lo aceptas ' +
+          'para medir visitas, páginas consultadas y mejorar cdayco.com.',
+        more: 'Más información',
+        reject: 'Rechazar analítica',
+        accept: 'Aceptar analítica'
+      };
+
+
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () {
     window.dataLayer.push(arguments);
@@ -202,10 +230,15 @@
     if (document.getElementById('cda-cookie-settings')) return;
 
     const button = document.createElement('button');
+
     button.id = 'cda-cookie-settings';
     button.type = 'button';
     button.textContent = 'Cookies';
-    button.setAttribute('aria-label', 'Cambiar preferencias de cookies');
+
+    button.setAttribute(
+      'aria-label',
+      COPY.settingsAria
+    );
 
     button.addEventListener('click', () => {
       button.remove();
@@ -219,44 +252,62 @@
     if (document.getElementById('cda-consent')) return;
 
     const banner = document.createElement('div');
+
     banner.id = 'cda-consent';
     banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-label', 'Preferencias de cookies');
+
+    banner.setAttribute(
+      'aria-label',
+      COPY.dialogAria
+    );
 
     banner.innerHTML = `
       <p>
-        Utilizamos Google Analytics únicamente si lo aceptas para medir visitas,
-        páginas consultadas y mejorar cdayco.com.
-        <a href="/cookies">Más información</a>.
+        ${COPY.body}
+        <a href="/cookies">${COPY.more}</a>.
       </p>
 
       <div class="cda-consent-actions">
-        <button type="button" class="cda-consent-btn" data-choice="denied">
-          Rechazar analítica
+
+        <button
+          type="button"
+          class="cda-consent-btn"
+          data-choice="denied">
+          ${COPY.reject}
         </button>
 
-        <button type="button" class="cda-consent-btn" data-choice="granted">
-          Aceptar analítica
+        <button
+          type="button"
+          class="cda-consent-btn"
+          data-choice="granted">
+          ${COPY.accept}
         </button>
+
       </div>
     `;
 
-    banner.querySelectorAll('[data-choice]').forEach(button => {
-      button.addEventListener('click', () => {
-        const choice = button.dataset.choice;
+    banner
+      .querySelectorAll('[data-choice]')
+      .forEach(button => {
 
-        saveChoice(choice);
+        button.addEventListener('click', () => {
 
-        if (choice === 'granted') {
-          loadAnalytics();
-        } else {
-          denyAnalytics();
-        }
+          const choice =
+            button.dataset.choice;
 
-        banner.remove();
-        showSettingsButton();
+          saveChoice(choice);
+
+          if (choice === 'granted') {
+            loadAnalytics();
+          } else {
+            denyAnalytics();
+          }
+
+          banner.remove();
+          showSettingsButton();
+        });
+
       });
-    });
 
     document.body.appendChild(banner);
   }

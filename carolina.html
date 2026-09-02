@@ -27,28 +27,63 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://cdayco.com/carolina#person",
-  "name": "Carolina Abril",
-  "url": "https://cdayco.com/carolina",
-  "jobTitle": "Directora de diseño y eventos",
-  "worksFor": {
-    "@type": "Organization",
-    "@id": "https://cdayco.com/#organization",
-    "name": "CDA & Co.",
-    "url": "https://cdayco.com/"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/carolina-abril-18208840"
-  ],
-  "knowsAbout": [
-    "Dirección de diseño",
-    "Dirección y producción de eventos",
-    "Interiorismo",
-    "Contract",
-    "Diseño expositivo",
-    "Ferias y exposiciones",
-    "Arquitectura efímera"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://cdayco.com/#website",
+      "url": "https://cdayco.com/",
+      "name": "CDA & Co.",
+      "publisher": {
+        "@id": "https://cdayco.com/#organization"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://cdayco.com/carolina#webpage",
+      "url": "https://cdayco.com/carolina",
+      "name": "Carolina Abril | Dirección de Diseño y Eventos | CDA & Co.",
+      "isPartOf": {
+        "@id": "https://cdayco.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://cdayco.com/carolina#person"
+      },
+      "about": {
+        "@id": "https://cdayco.com/carolina#person"
+      },
+      "inLanguage": "es-ES"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cdayco.com/#organization",
+      "name": "CDA & Co.",
+      "url": "https://cdayco.com/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://cdayco.com/carolina#person",
+      "name": "Carolina Abril",
+      "url": "https://cdayco.com/carolina",
+      "jobTitle": "Directora de diseño y eventos",
+      "worksFor": {
+        "@id": "https://cdayco.com/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/carolina-abril-18208840"
+      ],
+      "knowsAbout": [
+        "Dirección de diseño",
+        "Dirección y producción de eventos",
+        "Interiorismo",
+        "Contract",
+        "Diseño expositivo",
+        "Ferias y exposiciones",
+        "Arquitectura efímera"
+      ],
+      "mainEntityOfPage": {
+        "@id": "https://cdayco.com/carolina#webpage"
+      }
+    }
   ]
 }
 </script>

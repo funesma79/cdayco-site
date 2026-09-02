@@ -37,28 +37,82 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://cdayco.com/#website",
+      "url": "https://cdayco.com/",
+      "name": "CDA & Co.",
+      "alternateName": "CDA & Co. — From Design to Installation",
+      "inLanguage": "es-ES",
+      "publisher": {
+        "@id": "https://cdayco.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cdayco.com/#webpage",
+      "url": "https://cdayco.com/",
+      "name": "CDA & Co. — Diseño, dirección y producción de espacios, ferias y eventos",
+      "isPartOf": {
+        "@id": "https://cdayco.com/#website"
+      },
+      "about": {
+        "@id": "https://cdayco.com/#organization"
+      },
+      "inLanguage": "es-ES"
+    },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://cdayco.com/#organization",
+      "name": "CDA & Co.",
+      "alternateName": "CDA & Co. — From Design to Installation",
+      "url": "https://cdayco.com/",
+      "email": "c.abril@cdayco.com",
+      "telephone": "+34657213557",
+      "description": "Estudio multidisciplinar de diseño, dirección y producción de espacios, ferias y grandes eventos: interiorismo, contract, diseño expositivo y espacios de marca.",
+      "slogan": "From Design to Installation",
+      "areaServed": {
+        "@type": "Country",
+        "name": "España"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdayco.com/assets/logo-cda-co-ink.png"
+      },
+      "knowsAbout": [
+        "Interiorismo",
+        "Contract",
+        "Diseño expositivo",
+        "Ferias",
+        "Grandes eventos",
+        "Espacios de marca",
+        "Arquitectura efímera"
+      ]
+    },
+    {
       "@type": "Person",
-      "@id": "https://cdayco.com/#carolina-abril",
+      "@id": "https://cdayco.com/carolina#person",
       "name": "Carolina Abril",
       "url": "https://cdayco.com/carolina",
       "email": "c.abril@cdayco.com",
       "jobTitle": "Directora de diseño y eventos",
-      "sameAs": ["https://www.linkedin.com/in/carolina-abril-18208840"],
-      "worksFor": { "@id": "https://cdayco.com/#cda-co" }
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://cdayco.com/#cda-co",
-      "name": "CDA & Co.",
-      "alternateName": "CDA & Co. — From Design to Installation",
-      "description": "Estudio multidisciplinar de diseño, dirección y producción de espacios, ferias y grandes eventos: interiorismo, contract, diseño expositivo, espacios de marca.",
-      "url": "https://cdayco.com/",
-      "email": "c.abril@cdayco.com",
-      "telephone": "+34657213557",
-      "slogan": "From Design to Installation",
-      "founder": { "@id": "https://cdayco.com/#carolina-abril" },
-      "areaServed": ["Madrid", "España"],
-      "sameAs": ["https://www.linkedin.com/in/carolina-abril-18208840"]
+      "worksFor": {
+        "@id": "https://cdayco.com/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/carolina-abril-18208840"
+      ],
+      "knowsAbout": [
+        "Dirección de diseño",
+        "Dirección y producción de eventos",
+        "Interiorismo",
+        "Contract",
+        "Diseño expositivo",
+        "Ferias y exposiciones",
+        "Arquitectura efímera"
+      ]
     }
   ]
 }

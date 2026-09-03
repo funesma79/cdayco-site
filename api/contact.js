@@ -210,7 +210,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: 'CDA & Co. <contacto@contacto.cdayco.com>',
-        to: ['c.abril@cdayco.com'],
+        to: ['hola@cdayco.com'],
         reply_to: cleanEmail,
         subject,
         text: [

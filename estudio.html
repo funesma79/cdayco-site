@@ -4,18 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Estudio | CDA & Co.</title>
-<meta name="description" content="CDA & Co. es un estudio multidisciplinar de diseño: interiorismo, contract, exposiciones, ferias y grandes eventos.">
+<meta name="description" content="CDA & Co. es un estudio multidisciplinar de diseño y dirección de proyectos: ferias, stands, interiorismo, arquitectura y espacios de marca. From Design to Installation.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#111111">
 <link rel="canonical" href="https://cdayco.com/estudio">
 <link rel="alternate" hreflang="es" href="https://cdayco.com/estudio">
 <link rel="alternate" hreflang="en" href="https://cdayco.com/en/studio">
+<link rel="alternate" hreflang="zh-Hans" href="https://cdayco.com/zh/estudio">
 <link rel="alternate" hreflang="x-default" href="https://cdayco.com/estudio">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CDA & Co.">
 <meta property="og:title" content="Estudio | CDA & Co.">
-<meta property="og:description" content="Un estudio multidisciplinar de diseño: interiorismo, contract, exposiciones, ferias y grandes eventos.">
+<meta property="og:description" content="Un estudio multidisciplinar de diseño y dirección de proyectos: ferias, stands, interiorismo, arquitectura y espacios de marca.">
 <meta property="og:url" content="https://cdayco.com/estudio">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image" content="https://cdayco.com/og-image.jpg">
@@ -24,7 +25,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Estudio | CDA & Co.">
-<meta name="twitter:description" content="Un estudio multidisciplinar de diseño: interiorismo, contract, exposiciones, ferias y grandes eventos.">
+<meta name="twitter:description" content="Un estudio multidisciplinar de diseño y dirección de proyectos: ferias, stands, interiorismo, arquitectura y espacios de marca.">
 <meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -35,12 +36,27 @@
 
 <link rel="stylesheet" href="base.css">
 <style>
-  .intro{padding:88px 0 96px;}
-  .intro h1{font-size:clamp(2rem,4.6vw,3.2rem);max-width:16ch;}
-  .intro p{font-family:var(--sans);font-weight:300;font-size:1.2rem;line-height:1.65;color:var(--ink);max-width:46ch;margin-top:28px;}
+  .intro{padding:88px 0 64px;}
+  .intro h1{font-size:clamp(2rem,4.6vw,3.2rem);max-width:20ch;}
+  .intro p{font-family:var(--sans);font-weight:300;font-size:1.2rem;line-height:1.65;color:var(--ink);max-width:56ch;margin-top:28px;}
   .intro p + p{margin-top:20px;}
+  .concept{font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-text);margin-top:26px;}
+
+  .specs{border-top:1px solid var(--line);}
+  .specs h2{font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:32px;}
+  .specs ul{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+  @media (max-width:700px){.specs ul{grid-template-columns:1fr;}}
+  .specs li{font-family:var(--sans);font-weight:300;font-size:1rem;color:var(--ink-soft);padding-left:18px;position:relative;line-height:1.5;}
+  .specs li::before{content:"—";position:absolute;left:0;color:var(--gold-text);}
+
+  .team{border-top:1px solid var(--line);}
+  .team-inner{display:flex;gap:48px;flex-wrap:wrap;align-items:flex-start;}
+  .team p{font-family:var(--sans);font-weight:300;font-size:1.15rem;line-height:1.7;color:var(--ink);max-width:52ch;}
+  .team p b{font-weight:600;}
+  .team .link{margin-top:20px;display:inline-block;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;}
+
   .strip{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .strip a{flex:1 1 160px;padding:22px 6px;text-align:center;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;border-right:1px solid var(--line);color:var(--ink-soft);}
+  .strip a{flex:1 1 160px;padding:22px 6px;text-align:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;border-right:1px solid var(--line);color:var(--ink-soft);}
   .strip a:last-child{border-right:none;}
 </style>
 <script defer src="/analytics-consent.js"></script>
@@ -59,10 +75,10 @@
       <a href="/estudio" class="active">Estudio</a>
       <a href="/servicios">Servicios</a>
       <a href="/proyectos">Proyectos</a>
-      <a href="/carolina">Carolina</a>
+      <a href="/experiencia">Experiencia</a>
+      <a href="/blog">Blog</a>
       <a href="/contacto">Contacto</a>
-
-      <a href="/en/studio" lang="en" hreflang="en" aria-label="English version">EN</a>
+      <div class="lang-switch"><a href="/estudio" class="active">ES</a><span>/</span><a href="/en/studio" lang="en">EN</a><span>/</span><a href="/zh/estudio" lang="zh-Hans">中文</a></div>
     </nav>
   </div>
 </header>
@@ -71,18 +87,46 @@
   <section class="intro">
     <div class="wrap">
       <div class="eyebrow gold" style="margin-bottom:20px;">Estudio</div>
-      <h1>Un estudio multidisciplinar de diseño.</h1>
-      <p>Trabajamos el espacio: interiorismo, contract, exposiciones, ferias y grandes eventos — especialmente vinculados a arquitectura, diseño y marcas del sector.</p>
-      <p>Cuando una marca necesita presentarse de otra manera, diseñamos el formato físico para conseguirlo.</p>
+      <h1>Un estudio multidisciplinar de diseño y dirección de proyectos.</h1>
+      <p>CDA &amp; Co. no es una agencia de comunicación. Somos un estudio que interviene desde la estrategia y el concepto hasta el diseño, la dirección, la producción, la ejecución y la instalación final.</p>
+      <p>Organizamos y dirigimos ferias y grandes eventos, diseñamos espacios para ferias y stands, y trabajamos la arquitectura, el interiorismo y los espacios de marca — con el mismo criterio de principio a fin.</p>
+      <div class="concept">From Design to Installation — Diseño · Dirección · Producción · Instalación</div>
+    </div>
+  </section>
+
+  <section class="specs">
+    <div class="wrap">
+      <h2>A qué nos dedicamos.</h2>
+      <ul>
+        <li>Organización y dirección de ferias y grandes eventos</li>
+        <li>Diseño y dirección de espacios para ferias y eventos</li>
+        <li>Diseño de stands y arquitectura efímera</li>
+        <li>Arquitectura e interiorismo</li>
+        <li>Interiorismo residencial</li>
+        <li>Interiorismo Contract y hospitality</li>
+        <li>Diseño de espacios comerciales y de marca</li>
+        <li>Showrooms, flagship stores y espacios expositivos</li>
+        <li>Implantación de marcas internacionales en España y Europa</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="wrap team-inner">
+      <div>
+        <div class="eyebrow gold" style="margin-bottom:18px;">Equipo</div>
+        <p>CDA &amp; Co. está formado por un <b>equipo multidisciplinar dirigido por Carolina Abril</b>, con experiencia directa en el diseño, la dirección y la producción de ferias, eventos, arquitectura efímera e interiorismo.</p>
+        <a class="link" href="https://www.linkedin.com/in/carolina-abril-18208840" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
     </div>
   </section>
 
   <section class="strip" style="padding:0;">
+    <a href="/servicios">Ferias &amp; Eventos</a>
+    <a href="/servicios">Stands</a>
     <a href="/servicios">Interiorismo</a>
-    <a href="/servicios">Contract</a>
-    <a href="/servicios">Exposiciones</a>
-    <a href="/servicios">Ferias</a>
-    <a href="/servicios">Eventos</a>
+    <a href="/servicios">Brand Spaces</a>
+    <a href="/experiencia">Experiencia</a>
   </section>
 </main>
 
@@ -96,7 +140,7 @@
       <div class="footer-nav">
         <div class="footer-col">
           <h4>Estudio</h4>
-          <ul><li><a href="/estudio">Estudio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/proyectos">Proyectos</a></li><li><a href="/carolina">Carolina</a></li></ul>
+          <ul><li><a href="/estudio">Estudio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/proyectos">Proyectos</a></li><li><a href="/experiencia">Experiencia</a></li><li><a href="/blog">Blog</a></li></ul>
         </div>
         <div class="footer-col">
           <h4>Contacto</h4>

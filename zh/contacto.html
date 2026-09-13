@@ -1,92 +1,85 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="zh-Hans">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contacto | CDA & Co.</title>
-<meta name="description" content="¿Tienes un proyecto en mente? Hablemos.">
+<title>联系我们 | CDA & Co.</title>
+<meta name="description" content="有项目想法吗?联系 CDA & Co.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#111111">
-<link rel="canonical" href="https://cdayco.com/contacto">
+<link rel="canonical" href="https://cdayco.com/zh/contacto">
 <link rel="alternate" hreflang="es" href="https://cdayco.com/contacto">
-<link rel="alternate" hreflang="en" href="https://cdayco.com/en/contact">
 <link rel="alternate" hreflang="zh-Hans" href="https://cdayco.com/zh/contacto">
 <link rel="alternate" hreflang="x-default" href="https://cdayco.com/contacto">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CDA & Co.">
-<meta property="og:title" content="Contacto | CDA & Co.">
-<meta property="og:description" content="¿Tienes un proyecto en mente? Hablemos.">
-<meta property="og:url" content="https://cdayco.com/contacto">
-<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="联系我们 | CDA & Co.">
+<meta property="og:description" content="有项目想法吗?联系 CDA & Co.">
+<meta property="og:url" content="https://cdayco.com/zh/contacto">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdayco.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contacto | CDA & Co.">
-<meta name="twitter:description" content="¿Tienes un proyecto en mente? Hablemos.">
-<meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon.svg">
 
 <link rel="preload" href="/fonts/montserrat-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/noto-sans-sc-chinese-simplified-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="/base.css">
 <style>
   .cwrap{padding:88px 0 110px;}
   .chead{max-width:560px;margin-bottom:56px;}
   .chead h1{font-size:clamp(2rem,4.6vw,3rem);}
-  .chead p{font-family:var(--sans);font-weight:300;font-size:1.15rem;color:var(--ink-soft);margin-top:16px;}
+  .chead p{font-family:var(--sans-zh);font-weight:400;font-size:1.15rem;color:var(--ink-soft);margin-top:16px;}
 
   form.contact-form{max-width:640px;display:flex;flex-direction:column;gap:26px;}
   .form-row{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
   @media (max-width:560px){.form-row{grid-template-columns:1fr;}}
   .field{display:flex;flex-direction:column;gap:8px;}
-  .field label{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;}
+  .field label{font-family:var(--sans-zh);font-size:.8rem;color:var(--ink-soft);}
   .field input,.field textarea{
-    font-family:var(--sans);font-weight:400;font-size:1rem;padding:12px 0;background:transparent;
+    font-family:var(--sans-zh);font-weight:400;font-size:1rem;padding:12px 0;background:transparent;
     border:none;border-bottom:1px solid var(--line);color:var(--ink);border-radius:0;
   }
   .field input:focus,.field textarea:focus{outline:none;border-color:var(--ink);}
   .field textarea{resize:vertical;min-height:100px;}
   .hp-field{position:absolute;left:-9999px;}
-  .consent{display:flex;align-items:flex-start;gap:9px;font-size:.82rem;color:var(--ink-soft);font-family:var(--sans);}
+  .consent{display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--ink-soft);font-family:var(--sans-zh);}
   .consent a{text-decoration:underline;}
   .form-submit{
-    align-self:flex-start;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+    align-self:flex-start;font-family:var(--sans-zh);font-size:.88rem;
     background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:15px 26px;cursor:pointer;
   }
   .form-submit:hover{background:transparent;color:var(--ink);}
-  .form-status{font-family:var(--mono);font-size:.8rem;min-height:1.2em;}
+  .form-status{font-family:var(--sans-zh);font-size:.86rem;min-height:1.2em;}
   .form-status[data-state="ok"]{color:#4C7A4E;}
   .form-status[data-state="err"]{color:#A3503F;}
 
   .direct{margin-top:64px;padding-top:36px;border-top:1px solid var(--line);display:flex;gap:56px;flex-wrap:wrap;}
-  .direct div dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
+  .direct div dt{font-family:var(--sans-zh);font-size:.78rem;color:var(--ink-soft);margin-bottom:6px;}
   .direct div dd{font-size:1.05rem;}
 </style>
-<script defer src="/analytics-consent.js"></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Saltar al contenido</a>
+<a class="skip-link" href="#main">跳到主要内容</a>
 
 <header>
   <div class="header-inner">
-    <a class="logo-link" href="/"><img src="assets/logo-cda-co-ink.png" alt="CDA & Co."></a>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+    <a class="logo-link" href="/zh/"><img src="/assets/logo-cda-co-ink.png" alt="CDA & Co."></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="primary-nav">
       <span></span><span></span><span></span>
     </button>
     <nav class="primary-nav" id="primary-nav">
-      <a href="/">Inicio</a>
-      <a href="/estudio">Estudio</a>
-      <a href="/servicios">Servicios</a>
-      <a href="/proyectos">Proyectos</a>
-      <a href="/experiencia">Experiencia</a>
-      <a href="/blog">Blog</a>
-      <a href="/contacto" class="active">Contacto</a>
-      <div class="lang-switch"><a href="/contacto" class="active">ES</a><span>/</span><a href="/en/contact" lang="en">EN</a><span>/</span><a href="/zh/contacto" lang="zh-Hans">中文</a></div>
+      <a href="/zh/">首页</a>
+      <a href="/zh/estudio">工作室</a>
+      <a href="/zh/servicios">服务</a>
+      <a href="/zh/proyectos">项目</a>
+      <a href="/zh/experiencia">经验</a>
+      <a href="/zh/contacto" class="active">联系我们</a>
+      <div class="lang-switch"><a href="/contacto">ES</a><span>/</span><a href="/zh/contacto" class="active">中文</a></div>
     </nav>
   </div>
 </header>
@@ -95,26 +88,27 @@
   <section class="cwrap">
     <div class="wrap">
       <div class="chead">
-        <div class="eyebrow gold" style="margin-bottom:20px;">Contacto</div>
-        <h1>Hablemos.</h1>
-        <p>¿Tienes un proyecto en mente?</p>
+        <div class="eyebrow gold" style="margin-bottom:20px;">联系我们</div>
+        <h1>聊聊吧。</h1>
+        <p>有项目想法吗?</p>
       </div>
 
       <form class="contact-form" id="contact-form" novalidate>
         <div class="form-row">
-          <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-nombre">姓名</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">邮箱</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
         </div>
-        <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" type="text" autocomplete="organization"></div>
-        <div class="field"><label for="f-mensaje">Mensaje</label><textarea id="f-mensaje" name="mensaje" required></textarea></div>
-        <div class="hp-field" aria-hidden="true"><label for="f-website">No rellenar</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-        <label class="consent"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="/privacidad">política de privacidad</a>.</span></label>
-        <button class="form-submit" type="submit">Enviar mensaje</button>
+        <div class="field"><label for="f-empresa">公司</label><input id="f-empresa" name="empresa" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="f-mensaje">留言</label><textarea id="f-mensaje" name="mensaje" required></textarea></div>
+        <div class="hp-field" aria-hidden="true"><label for="f-website">请勿填写</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input type="checkbox" name="privacidad" required><span>我已阅读并同意<a href="/privacidad">隐私政策</a>。</span></label>
+        <button class="form-submit" type="submit">发送消息</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
 
       <div class="direct">
-        <dl><dt>Email</dt><dd><a href="mailto:hola@cdayco.com">hola@cdayco.com</a></dd></dl>
+        <dl><dt>邮箱</dt><dd><a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a></dd></dl>
+        <dl><dt>电话</dt><dd><a href="tel:+34657213557">+34 657 21 35 57</a></dd></dl>
       </div>
     </div>
   </section>
@@ -124,20 +118,20 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/logo-cda-co-white.png" alt="CDA & Co.">
+        <img src="/assets/logo-cda-co-white.png" alt="CDA & Co.">
         <span>From Design to Installation</span>
       </div>
       <div class="footer-nav">
         <div class="footer-col">
-          <h4>Estudio</h4>
-          <ul><li><a href="/estudio">Estudio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/proyectos">Proyectos</a></li><li><a href="/experiencia">Experiencia</a></li><li><a href="/blog">Blog</a></li></ul>
+          <h4>工作室</h4>
+          <ul><li><a href="/zh/estudio">工作室</a></li><li><a href="/zh/servicios">服务</a></li><li><a href="/zh/proyectos">项目</a></li><li><a href="/zh/experiencia">经验</a></li></ul>
         </div>
         <div class="footer-col">
-          <h4>Contacto</h4>
-          <ul><li><a href="mailto:hola@cdayco.com">hola@cdayco.com</a></li></ul>
+          <h4>联系</h4>
+          <ul><li><a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a></li><li><a href="tel:+34657213557">+34 657 21 35 57</a></li></ul>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>法律</h4>
           <ul><li><a href="/aviso-legal">Aviso legal</a></li><li><a href="/privacidad">Privacidad</a></li><li><a href="/cookies">Cookies</a></li></ul>
         </div>
       </div>
@@ -173,19 +167,9 @@
     try {
       const res = await fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
       if (!res.ok) throw new Error('bad-response');
-      status.dataset.state='ok';
-      status.textContent='Mensaje enviado. Te responderé lo antes posible.';
-
-      if (window.cdaAnalytics) {
-        window.cdaAnalytics.event('generate_lead', {
-          form_name: 'contacto',
-          form_location: window.location.pathname
-        });
-      }
-
-      form.reset();
+      status.dataset.state='ok'; status.textContent='消息已发送,我们会尽快回复您。'; form.reset();
     } catch(err) {
-      status.dataset.state='err'; status.innerHTML='No se pudo enviar. Escribe a <a href="mailto:hola@cdayco.com">hola@cdayco.com</a>.';
+      status.dataset.state='err'; status.innerHTML='发送失败,请写信至 <a href="mailto:c.abril@cdayco.com">c.abril@cdayco.com</a>。';
     } finally { btn.disabled = false; }
   });
 </script>

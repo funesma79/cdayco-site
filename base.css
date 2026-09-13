@@ -5,6 +5,8 @@
 @font-face{font-family:'Montserrat';src:url('fonts/montserrat-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
 @font-face{font-family:'IBM Plex Mono';src:url('fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
 @font-face{font-family:'IBM Plex Mono';src:url('fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Noto Sans SC';src:url('fonts/noto-sans-sc-chinese-simplified-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;unicode-range:U+4E00-9FFF,U+3000-303F,U+FF00-FFEF;}
+@font-face{font-family:'Noto Sans SC';src:url('fonts/noto-sans-sc-chinese-simplified-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;unicode-range:U+4E00-9FFF,U+3000-303F,U+FF00-FFEF;}
 
 :root{
   --ink:#111111;
@@ -15,6 +17,7 @@
   --gold:#A8905C;
   --gold-text:#867349;
   --sans:'Montserrat',-apple-system,'Segoe UI',sans-serif;
+  --sans-zh:'Noto Sans SC','Montserrat',-apple-system,sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
   --maxw:1360px;
   --margin:64px;
@@ -66,7 +69,7 @@ header{
 .logo-link img{height:40px;width:auto;}
 @media (max-width:560px){.logo-link img{height:32px;}}
 
-nav.primary-nav{display:flex;align-items:center;gap:36px;}
+nav.primary-nav{display:flex;align-items:center;gap:26px;}
 nav.primary-nav a{
   font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
   position:relative;padding:4px 0;
@@ -112,3 +115,41 @@ section{padding:96px 0;}
 @media (max-width:900px){section{padding:64px 0;}}
 @media (max-width:560px){section{padding:48px 0;}}
 .section-line{border-top:1px solid var(--line);}
+
+/* language switch */
+.lang-switch{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;margin-left:8px;}
+.lang-switch a{color:var(--ink-soft);padding:2px 4px;}
+.lang-switch a.active{color:var(--ink);border-bottom:1px solid var(--ink);}
+.lang-switch span{color:var(--line);}
+@media (max-width:900px){.lang-switch{margin:6px 0 0;font-size:.9rem;}}
+
+/* differentiator (home) */
+.diff{border-top:1px solid var(--line);}
+.diff-head{max-width:56ch;margin-bottom:48px;}
+.diff-head h2{font-size:clamp(1.6rem,3.4vw,2.3rem);}
+.diff-head p{font-family:var(--sans);font-weight:300;font-size:1.05rem;color:var(--ink-soft);margin-top:18px;line-height:1.65;}
+.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+@media (max-width:900px){.diff-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.diff-grid{grid-template-columns:1fr;}}
+.diff-item{background:var(--paper);padding:26px 22px;}
+.diff-item .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-text);}
+.diff-item p{font-size:.92rem;color:var(--ink-soft);margin-top:8px;line-height:1.5;font-family:var(--sans);font-weight:300;}
+
+/* experiencia page */
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px;}
+@media (max-width:800px){.exp-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:520px){.exp-grid{grid-template-columns:1fr;}}
+.exp-item{background:var(--paper);padding:44px 30px;display:flex;flex-direction:column;justify-content:center;min-height:140px;}
+.exp-item .name{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:600;letter-spacing:-.01em;}
+.exp-item .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;}
+.exp-statement{font-family:var(--sans);font-weight:300;font-size:1.15rem;line-height:1.7;color:var(--ink-soft);max-width:60ch;margin-top:36px;}
+
+/* blog */
+.empty-state{border:1px dashed var(--line);padding:64px 32px;text-align:center;max-width:640px;margin:0 auto;}
+.empty-state .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-text);}
+.empty-state p{font-family:var(--sans);font-weight:300;color:var(--ink-soft);margin-top:14px;font-size:1.02rem;line-height:1.6;}
+
+/* zh (Simplified Chinese) type overrides */
+html[lang="zh-Hans"] body{font-family:var(--sans-zh),var(--sans);}
+html[lang="zh-Hans"] h1,html[lang="zh-Hans"] h2,html[lang="zh-Hans"] h3{font-family:var(--sans-zh),var(--sans);font-weight:600;letter-spacing:0;}
+html[lang="zh-Hans"] .eyebrow,html[lang="zh-Hans"] nav.primary-nav a,html[lang="zh-Hans"] .footer-col h4{letter-spacing:.04em;}

@@ -98,10 +98,24 @@
   .article-links{margin-top:64px;padding-top:32px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:22px;}
   .article-links a{font-family:var(--mono);font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;}
 
+  /* ==== Reusable share block (see FUTUROS ARTÍCULOS note near markup) ==== */
+  .article-share{margin-top:40px;padding-top:28px;border-top:1px solid var(--line);}
+  .article-share .share-label{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:18px;}
+  .share-row{display:flex;flex-wrap:wrap;align-items:center;gap:20px;row-gap:14px;}
+  .share-item{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:none;border:none;padding:0;margin:0;cursor:pointer;line-height:1;transition:color .25s ease;}
+  .share-item:hover,.share-item:focus-visible{color:var(--gold-text);}
+  .share-icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;flex:none;border:1px solid var(--line);border-radius:50%;font-family:var(--mono);font-size:.62rem;text-transform:none;letter-spacing:0;color:inherit;transition:border-color .25s ease;}
+  .share-item:hover .share-icon,.share-item:focus-visible .share-icon{border-color:var(--gold);}
+  .share-icon svg{width:12px;height:12px;stroke:currentColor;}
+  .share-feedback{display:inline-block;margin-left:2px;margin-top:12px;font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;color:var(--gold-text);opacity:0;transform:translateY(-2px);transition:opacity .3s ease,transform .3s ease;}
+  .share-feedback.is-visible{opacity:1;transform:translateY(0);}
+
   @media (max-width:700px){
     .article-head{padding:56px 0 4px;}
     .article-body{padding:28px 0 72px;}
     .article-body h2{margin-top:48px;}
+    .article-share{margin-top:32px;padding-top:24px;}
+    .share-row{gap:16px;row-gap:14px;}
   }
 </style>
 <script defer src="/analytics-consent.js"></script>
@@ -231,6 +245,40 @@
         <a href="/contacto">Hablemos de tu proyecto</a>
       </div>
 
+      <!--
+        ==== BLOQUE DE COMPARTIR — REUTILIZABLE EN FUTUROS ARTÍCULOS ====
+        Para añadirlo a un nuevo artículo del blog:
+        1) Copia este bloque completo (el <div class="article-share">...</div> de aquí abajo)
+           y el CSS ".article-share / .share-row / .share-item / .share-icon / .share-feedback"
+           del <style> de esta página, y el bloque JS "Compartir artículo" del <script> del final.
+        2) Cambia solo data-share-url y data-share-title por los del nuevo artículo.
+           Los enlaces de LinkedIn/X/Facebook/WhatsApp y el botón de copiar se generan
+           automáticamente a partir de esos dos valores (ver <script> al final del body).
+        No requiere ninguna librería externa.
+      -->
+      <div class="article-share" data-share-url="https://cdayco.com/blog/ferias-eventos-clave-para-marcas" data-share-title="Por qué las marcas necesitan volver a encontrarse cara a cara">
+        <span class="share-label">Compartir este artículo</span>
+        <div class="share-row">
+          <a class="share-item share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
+            <span class="share-icon" aria-hidden="true">in</span><span>LinkedIn</span>
+          </a>
+          <a class="share-item share-x" href="#" target="_blank" rel="noopener" aria-label="Compartir en X">
+            <span class="share-icon" aria-hidden="true">X</span><span>X</span>
+          </a>
+          <a class="share-item share-facebook" href="#" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
+            <span class="share-icon" aria-hidden="true">f</span><span>Facebook</span>
+          </a>
+          <a class="share-item share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp">
+            <span class="share-icon" aria-hidden="true">wa</span><span>WhatsApp</span>
+          </a>
+          <button type="button" class="share-item share-copy" aria-label="Copiar enlace del artículo">
+            <span class="share-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M4 16V6a2 2 0 0 1 2-2h10"></path></svg></span><span>Copiar enlace</span>
+          </button>
+        </div>
+        <span class="share-feedback" role="status" aria-live="polite"></span>
+      </div>
+      <!-- ==== FIN BLOQUE DE COMPARTIR ==== -->
+
     </div>
   </section>
 
@@ -276,6 +324,65 @@
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false');
   }));
+
+  // Compartir artículo — bloque reutilizable: solo depende de data-share-url / data-share-title
+  document.querySelectorAll('.article-share').forEach((block) => {
+    const shareUrl = block.getAttribute('data-share-url') || location.href;
+    const shareTitle = block.getAttribute('data-share-title') || document.title;
+    const encUrl = encodeURIComponent(shareUrl);
+    const encTitle = encodeURIComponent(shareTitle);
+
+    const linkedin = block.querySelector('.share-linkedin');
+    if (linkedin) linkedin.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encUrl}`;
+
+    const x = block.querySelector('.share-x');
+    if (x) x.href = `https://twitter.com/intent/tweet?url=${encUrl}&text=${encTitle}`;
+
+    const facebook = block.querySelector('.share-facebook');
+    if (facebook) facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encUrl}`;
+
+    const whatsapp = block.querySelector('.share-whatsapp');
+    if (whatsapp) whatsapp.href = `https://wa.me/?text=${encTitle}%20${encUrl}`;
+
+    const copyBtn = block.querySelector('.share-copy');
+    const feedback = block.querySelector('.share-feedback');
+    let feedbackTimer = null;
+    const showFeedback = (msg) => {
+      if (!feedback) return;
+      feedback.textContent = msg;
+      feedback.classList.add('is-visible');
+      clearTimeout(feedbackTimer);
+      feedbackTimer = setTimeout(() => feedback.classList.remove('is-visible'), 2200);
+    };
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const fallbackCopy = () => {
+          try {
+            const tmp = document.createElement('textarea');
+            tmp.value = shareUrl;
+            tmp.setAttribute('readonly', '');
+            tmp.style.position = 'fixed';
+            tmp.style.left = '-9999px';
+            document.body.appendChild(tmp);
+            tmp.select();
+            document.execCommand('copy');
+            document.body.removeChild(tmp);
+            showFeedback('Enlace copiado');
+          } catch (e) {
+            showFeedback('No se pudo copiar');
+          }
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(shareUrl).then(
+            () => showFeedback('Enlace copiado'),
+            fallbackCopy
+          );
+        } else {
+          fallbackCopy();
+        }
+      });
+    }
+  });
 </script>
 </body>
 </html>

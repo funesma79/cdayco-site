@@ -24,6 +24,26 @@
 <meta name="twitter:description" content="Ideas, proyectos y reflexiones de CDA & Co. sobre diseño, arquitectura, ferias y grandes eventos.">
 <meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://cdayco.com/blog#blog",
+  "url": "https://cdayco.com/blog",
+  "name": "Blog | CDA & Co.",
+  "publisher": { "@type": "Organization", "name": "CDA & Co.", "url": "https://cdayco.com/" },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Por qué las marcas necesitan volver a encontrarse cara a cara",
+      "url": "https://cdayco.com/blog/ferias-eventos-clave-para-marcas",
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13"
+    }
+  ]
+}
+</script>
+
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon.svg">
 
@@ -35,7 +55,17 @@
   .page-head{padding:72px 0 16px;}
   .page-head h1{font-size:clamp(1.9rem,4vw,2.6rem);max-width:20ch;}
   .page-head p{font-family:var(--sans);font-weight:300;font-size:1.1rem;color:var(--ink-soft);max-width:56ch;margin-top:22px;line-height:1.6;}
-  .blog-empty{padding:24px 0 96px;}
+
+  .blog-list{padding:24px 0 96px;}
+  .blog-item{border-top:1px solid var(--line);padding:44px 0;display:grid;grid-template-columns:140px 1fr;gap:32px;}
+  .blog-list .wrap > .blog-item:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:700px){.blog-item{grid-template-columns:1fr;gap:12px;}}
+  .blog-item .date{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-text);padding-top:4px;}
+  .blog-item h2{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:600;max-width:24ch;}
+  .blog-item h2 a{text-decoration:none;color:inherit;}
+  .blog-item h2 a:hover{text-decoration:underline;text-underline-offset:5px;}
+  .blog-item .excerpt{font-family:var(--sans);font-weight:300;font-size:1rem;color:var(--ink-soft);line-height:1.65;max-width:60ch;margin-top:14px;}
+  .blog-item .read-more{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;}
 </style>
 </head>
 <body>
@@ -68,12 +98,16 @@
     </div>
   </section>
 
-  <section class="blog-empty">
+  <section class="blog-list">
     <div class="wrap">
-      <div class="empty-state">
-        <div class="k">Próximamente</div>
-        <p>El primer artículo se publicará muy pronto. A partir de entonces, nuevas entradas cada semana.</p>
-      </div>
+      <article class="blog-item">
+        <div class="date">13 sep 2026</div>
+        <div>
+          <h2><a href="/blog/ferias-eventos-clave-para-marcas">Por qué las marcas necesitan volver a encontrarse cara a cara</a></h2>
+          <p class="excerpt">Ferias, eventos y espacios físicos como herramientas estratégicas de marca: por qué el encuentro presencial sigue generando algo que ninguna pantalla reproduce del todo, y cómo el diseño de espacios puede convertirlo en experiencias, contactos y negocio.</p>
+          <a class="read-more" href="/blog/ferias-eventos-clave-para-marcas">Leer artículo →</a>
+        </div>
+      </article>
     </div>
   </section>
 </main>

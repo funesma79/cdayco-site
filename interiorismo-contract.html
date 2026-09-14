@@ -115,13 +115,41 @@
   .cta-btn{display:inline-block;margin-top:26px;padding:14px 22px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;}
   .cta-btn:hover{background:transparent;color:var(--ink);}
 
+  .quick-contact{padding:80px 0;border-top:1px solid var(--line);}
+  .quick-contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start;}
+  .quick-contact-grid h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;}
+  .quick-contact-intro p{font-family:var(--sans);font-weight:300;line-height:1.7;color:var(--ink-soft);max-width:400px;margin-top:16px;}
+  .quick-form{display:flex;flex-direction:column;gap:22px;max-width:560px;}
+  .quick-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .quick-form .field{display:flex;flex-direction:column;gap:8px;}
+  .quick-form .field label{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;}
+  .quick-form input,.quick-form select,.quick-form textarea{
+    font-family:var(--sans);font-weight:400;font-size:1rem;padding:12px 0;background:transparent;
+    border:none;border-bottom:1px solid var(--line);color:var(--ink);border-radius:0;width:100%;
+  }
+  .quick-form select{cursor:pointer;}
+  .quick-form input:focus,.quick-form select:focus,.quick-form textarea:focus{outline:none;border-color:var(--ink);}
+  .quick-form textarea{resize:vertical;min-height:90px;}
+  .quick-form .hp-field{position:absolute;left:-9999px;}
+  .quick-form .consent{display:flex;align-items:flex-start;gap:9px;font-size:.8rem;color:var(--ink-soft);font-family:var(--sans);}
+  .quick-form .consent a{text-decoration:underline;}
+  .quick-form .form-submit{
+    align-self:flex-start;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+    background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:15px 26px;cursor:pointer;
+  }
+  .quick-form .form-submit:hover{background:transparent;color:var(--ink);}
+  .quick-form .form-submit:disabled{opacity:.6;cursor:default;}
+  .quick-form .form-status{font-family:var(--mono);font-size:.8rem;min-height:1.2em;}
+  .quick-form .form-status[data-state="ok"]{color:#4C7A4E;}
+  .quick-form .form-status[data-state="err"]{color:#A3503F;}
+
   @media (max-width:820px){
     .cap-grid{grid-template-columns:1fr 1fr;}
     .cap:nth-child(3n){border-right:1px solid var(--line);}
     .cap:nth-child(2n){border-right:none;}
     .cap:nth-last-child(-n+3){border-bottom:1px solid var(--line);}
     .cap:nth-last-child(-n+2){border-bottom:none;}
-    .section-grid,.experience-box{grid-template-columns:1fr;gap:26px;}
+    .section-grid,.experience-box,.quick-contact-grid{grid-template-columns:1fr;gap:26px;}
     .process-grid{grid-template-columns:1fr;}
     .process-step,.process-step+.process-step{padding:22px 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.2);}
     .process-step:last-child{border-bottom:none;}
@@ -131,8 +159,9 @@
     .cap-grid{grid-template-columns:1fr;}
     .cap,.cap:nth-child(2n),.cap:nth-child(3n),.cap:nth-last-child(-n+2){border-right:none;border-bottom:1px solid var(--line);}
     .cap:last-child{border-bottom:none;}
-    .service-section,.process,.experience{padding:56px 0;}
+    .service-section,.process,.experience,.quick-contact{padding:56px 0;}
     .experience-box{padding:26px;}
+    .quick-form .form-row{grid-template-columns:1fr;}
   }
 </style>
 <script defer src="/analytics-consent.js"></script>
@@ -238,6 +267,39 @@
       <a class="cta-btn" href="/contacto">Hablar con CDA &amp; Co.</a>
     </div>
   </section>
+
+  <section class="quick-contact">
+    <div class="wrap quick-contact-grid">
+      <div class="quick-contact-intro">
+        <div class="eyebrow gold" style="margin-bottom:18px;">Contacto rápido</div>
+        <h2>Cuéntanos tu proyecto en dos líneas.</h2>
+        <p>Si prefieres ir directo, escríbenos aquí mismo con lo esencial. Te respondemos por email con los siguientes pasos.</p>
+      </div>
+      <form class="quick-form" id="quick-contact-form" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="qf-nombre">Nombre</label><input id="qf-nombre" name="nombre" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="qf-email">Email</label><input id="qf-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="qf-empresa">Empresa / marca</label><input id="qf-empresa" name="empresa" type="text" autocomplete="organization"></div>
+          <div class="field">
+            <label for="qf-tipo">Tipo de proyecto</label>
+            <select id="qf-tipo" name="tipo">
+              <option value="Interiorismo &amp; Contract" selected>Interiorismo &amp; Contract</option>
+              <option value="Diseño Expositivo / Stands">Diseño Expositivo / Stands</option>
+              <option value="Ferias, Eventos y Producción">Ferias, Eventos y Producción</option>
+              <option value="Otro / No estoy seguro">Otro / No estoy seguro</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="qf-mensaje">Mensaje</label><textarea id="qf-mensaje" name="mensaje" required></textarea></div>
+        <div class="hp-field" aria-hidden="true"><label for="qf-website">No rellenar</label><input id="qf-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="/privacidad">política de privacidad</a>.</span></label>
+        <button class="form-submit" type="submit">Enviar mensaje</button>
+        <p class="form-status" id="quick-form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -280,6 +342,37 @@
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false');
   }));
+
+  const quickForm = document.getElementById('quick-contact-form');
+  const quickStatus = document.getElementById('quick-form-status');
+  if (quickForm) {
+    quickForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      quickStatus.dataset.state = ''; quickStatus.textContent = '';
+      if (quickForm.website.value) return;
+      if (!quickForm.checkValidity()) { quickForm.reportValidity(); return; }
+      const payload = Object.fromEntries(new FormData(quickForm).entries());
+      const btn = quickForm.querySelector('.form-submit'); btn.disabled = true;
+      try {
+        const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+        if (!res.ok) throw new Error('bad-response');
+        quickStatus.dataset.state = 'ok';
+        quickStatus.textContent = 'Mensaje enviado. Te responderé lo antes posible.';
+
+        if (window.cdaAnalytics) {
+          window.cdaAnalytics.event('generate_lead', {
+            form_name: 'interiorismo-contract-quick',
+            form_location: window.location.pathname
+          });
+        }
+
+        quickForm.reset();
+      } catch (err) {
+        quickStatus.dataset.state = 'err';
+        quickStatus.innerHTML = 'No se pudo enviar. Escribe a <a href="mailto:hola@cdayco.com">hola@cdayco.com</a>.';
+      } finally { btn.disabled = false; }
+    });
+  }
 </script>
 </body>
 </html>

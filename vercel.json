@@ -7,6 +7,16 @@
       "has": [{ "type": "host", "value": "www.cdayco.com" }],
       "destination": "https://cdayco.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/carolina",
+      "destination": "/estudio",
+      "permanent": true
+    },
+    {
+      "source": "/en/carolina-abril",
+      "destination": "/en/studio",
+      "permanent": true
     }
   ],
   "rewrites": [

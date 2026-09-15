@@ -115,124 +115,74 @@
     margin:26px auto 0;
   }
 
-  .hero-tags{
-    margin-top:36px;
+  .hero-concept{
+    margin-top:22px;
     font-family:var(--mono);
-    font-size:.78rem;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-  }
-
-  .work-head{
-    display:flex;
-    align-items:baseline;
-    justify-content:space-between;
-    margin-bottom:40px;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-
-  .work-head h2{
-    font-size:1.5rem;
-  }
-
-  .work-head a{
-    font-family:var(--mono);
-    font-size:.78rem;
+    font-size:.8rem;
     letter-spacing:.08em;
     text-transform:uppercase;
-    border-bottom:1px solid var(--ink);
-    padding-bottom:2px;
+    color:var(--gold-text);
   }
 
-  .work-grid{
+  .services-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
     gap:2px;
   }
 
-  .pcard{
-    position:relative;
-    aspect-ratio:4/3;
+  @media (max-width:800px){
+    .services-grid{
+      grid-template-columns:1fr;
+    }
+  }
+
+  .scard{
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    padding:32px;
-    overflow:hidden;
+    gap:20px;
+    padding:48px 36px;
+    min-height:260px;
     transition:opacity .3s ease;
   }
 
-  .pcard:hover{
-    opacity:.88;
+  .scard:hover{
+    opacity:.9;
   }
 
-  .pcard.ink{
+  .scard.ink{
     background:var(--ink);
     color:var(--paper);
   }
 
-  .pcard.paper{
+  .scard.paper{
     background:var(--paper-alt);
     color:var(--ink);
   }
 
-  .pcard .num{
+  .scard .num{
     font-family:var(--mono);
     font-size:.78rem;
     letter-spacing:.1em;
     color:var(--gold);
   }
 
-  .pcard.paper .num{
+  .scard.paper .num{
     color:var(--gold-text);
   }
 
-  .pcard .name{
-    font-size:clamp(1.6rem,3vw,2.3rem);
+  .scard .name{
+    font-size:clamp(1.3rem,2.6vw,1.7rem);
     font-weight:600;
-    line-height:1.1;
+    line-height:1.15;
   }
 
-  .pcard .cat{
-    font-family:var(--mono);
-    font-size:.72rem;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    opacity:.65;
-  }
-
-  .strip{
-    display:flex;
-    flex-wrap:wrap;
-    gap:0;
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
-
-  .strip a{
-    flex:1 1 200px;
-    padding:22px 6px;
-    text-align:center;
-    font-family:var(--mono);
-    font-size:.78rem;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    border-right:1px solid var(--line);
-  }
-
-  .strip a:last-child{
-    border-right:none;
-  }
-
-  .strip a:hover{
-    color:var(--gold-text);
-  }
-
-  @media(max-width:800px){
-    .work-grid{
-      grid-template-columns:1fr;
-    }
+  .scard p{
+    font-family:var(--sans);
+    font-weight:300;
+    font-size:.95rem;
+    line-height:1.55;
+    opacity:.85;
   }
 </style>
 
@@ -260,9 +210,10 @@
 
     <nav class="primary-nav" id="primary-nav">
       <a href="/en/" class="active">Home</a>
+      <a href="/en/event-design-production">Fairs &amp; Events</a>
+      <a href="/en/exhibition-design">Stands &amp; Brand Spaces</a>
+      <a href="/en/interior-design-contract">Contract Interior Design</a>
       <a href="/en/studio">Studio</a>
-      <a href="/en/services">Services</a>
-      <a href="/en/projects">Projects</a>
       <a href="/en/contact">Contact</a>
       <a href="/" lang="es" hreflang="es" aria-label="Spanish version">ES</a>
     </nav>
@@ -280,64 +231,39 @@
            alt="CDA & Co. — From Design to Installation">
 
       <h1>
-        We design spaces, exhibitions and events.
+        Design, direction and production of spaces, fairs and large-scale events.
       </h1>
 
       <p class="hero-sub">
-        Multidisciplinary studio for exhibition design,
-        interiors, contract and large-scale events in Spain.
+        We design and develop projects for brands and companies: from trade fairs and stands to interior design spaces, particularly within the Contract sector.
       </p>
 
-      <p class="hero-tags">
-        Interiors · Contract · Exhibitions ·
-        Trade Shows · Events
-      </p>
+      <p class="hero-concept">From concept to installation.</p>
 
     </div>
   </section>
 
 
-  <section class="section-line">
-    <div class="wrap">
+  <section class="services-grid">
 
-      <div class="work-head">
-        <h2>Projects &amp; experience</h2>
-        <a href="/en/projects">View all →</a>
-      </div>
+    <a class="scard ink" href="/en/event-design-production">
+      <span class="num">01</span>
+      <span class="name">Fairs &amp; Events</span>
+      <p>Direction, coordination and production of trade fairs, exhibitions and large-scale events.</p>
+    </a>
 
-      <div class="work-grid">
+    <a class="scard paper" href="/en/exhibition-design">
+      <span class="num">02</span>
+      <span class="name">Stands &amp; Brand Spaces</span>
+      <p>Design and development of stands, pavilions, exhibition spaces and brand spaces.</p>
+    </a>
 
-        <a class="pcard ink"
-           href="/en/experience/marbella-design">
+    <a class="scard ink" href="/en/interior-design-contract">
+      <span class="num">03</span>
+      <span class="name">Contract Interior Design</span>
+      <p>Interior design for hospitality, retail, showrooms, offices and Contract projects.</p>
+    </a>
 
-          <span class="num">01</span>
-          <span class="name">Marbella Design</span>
-          <span class="cat">
-            Documented history · 2019–2020
-          </span>
-
-        </a>
-
-        <div class="pcard paper">
-
-          <span class="num">02</span>
-          <span class="name">Betanzos 60</span>
-          <span class="cat">
-            Interior Design · Contract
-          </span>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="strip" style="padding:0;">
-    <a href="/en/event-design-production">Trade Shows &amp; Events</a>
-    <a href="/en/interior-design-contract">Interior Design &amp; Contract</a>
-    <a href="/en/exhibition-design">Exhibition Design</a>
-    <a href="/en/services">Brand Spaces</a>
   </section>
 
 </main>

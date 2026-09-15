@@ -101,32 +101,22 @@
 </script>
 
 <style>
-  .hero{padding:72px 0 88px;text-align:center;}
-  .hero-logo{width:220px;margin:0 auto 40px;}
-  .hero h1{font-size:clamp(2.1rem,5vw,3.6rem);font-weight:600;max-width:20ch;margin:0 auto;}
-  .hero-sub{font-family:var(--sans);font-weight:300;font-size:1.15rem;color:var(--ink-soft);max-width:52ch;margin:26px auto 0;}
-  .hero-concept{margin-top:22px;font-family:var(--mono);font-weight:400;letter-spacing:.04em;color:var(--gold-text);font-size:.85rem;text-transform:uppercase;}
-  .hero-tags{margin-top:36px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+  .hero{padding:96px 0 80px;text-align:center;}
+  .hero-logo{width:200px;margin:0 auto 44px;}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:600;max-width:22ch;margin:0 auto;}
+  .hero-sub{font-family:var(--sans);font-weight:300;font-size:1.15rem;line-height:1.6;color:var(--ink-soft);max-width:52ch;margin:26px auto 0;}
+  .hero-concept{margin-top:26px;font-family:var(--mono);font-weight:400;letter-spacing:.04em;color:var(--gold-text);font-size:.85rem;text-transform:uppercase;}
 
-  .work-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;}
-  .work-head h2{font-size:1.5rem;}
-  .work-head a{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;}
-
-  .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
-  @media (max-width:800px){.work-grid{grid-template-columns:1fr;}}
-  .pcard{position:relative;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:space-between;padding:32px;overflow:hidden;transition:opacity .3s ease;}
-  .pcard:hover{opacity:.88;}
-  .pcard.ink{background:var(--ink);color:var(--paper);}
-  .pcard.paper{background:var(--paper-alt);color:var(--ink);}
-  .pcard .num{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;color:var(--gold);}
-  .pcard.paper .num{color:var(--gold-text);}
-  .pcard .name{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:600;line-height:1.1;}
-  .pcard .cat{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;opacity:.65;}
-
-  .strip{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .strip a{flex:1 1 200px;padding:22px 6px;text-align:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;border-right:1px solid var(--line);}
-  .strip a:last-child{border-right:none;}
-  .strip a:hover{color:var(--gold-text);}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+  @media (max-width:800px){.services-grid{grid-template-columns:1fr;}}
+  .scard{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:48px 36px;min-height:260px;transition:opacity .3s ease;}
+  .scard:hover{opacity:.9;}
+  .scard.ink{background:var(--ink);color:var(--paper);}
+  .scard.paper{background:var(--paper-alt);color:var(--ink);}
+  .scard .num{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;color:var(--gold);}
+  .scard.paper .num{color:var(--gold-text);}
+  .scard .name{font-size:clamp(1.3rem,2.6vw,1.7rem);font-weight:600;line-height:1.15;}
+  .scard p{font-family:var(--sans);font-weight:300;font-size:.95rem;line-height:1.55;opacity:.85;}
 </style>
 <script defer src="/analytics-consent.js"></script>
 </head>
@@ -141,10 +131,10 @@
     </button>
     <nav class="primary-nav" id="primary-nav">
       <a href="/" class="active">Inicio</a>
+      <a href="/direccion-produccion-eventos">Ferias &amp; Eventos</a>
+      <a href="/diseno-expositivo">Stands &amp; Espacios de marca</a>
+      <a href="/interiorismo-contract">Interiorismo Contract</a>
       <a href="/estudio">Estudio</a>
-      <a href="/servicios">Servicios</a>
-      <a href="/proyectos">Proyectos</a>
-      <a href="/experiencia">Experiencia</a>
       <a href="/blog">Blog</a>
       <a href="/contacto">Contacto</a>
       <div class="lang-switch"><a href="/" class="active">ES</a><span>/</span><a href="/en/" lang="en">EN</a><span>/</span><a href="/zh/" lang="zh-Hans">中文</a></div>
@@ -155,57 +145,33 @@
 <main id="main">
   <section class="hero">
     <div class="wrap">
-      <img class="hero-logo" src="assets/logo-cda-co-ink.png" alt="CDA & Co. — From Design to Installation">
-      <h1>Diseño, espacios y grandes eventos.</h1>
-      <p class="hero-sub">CDA &amp; Co. es un estudio multidisciplinar especializado en diseño, arquitectura, interiorismo, ferias, espacios expositivos y grandes eventos.</p>
-      <p class="hero-concept">Del concepto a la instalación final.</p>
-      <p class="hero-tags">Ferias &amp; Eventos &middot; Stands &amp; Espacios Expositivos &middot; Interiorismo &amp; Arquitectura &middot; Brand Spaces &middot; International Market Entry</p>
-    </div>
-  </section>
-
-  <section class="diff section-line">
-    <div class="wrap">
-      <div class="diff-head">
-        <div class="eyebrow gold" style="margin-bottom:16px;">Nuestro diferencial</div>
-        <h2>Entendemos la feria por dentro — por eso diseñamos espacios que funcionan dentro de ella.</h2>
-        <p>Dirigir y producir ferias y grandes eventos nos da un criterio que no se aprende solo diseñando: sabemos cómo se comporta un espacio con público real, presupuesto real y tiempos reales. Por eso nuestros stands y espacios expositivos no son solo estéticos — son estratégicos y funcionales.</p>
-      </div>
-      <div class="diff-grid">
-        <div class="diff-item"><div class="k">Recorrido</div><p>Circulación y experiencia del visitante.</p></div>
-        <div class="diff-item"><div class="k">Marca</div><p>Visibilidad y posicionamiento de marca en el espacio.</p></div>
-        <div class="diff-item"><div class="k">Construcción</div><p>Arquitectura efímera, materiales, iluminación y producción.</p></div>
-        <div class="diff-item"><div class="k">Ejecución</div><p>Presupuesto, tiempos, logística y montaje reales.</p></div>
-      </div>
+      <img class="hero-logo" src="assets/logo-cda-co-ink.png" alt="CDA & Co.">
+      <h1>Diseño, dirección y producción de espacios, ferias y grandes eventos.</h1>
+      <p class="hero-sub">Diseñamos y desarrollamos proyectos para marcas y empresas: desde ferias y stands hasta espacios de interiorismo, especialmente dentro del sector Contract.</p>
+      <p class="hero-concept">Del concepto a la instalación.</p>
     </div>
   </section>
 
   <section class="section-line">
     <div class="wrap">
-      <div class="work-head">
-        <h2>Proyectos</h2>
-        <a href="/proyectos">Ver todos →</a>
-      </div>
-      <div class="work-grid">
-        <a class="pcard ink" href="/proyectos">
+      <div class="services-grid">
+        <a class="scard ink" href="/direccion-produccion-eventos">
           <span class="num">01</span>
-          <span class="name">Marbella Design</span>
-          <span class="cat">Feria &middot; Evento</span>
+          <span class="name">Ferias &amp; Eventos</span>
+          <p>Dirección, coordinación y producción de ferias, exposiciones y grandes eventos.</p>
         </a>
-        <a class="pcard paper" href="/proyectos">
+        <a class="scard paper" href="/diseno-expositivo">
           <span class="num">02</span>
-          <span class="name">Betanzos 60</span>
-          <span class="cat">Interiorismo &middot; Contract</span>
+          <span class="name">Stands &amp; Espacios de marca</span>
+          <p>Diseño y desarrollo de stands, pabellones, espacios expositivos y espacios de marca.</p>
+        </a>
+        <a class="scard ink" href="/interiorismo-contract">
+          <span class="num">03</span>
+          <span class="name">Interiorismo Contract</span>
+          <p>Interiorismo para hospitality, retail, showrooms, oficinas y proyectos Contract.</p>
         </a>
       </div>
     </div>
-  </section>
-
-  <section class="strip" style="padding:0;">
-    <a href="/servicios">Ferias &amp; Grandes Eventos</a>
-    <a href="/servicios">Stands &amp; Espacios Expositivos</a>
-    <a href="/servicios">Interiorismo &amp; Arquitectura</a>
-    <a href="/servicios">Brand Spaces</a>
-    <a href="/servicios">International Market Entry</a>
   </section>
 </main>
 

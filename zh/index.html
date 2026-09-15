@@ -56,25 +56,16 @@
   .hero-concept{margin-top:22px;font-family:var(--mono);font-weight:400;letter-spacing:.02em;color:var(--gold-text);font-size:.85rem;}
   .hero-tags{margin-top:36px;font-family:var(--sans-zh);font-size:.82rem;color:var(--ink-soft);}
 
-  .work-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;}
-  .work-head h2{font-size:1.5rem;}
-  .work-head a{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;}
-
-  .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
-  @media (max-width:800px){.work-grid{grid-template-columns:1fr;}}
-  .pcard{position:relative;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:space-between;padding:32px;overflow:hidden;transition:opacity .3s ease;}
-  .pcard:hover{opacity:.88;}
-  .pcard.ink{background:var(--ink);color:var(--paper);}
-  .pcard.paper{background:var(--paper-alt);color:var(--ink);}
-  .pcard .num{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;color:var(--gold);}
-  .pcard.paper .num{color:var(--gold-text);}
-  .pcard .name{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:600;line-height:1.1;}
-  .pcard .cat{font-family:var(--sans-zh);font-size:.78rem;opacity:.65;}
-
-  .strip{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .strip a{flex:1 1 200px;padding:22px 6px;text-align:center;font-family:var(--sans-zh);font-size:.86rem;border-right:1px solid var(--line);}
-  .strip a:last-child{border-right:none;}
-  .strip a:hover{color:var(--gold-text);}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+  @media (max-width:800px){.services-grid{grid-template-columns:1fr;}}
+  .scard{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:48px 36px;min-height:260px;transition:opacity .3s ease;}
+  .scard:hover{opacity:.9;}
+  .scard.ink{background:var(--ink);color:var(--paper);}
+  .scard.paper{background:var(--paper-alt);color:var(--ink);}
+  .scard .num{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;color:var(--gold);}
+  .scard.paper .num{color:var(--gold-text);}
+  .scard .name{font-size:clamp(1.3rem,2.6vw,1.7rem);font-weight:600;line-height:1.15;}
+  .scard p{font-family:var(--sans-zh);font-weight:400;font-size:.92rem;line-height:1.65;opacity:.85;}
 </style>
 </head>
 <body>
@@ -88,10 +79,10 @@
     </button>
     <nav class="primary-nav" id="primary-nav">
       <a href="/zh/" class="active">首页</a>
+      <a href="/zh/servicios#fairs-events">展会与大型活动</a>
+      <a href="/zh/servicios#stands-exhibition">展位与展览空间</a>
+      <a href="/zh/servicios#interior-design">室内设计与建筑</a>
       <a href="/zh/estudio">工作室</a>
-      <a href="/zh/servicios">服务</a>
-      <a href="/zh/proyectos">项目</a>
-      <a href="/zh/experiencia">经验</a>
       <a href="/zh/contacto">联系我们</a>
       <div class="lang-switch"><a href="/">ES</a><span>/</span><a href="/zh/" class="active">中文</a></div>
     </nav>
@@ -102,56 +93,28 @@
   <section class="hero">
     <div class="wrap">
       <img class="hero-logo" src="/assets/logo-cda-co-ink.png" alt="CDA & Co. — From Design to Installation">
-      <h1>设计、空间与大型活动。</h1>
-      <p class="hero-sub">CDA &amp; Co. 是一家专注于设计、建筑、室内设计、展会、展览空间与大型活动的多学科工作室。</p>
-      <p class="hero-concept">FROM DESIGN TO INSTALLATION · 从概念到最终安装</p>
-      <p class="hero-tags">展会与大型活动 · 展位与展览空间 · 室内设计与建筑 · 品牌空间 · 国际市场进入</p>
+      <h1>空间、展会与大型活动的设计、指导与制作。</h1>
+      <p class="hero-sub">我们为品牌与企业设计并开发项目:从展会与展位到室内设计空间,尤其专注于 Contract 领域。</p>
+      <p class="hero-concept">从概念到最终安装。</p>
     </div>
   </section>
 
-  <section class="diff section-line">
-    <div class="wrap">
-      <div class="diff-head">
-        <div class="eyebrow gold" style="margin-bottom:16px;">我们的差异化优势</div>
-        <h2>我们从内部理解展会——所以我们设计的空间真正能在展会中运作。</h2>
-        <p>策划和制作展会与大型活动,让我们拥有仅靠设计无法获得的判断力:我们了解一个空间在真实观众、真实预算与真实时间下的运作方式。因此,我们的展位和展览空间不仅追求美观——它们同样具有战略性与功能性。</p>
-      </div>
-      <div class="diff-grid">
-        <div class="diff-item"><div class="k">动线</div><p>人流动线与访客体验。</p></div>
-        <div class="diff-item"><div class="k">品牌</div><p>空间中的品牌可见度与定位。</p></div>
-        <div class="diff-item"><div class="k">搭建</div><p>临时建筑、材料、灯光与制作。</p></div>
-        <div class="diff-item"><div class="k">执行</div><p>真实的预算、时间与搭建物流。</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-line">
-    <div class="wrap">
-      <div class="work-head">
-        <h2>项目</h2>
-        <a href="/zh/proyectos">查看全部 →</a>
-      </div>
-      <div class="work-grid">
-        <a class="pcard ink" href="/zh/proyectos">
-          <span class="num">01</span>
-          <span class="name">Marbella Design</span>
-          <span class="cat">展会 · 活动</span>
-        </a>
-        <a class="pcard paper" href="/zh/proyectos">
-          <span class="num">02</span>
-          <span class="name">Betanzos 60</span>
-          <span class="cat">室内设计 · 合同</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="strip" style="padding:0;">
-    <a href="/zh/servicios">展会与大型活动</a>
-    <a href="/zh/servicios">展位与展览空间</a>
-    <a href="/zh/servicios">室内设计与建筑</a>
-    <a href="/zh/servicios">品牌空间</a>
-    <a href="/zh/servicios">国际市场进入</a>
+  <section class="services-grid">
+    <a class="scard ink" href="/zh/servicios#fairs-events">
+      <span class="num">01</span>
+      <span class="name">展会与大型活动</span>
+      <p>策划、指导并制作展会、展览与大型活动。</p>
+    </a>
+    <a class="scard paper" href="/zh/servicios#stands-exhibition">
+      <span class="num">02</span>
+      <span class="name">展位与展览空间</span>
+      <p>展位、展馆、展览空间与品牌空间的设计与开发。</p>
+    </a>
+    <a class="scard ink" href="/zh/servicios#interior-design">
+      <span class="num">03</span>
+      <span class="name">室内设计与建筑</span>
+      <p>酒店、零售、展厅、办公及 Contract 项目的室内设计。</p>
+    </a>
   </section>
 </main>
 

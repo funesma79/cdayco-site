@@ -46,6 +46,10 @@
   .prow:hover{opacity:.9;}
   .prow.ink{background:var(--ink);color:var(--paper);}
   .prow.paper{background:var(--paper-alt);color:var(--ink);}
+  .prow.photo{background-size:cover;background-position:center;color:var(--paper);}
+  .prow.photo::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,17,.45),rgba(17,17,17,.78));}
+  .prow.photo .num{color:var(--gold);z-index:1;}
+  .prow.photo .inner{position:relative;z-index:1;}
   .prow .inner{max-width:var(--maxw);margin:0 auto;width:100%;display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;}
   .prow .num{font-family:var(--mono);font-size:.85rem;color:var(--gold);position:absolute;top:32px;left:var(--margin);}
   .prow.paper .num{color:var(--gold-text);}
@@ -103,8 +107,9 @@
     </a>
 
 
-    <a class="prow paper"
-       href="/trayectoria/design-week-marbella">
+    <a class="prow photo"
+       href="/trayectoria/design-week-marbella"
+       style="background-image:url('assets/design-week-marbella-showroom.jpg');">
 
       <span class="num">02</span>
 

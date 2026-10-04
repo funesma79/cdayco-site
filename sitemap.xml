@@ -166,9 +166,16 @@
 
   <url>
     <loc>https://cdayco.com/blog</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cdayco.com/blog/importancia-diseno-de-stand</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>

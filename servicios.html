@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Interiorismo, Contract, Ferias y Diseño Expositivo | CDA & Co.</title>
-<meta name="description" content="Ferias y grandes eventos, stands y espacios expositivos, interiorismo y arquitectura, brand spaces e implantación de marcas internacionales.">
+<meta name="description" content="Ferias y grandes eventos, stands y diseño expositivo, interiorismo y Contract, brand spaces y proyectos físicos de marcas internacionales en España.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#111111">
 <link rel="canonical" href="https://cdayco.com/servicios">
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CDA & Co.">
 <meta property="og:title" content="Servicios | CDA & Co.">
-<meta property="og:description" content="Ferias y grandes eventos, stands y espacios expositivos, interiorismo y arquitectura, brand spaces e implantación de marcas internacionales.">
+<meta property="og:description" content="Ferias y grandes eventos, stands y diseño expositivo, interiorismo y Contract, brand spaces y proyectos físicos de marcas internacionales en España.">
 <meta property="og:url" content="https://cdayco.com/servicios">
 <meta property="og:locale" content="es_ES">
 <meta property="og:image" content="https://cdayco.com/og-image.jpg">
@@ -25,7 +25,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Servicios | CDA & Co.">
-<meta name="twitter:description" content="Ferias y grandes eventos, stands y espacios expositivos, interiorismo y arquitectura, brand spaces e implantación de marcas internacionales.">
+<meta name="twitter:description" content="Ferias y grandes eventos, stands y diseño expositivo, interiorismo y Contract, brand spaces y proyectos físicos de marcas internacionales en España.">
 <meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -40,17 +40,17 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "provider": { "@type": "ProfessionalService", "name": "CDA & Co.", "url": "https://cdayco.com/" },
-  "areaServed": ["Madrid", "España", "Europa"],
+  "provider": { "@type": "ProfessionalService", "@id": "https://cdayco.com/#organization", "name": "CDA & Co.", "url": "https://cdayco.com/" },
+  "areaServed": [{ "@type": "City", "name": "Madrid" }, { "@type": "Country", "name": "Spain" }],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Servicios de CDA & Co.",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ferias & Grandes Eventos", "description": "Conceptualización, diseño, dirección y producción de ferias, eventos y espacios expositivos. Experiencia en proyectos de gran escala y formatos internacionales." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stands & Espacios Expositivos", "description": "Diseño integral de stands y espacios de marca: concepto, arquitectura, interiorismo, materiales, gráfica, iluminación, producción, montaje y dirección." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interiorismo & Arquitectura", "description": "Proyectos de interiorismo residencial, contract, hospitality, retail y espacios corporativos, desde el concepto hasta la ejecución." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Spaces", "description": "Showrooms, flagship stores, hospitality, espacios comerciales, pop-ups y experiencias de marca." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "International Market Entry", "description": "Estrategia, branding, concepto espacial, localización, diseño, producción y lanzamiento para marcas internacionales que se implantan en España o Europa." } }
+      { "@type": "Offer", "position": 1, "itemOffered": { "@type": "Service", "name": "Ferias & Grandes Eventos", "description": "Conceptualización, diseño, dirección y producción de ferias, eventos y espacios expositivos." } },
+      { "@type": "Offer", "position": 2, "itemOffered": { "@type": "Service", "name": "Stands & Espacios Expositivos", "description": "Diseño integral de stands y espacios de marca: concepto, arquitectura, interiorismo, materiales, gráfica, iluminación, producción, montaje y dirección." } },
+      { "@type": "Offer", "position": 3, "itemOffered": { "@type": "Service", "name": "Interiorismo & Contract", "description": "Proyectos de interiorismo y Contract para hospitality, retail, oficinas, showrooms y espacios profesionales, comerciales y corporativos." } },
+      { "@type": "Offer", "position": 4, "itemOffered": { "@type": "Service", "name": "Brand Spaces", "description": "Showrooms, flagship stores, hospitality, espacios comerciales, pop-ups y experiencias de marca." } },
+      { "@type": "Offer", "position": 5, "itemOffered": { "@type": "Service", "name": "Marcas internacionales en España", "description": "Diseño espacial, dirección de proyecto, producción e instalación de proyectos físicos de marcas internacionales en España, con coordinación de proveedores y contratistas especializados." } }
     ]
   }
 }
@@ -61,7 +61,7 @@
   .page-head h1{font-size:clamp(1.9rem,4vw,2.6rem);}
   .services{padding:0;}
   .srow{display:grid;grid-template-columns:100px 1fr 1.1fr;gap:32px;padding:48px 0;border-top:1px solid var(--line);align-items:start;}
-  .services .wrap > .srow:last-child{border-bottom:1px solid var(--line);}
+  .services .wrap > .srow:last-of-type{border-bottom:1px solid var(--line);}
   @media (max-width:800px){.srow{grid-template-columns:56px 1fr;}}
   .srow .num{font-family:var(--mono);font-size:.85rem;color:var(--gold-text);padding-top:4px;}
   .srow h2{font-size:clamp(1.3rem,2.4vw,1.8rem);font-weight:600;}
@@ -73,6 +73,14 @@
   .srow .note{font-family:var(--sans);font-weight:400;font-size:.94rem;color:var(--ink);margin-top:14px;max-width:52ch;line-height:1.55;}
   .srow ul{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
   .srow ul li{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);border:1px solid var(--line);padding:6px 10px;}
+  .srow .body a.inline{text-decoration:underline;text-underline-offset:4px;}
+  .faq-note{font-family:var(--sans);font-weight:300;font-size:1.05rem;color:var(--ink-soft);line-height:1.65;max-width:72ch;margin:40px 0 0;}
+  .faq-note a{text-decoration:underline;text-underline-offset:4px;}
+  .service-cta{margin-top:72px;padding:72px 0;background:var(--paper-alt);}
+  .service-cta h2{font-size:clamp(1.8rem,3.6vw,2.8rem);max-width:18ch;}
+  .service-cta p{font-family:var(--sans);font-weight:300;line-height:1.7;color:var(--ink-soft);max-width:640px;margin-top:18px;}
+  .cta-btn{display:inline-block;margin-top:26px;padding:14px 22px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;}
+  .cta-btn:hover{background:transparent;color:var(--ink);}
 </style>
 <script defer src="/analytics-consent.js"></script>
 </head>
@@ -93,7 +101,7 @@
       <a href="/estudio">Estudio</a>
       <a href="/blog">Blog</a>
       <a href="/contacto">Contacto</a>
-      <div class="lang-switch"><a href="/servicios" class="active">ES</a><span>/</span><a href="/en/services" lang="en">EN</a><span>/</span><a href="/zh/servicios" lang="zh-Hans">中文</a></div>
+      <div class="lang-switch" role="group" aria-label="Selector de idioma"><a href="/servicios" lang="es" hreflang="es" class="active" aria-current="page">ES</a><span aria-hidden="true">/</span><a href="/en/services" lang="en" hreflang="en">EN</a><span aria-hidden="true">/</span><a href="/zh/servicios" lang="zh-Hans" hreflang="zh-Hans">中文</a></div>
     </nav>
   </div>
 </header>
@@ -126,33 +134,43 @@
       </div>
       <div class="srow">
         <span class="num">03</span>
-        <h2><a href="/interiorismo-contract">Interiorismo &amp; Arquitectura</a></h2>
+        <h2><a href="/interiorismo-contract">Interiorismo &amp; Contract</a></h2>
         <div class="body">
-          <p>Proyectos de interiorismo residencial, Contract, hospitality, retail y espacios corporativos.</p>
+          <p>Proyectos de interiorismo y Contract para hospitality, retail, oficinas, showrooms y espacios profesionales, comerciales y corporativos.</p>
           <p>Desde el concepto inicial hasta la selección de materiales, desarrollo, coordinación y ejecución.</p>
         </div>
       </div>
       <div class="srow">
         <span class="num">04</span>
-        <h2>Brand Spaces</h2>
+        <h2><a href="/proyectos">Brand Spaces</a></h2>
         <div class="body">
           <p>Diseño de espacios capaces de trasladar la identidad de una marca a un entorno físico.</p>
-          <p>Showrooms, flagship stores, hospitality, espacios comerciales, pop-ups y experiencias de marca.</p>
+          <p>Showrooms, flagship stores, hospitality, espacios comerciales, pop-ups y experiencias de marca. <a class="inline" href="/proyectos">Ver proyectos.</a></p>
         </div>
       </div>
       <div class="srow">
         <span class="num">05</span>
-        <h2>International Market Entry</h2>
+        <h2>Marcas internacionales en España</h2>
         <div class="body">
-          <p>CDA &amp; Co. también trabaja con marcas internacionales que quieren implantarse en España o Europa. Desarrollamos el proceso desde la estrategia inicial y el posicionamiento hasta la materialización final.</p>
+          <p>Trabajamos con marcas internacionales que desarrollan proyectos físicos en España: stands, espacios de marca, showrooms e interiores.</p>
+          <p>Nos ocupamos del diseño espacial, la dirección de proyecto, la producción y la instalación, y coordinamos a los proveedores y contratistas especializados que intervienen en cada proyecto.</p>
           <ul>
-            <li>Adaptación de marca</li><li>Branding</li><li>Concepto espacial</li><li>Estrategia de entrada</li>
-            <li>Localización</li><li>Diseño</li><li>Partners y proveedores</li><li>Producción</li>
-            <li>Lanzamiento</li><li>Implantación</li>
+            <li>Diseño espacial</li><li>Dirección de proyecto</li><li>Producción</li><li>Instalación</li>
+            <li>Coordinación de proveedores y contratistas</li>
           </ul>
-          <p class="note">El objetivo es que una marca encuentre en CDA &amp; Co. un único interlocutor para desarrollar y materializar su entrada en un nuevo mercado.</p>
+          <p class="note"><a class="inline" href="/contacto">Cuéntanos tu proyecto en España.</a></p>
         </div>
       </div>
+      <p class="faq-note">¿Dudas sobre alcance, plazos o forma de trabajo? <a href="/preguntas-frecuentes">Consulta las preguntas frecuentes.</a></p>
+    </div>
+  </section>
+
+  <section class="service-cta">
+    <div class="wrap">
+      <div class="eyebrow gold" style="margin-bottom:18px;">Empezar un proyecto</div>
+      <h2>¿Tienes una feria, un stand o un espacio en mente?</h2>
+      <p>Cuéntanos qué necesitas, dónde y en qué plazos.</p>
+      <a class="cta-btn" href="/contacto">Hablar con CDA &amp; Co.</a>
     </div>
   </section>
 </main>

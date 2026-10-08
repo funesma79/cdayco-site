@@ -4,18 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>服务 | CDA & Co.</title>
-<meta name="description" content="展会与大型活动、展位与展览空间、室内设计与建筑、品牌空间以及国际市场进入。">
+<meta name="description" content="展会与大型活动、展位与展览设计、室内设计与 Contract、品牌空间,以及为在西班牙开展项目的国际品牌提供实体空间服务。总部位于马德里。">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#111111">
 <link rel="canonical" href="https://cdayco.com/zh/servicios">
 <link rel="alternate" hreflang="es" href="https://cdayco.com/servicios">
+<link rel="alternate" hreflang="en" href="https://cdayco.com/en/services">
 <link rel="alternate" hreflang="zh-Hans" href="https://cdayco.com/zh/servicios">
 <link rel="alternate" hreflang="x-default" href="https://cdayco.com/servicios">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CDA & Co.">
 <meta property="og:title" content="服务 | CDA & Co.">
-<meta property="og:description" content="展会与大型活动、展位与展览空间、室内设计与建筑、品牌空间以及国际市场进入。">
+<meta property="og:description" content="展会与大型活动、展位与展览设计、室内设计与 Contract、品牌空间,以及为在西班牙开展项目的国际品牌提供实体空间服务。总部位于马德里。">
 <meta property="og:url" content="https://cdayco.com/zh/servicios">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdayco.com/og-image.jpg">
@@ -34,17 +35,17 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "provider": { "@type": "ProfessionalService", "name": "CDA & Co.", "url": "https://cdayco.com/" },
-  "areaServed": ["Madrid", "España", "Europa"],
+  "provider": { "@type": "ProfessionalService", "@id": "https://cdayco.com/#organization", "name": "CDA & Co.", "url": "https://cdayco.com/" },
+  "areaServed": [{ "@type": "City", "name": "Madrid" }, { "@type": "Country", "name": "Spain" }],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "CDA & Co. 服务",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "展会与大型活动", "description": "展会、活动与展览空间的概念策划、设计、指导与制作。" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "展位与展览空间", "description": "展位与品牌空间的整体设计:概念、建筑、室内设计、材料、平面设计、灯光、制作、搭建与指导。" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "室内设计与建筑", "description": "住宅、合同、酒店、零售与企业空间的室内设计项目。" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "品牌空间", "description": "展厅、旗舰店、酒店空间、商业空间、快闪店与品牌体验。" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "国际市场进入", "description": "为进入西班牙或欧洲市场的国际品牌提供从战略到落地的全程服务。" } }
+      { "@type": "Offer", "position": 1, "itemOffered": { "@type": "Service", "name": "展会与大型活动", "description": "展会、活动与展览空间的概念策划、设计、指导与制作。" } },
+      { "@type": "Offer", "position": 2, "itemOffered": { "@type": "Service", "name": "展位与展览空间", "description": "展位与品牌空间的整体设计:概念、建筑、室内设计、材料、平面设计、灯光、制作、搭建与指导。" } },
+      { "@type": "Offer", "position": 3, "itemOffered": { "@type": "Service", "name": "室内设计与 Contract", "description": "面向酒店、零售、办公、展厅以及专业、商业与企业空间的室内设计与 Contract 项目。" } },
+      { "@type": "Offer", "position": 4, "itemOffered": { "@type": "Service", "name": "品牌空间", "description": "展厅、旗舰店、酒店空间、商业空间、快闪店与品牌体验。" } },
+      { "@type": "Offer", "position": 5, "itemOffered": { "@type": "Service", "name": "在西班牙开展项目的国际品牌", "description": "为在西班牙开展实体空间项目的国际品牌提供空间设计、项目指导、制作与安装,并协调专业供应商与承包商。" } }
     ]
   }
 }
@@ -65,6 +66,13 @@
   .srow .note{font-family:var(--sans-zh);font-weight:400;font-size:.96rem;color:var(--ink);margin-top:14px;max-width:52ch;line-height:1.7;}
   .srow ul{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
   .srow ul li{font-family:var(--sans-zh);font-size:.78rem;color:var(--ink-soft);border:1px solid var(--line);padding:6px 10px;}
+  .srow .body a.inline{text-decoration:underline;text-underline-offset:4px;}
+  .service-cta{margin-top:72px;padding:72px 0;background:var(--paper-alt);}
+  .service-cta h2{font-size:clamp(1.8rem,3.6vw,2.8rem);max-width:18ch;}
+  .service-cta p{font-family:var(--sans-zh);font-weight:400;line-height:1.75;color:var(--ink-soft);max-width:640px;margin-top:18px;}
+  .service-cta p a{text-decoration:underline;text-underline-offset:4px;}
+  .cta-btn{display:inline-block;margin-top:26px;padding:14px 22px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);font-family:var(--sans-zh);font-size:.86rem;letter-spacing:.04em;}
+  .cta-btn:hover{background:transparent;color:var(--ink);}
 </style>
 </head>
 <body>
@@ -83,7 +91,7 @@
       <a href="/zh/servicios#interior-design">室内设计与建筑</a>
       <a href="/zh/estudio">工作室</a>
       <a href="/zh/contacto">联系我们</a>
-      <div class="lang-switch"><a href="/servicios">ES</a><span>/</span><a href="/zh/servicios" class="active">中文</a></div>
+      <div class="lang-switch" role="group" aria-label="语言选择"><a href="/servicios" lang="es" hreflang="es">ES</a><span aria-hidden="true">/</span><a href="/en/services" lang="en" hreflang="en">EN</a><span aria-hidden="true">/</span><a href="/zh/servicios" lang="zh-Hans" hreflang="zh-Hans" class="active" aria-current="page">中文</a></div>
     </nav>
   </div>
 </header>
@@ -103,7 +111,7 @@
         <h2>展会与大型活动</h2>
         <div class="body">
           <p>展会、活动与展览空间的概念策划、设计、指导与制作。</p>
-          <p>拥有大型项目与国际化形式的经验。</p>
+          <p>拥有大型项目与国际化形式的经验。<a class="inline" href="/zh/experiencia">了解我们的经验。</a></p>
         </div>
       </div>
       <div class="srow" id="stands-exhibition">
@@ -116,9 +124,9 @@
       </div>
       <div class="srow" id="interior-design">
         <span class="num">03</span>
-        <h2>室内设计与建筑</h2>
+        <h2>室内设计与 Contract</h2>
         <div class="body">
-          <p>住宅、合同、酒店、零售与企业空间的室内设计项目。</p>
+          <p>面向酒店、零售、办公、展厅以及专业、商业与企业空间的室内设计与 Contract 项目。</p>
           <p>从最初的概念到材料选择、深化设计、协调与执行。</p>
         </div>
       </div>
@@ -127,22 +135,30 @@
         <h2>品牌空间</h2>
         <div class="body">
           <p>设计能够将品牌身份转化为实体空间的场所。</p>
-          <p>展厅、旗舰店、酒店空间、商业空间、快闪店与品牌体验。</p>
+          <p>展厅、旗舰店、酒店空间、商业空间、快闪店与品牌体验。<a class="inline" href="/zh/proyectos">查看项目。</a></p>
         </div>
       </div>
       <div class="srow">
         <span class="num">05</span>
-        <h2>国际市场进入</h2>
+        <h2>在西班牙开展项目的国际品牌</h2>
         <div class="body">
-          <p>CDA &amp; Co. 也与希望进入西班牙或欧洲市场的国际品牌合作。我们负责从最初的战略与定位到最终落地的全过程。</p>
+          <p>我们与在西班牙开展实体空间项目的国际品牌合作,包括展位、品牌空间、展厅与室内项目。</p>
+          <p>我们负责空间设计、项目指导、制作与安装,并协调参与每个项目的专业供应商与承包商。</p>
           <ul>
-            <li>品牌本地化调整</li><li>品牌塑造</li><li>空间概念</li><li>进入策略</li>
-            <li>选址</li><li>设计</li><li>合作伙伴与供应商</li><li>制作</li>
-            <li>发布</li><li>落地</li>
+            <li>空间设计</li><li>项目指导</li><li>制作</li><li>安装</li>
+            <li>供应商与承包商协调</li>
           </ul>
-          <p class="note">目标是让品牌在开拓新市场时,能够在 CDA &amp; Co. 找到唯一的合作对接人。</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="service-cta">
+    <div class="wrap">
+      <div class="eyebrow gold" style="margin-bottom:18px;">开始一个项目</div>
+      <h2>您有展会、展位或空间项目吗?</h2>
+      <p>请告诉我们您的需求、地点与时间安排。<a href="/zh/estudio">了解我们的工作室。</a></p>
+      <a class="cta-btn" href="/zh/contacto">联系我们</a>
     </div>
   </section>
 </main>

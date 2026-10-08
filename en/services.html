@@ -5,19 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Exhibition Design, Event Production & Interiors in Spain | CDA & Co.</title>
-<meta name="description" content="Exhibition design, event design and production, interior design, contract and brand spaces from Madrid for projects in Spain and international collaborations.">
+<meta name="description" content="Trade shows and events, exhibition design, interior design and contract, brand spaces and physical projects for international brands in Spain. Based in Madrid.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#111111">
 
 <link rel="canonical" href="https://cdayco.com/en/services">
 <link rel="alternate" hreflang="es" href="https://cdayco.com/servicios">
 <link rel="alternate" hreflang="en" href="https://cdayco.com/en/services">
+<link rel="alternate" hreflang="zh-Hans" href="https://cdayco.com/zh/servicios">
 <link rel="alternate" hreflang="x-default" href="https://cdayco.com/servicios">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CDA & Co.">
 <meta property="og:title" content="Exhibition Design, Event Production & Interiors in Spain | CDA & Co.">
-<meta property="og:description" content="Exhibition design, event design and production, interior design, contract and brand spaces from Madrid for projects in Spain and international collaborations.">
+<meta property="og:description" content="Trade shows and events, exhibition design, interior design and contract, brand spaces and physical projects for international brands in Spain. Based in Madrid.">
 <meta property="og:url" content="https://cdayco.com/en/services">
 <meta property="og:locale" content="en_GB">
 <meta property="og:locale:alternate" content="es_ES">
@@ -27,56 +28,24 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Exhibition Design, Event Production & Interiors in Spain | CDA & Co.">
-<meta name="twitter:description" content="Exhibition design, event design and production, interior design, contract and brand spaces from Madrid for projects in Spain and international collaborations.">
+<meta name="twitter:description" content="Trade shows and events, exhibition design, interior design and contract, brand spaces and physical projects for international brands in Spain. Based in Madrid.">
 <meta name="twitter:image" content="https://cdayco.com/og-image.jpg">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "provider": {
-    "@id": "https://cdayco.com/#organization"
-  },
-  "areaServed": [
-    "Madrid",
-    "Spain"
-  ],
+  "provider": { "@type": "ProfessionalService", "@id": "https://cdayco.com/#organization", "name": "CDA & Co.", "url": "https://cdayco.com/" },
+  "areaServed": [{ "@type": "City", "name": "Madrid" }, { "@type": "Country", "name": "Spain" }],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "CDA & Co. services",
     "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Trade Shows & Large-Scale Events",
-          "description": "Design, direction and production of trade shows, conferences and large-scale events."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Interior Design & Contract",
-          "description": "Interior design and contract projects for professional, commercial and hospitality spaces."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Exhibition Design",
-          "description": "Stands, exhibitions, installations and temporary spaces for brands and institutions."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Brand Spaces",
-          "description": "Physical environments designed to connect brands with audiences and markets."
-        }
-      }
+      { "@type": "Offer", "position": 1, "itemOffered": { "@type": "Service", "name": "Trade Shows & Large-Scale Events", "description": "Design, direction and production of trade shows, conferences and large-scale events." } },
+      { "@type": "Offer", "position": 2, "itemOffered": { "@type": "Service", "name": "Exhibition Design", "description": "Stands, exhibitions, installations and temporary environments for brands, institutions and events." } },
+      { "@type": "Offer", "position": 3, "itemOffered": { "@type": "Service", "name": "Interior Design & Contract", "description": "Interior design and contract projects for hospitality, retail, offices, showrooms, and professional, commercial and corporate spaces." } },
+      { "@type": "Offer", "position": 4, "itemOffered": { "@type": "Service", "name": "Brand Spaces", "description": "Showrooms, flagship stores, hospitality, commercial spaces, pop-ups and brand experiences." } },
+      { "@type": "Offer", "position": 5, "itemOffered": { "@type": "Service", "name": "International Brands in Spain", "description": "Spatial design, project direction, production and installation of physical projects for international brands in Spain, coordinating specialist suppliers and contractors." } }
     ]
   }
 }
@@ -165,6 +134,12 @@
       grid-column:2;
     }
   }
+
+  .service-cta{margin-top:72px;padding:72px 0;background:var(--paper-alt);}
+  .service-cta h2{font-size:clamp(1.8rem,3.6vw,2.8rem);max-width:18ch;}
+  .service-cta p{font-family:var(--sans);font-weight:300;line-height:1.7;color:var(--ink-soft);max-width:640px;margin-top:18px;}
+  .cta-btn{display:inline-block;margin-top:26px;padding:14px 22px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;}
+  .cta-btn:hover{background:transparent;color:var(--ink);}
 </style>
 
 
@@ -196,7 +171,7 @@
       <a href="/en/interior-design-contract">Contract Interior Design</a>
       <a href="/en/studio">Studio</a>
       <a href="/en/contact">Contact</a>
-      <a href="/servicios" lang="es" hreflang="es" aria-label="Spanish version">ES</a>
+      <div class="lang-switch" role="group" aria-label="Language selector"><a href="/servicios" lang="es" hreflang="es">ES</a><span aria-hidden="true">/</span><a href="/en/services" lang="en" hreflang="en" class="active" aria-current="page">EN</a><span aria-hidden="true">/</span><a href="/zh/servicios" lang="zh-Hans" hreflang="zh-Hans">中文</a></div>
     </nav>
 
   </div>
@@ -253,23 +228,6 @@
       <div class="srow">
         <span class="num">02</span>
         <h2>
-          <a href="/en/interior-design-contract">
-            Interior Design &amp; Contract
-          </a>
-        </h2>
-        <p>
-          Interior design and contract projects for
-          professional, commercial and hospitality spaces.
-          <a href="/en/interior-design-contract"
-             style="text-decoration:underline;text-underline-offset:4px;">
-            Explore interior design &amp; contract.
-          </a>
-        </p>
-      </div>
-
-      <div class="srow">
-        <span class="num">03</span>
-        <h2>
           <a href="/en/exhibition-design">
             Exhibition Design
           </a>
@@ -285,12 +243,56 @@
       </div>
 
       <div class="srow">
-        <span class="num">04</span>
-        <h2>Brand Spaces</h2>
+        <span class="num">03</span>
+        <h2>
+          <a href="/en/interior-design-contract">
+            Interior Design &amp; Contract
+          </a>
+        </h2>
         <p>
-          Physical environments created to present,
-          introduce or connect a brand with its market
-          through space and experience.
+          Interior design and contract projects for
+          hospitality, retail, offices, showrooms, and
+          professional, commercial and corporate spaces.
+          <a href="/en/interior-design-contract"
+             style="text-decoration:underline;text-underline-offset:4px;">
+            Explore interior design &amp; contract.
+          </a>
+        </p>
+      </div>
+
+      <div class="srow">
+        <span class="num">04</span>
+        <h2>
+          <a href="/en/projects">
+            Brand Spaces
+          </a>
+        </h2>
+        <p>
+          Spaces that translate a brand's identity into a
+          physical environment: showrooms, flagship stores,
+          hospitality, commercial spaces, pop-ups and brand
+          experiences.
+          <a href="/en/projects"
+             style="text-decoration:underline;text-underline-offset:4px;">
+            See our projects.
+          </a>
+        </p>
+      </div>
+
+      <div class="srow">
+        <span class="num">05</span>
+        <h2>International Brands in Spain</h2>
+        <p>
+          We work with international brands developing
+          physical projects in Spain: stands, brand spaces,
+          showrooms and interiors. We handle spatial design,
+          project direction, production and installation,
+          and coordinate the specialist suppliers and
+          contractors involved in each project.
+          <a href="/en/contact"
+             style="text-decoration:underline;text-underline-offset:4px;">
+            Tell us about your project in Spain.
+          </a>
         </p>
       </div>
 
@@ -303,6 +305,15 @@
         </a>
       </p>
 
+    </div>
+  </section>
+
+  <section class="service-cta">
+    <div class="wrap">
+      <div class="eyebrow gold" style="margin-bottom:18px;">Start a project</div>
+      <h2>Planning a trade show, a stand or a space?</h2>
+      <p>Tell us what you need, where and when.</p>
+      <a class="cta-btn" href="/en/contact">Talk to CDA &amp; Co.</a>
     </div>
   </section>
 

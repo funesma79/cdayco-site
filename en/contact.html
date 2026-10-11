@@ -124,6 +124,12 @@
     cursor:pointer;
   }
 
+  /* Foco visible con teclado (misma convención que base.css). */
+  .field select:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
   .field-hint{
     font-family:var(--sans);
     font-weight:300;
@@ -524,8 +530,10 @@
           PROJECT_PRESETS[projectParam]
       );
 
+    // Sin defaultSelected: tras un envío correcto, form.reset()
+    // devuelve el selector a vacío y no arrastra la categoría
+    // a una consulta posterior distinta.
     if (preset) {
-      preset.defaultSelected = true;
       preset.selected = true;
     }
   }

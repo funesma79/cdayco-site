@@ -99,6 +99,7 @@
   }
 
   .field input,
+  .field select,
   .field textarea{
     font-family:var(--sans);
     font-weight:400;
@@ -112,9 +113,29 @@
   }
 
   .field input:focus,
+  .field select:focus,
   .field textarea:focus{
     outline:none;
     border-color:var(--ink);
+  }
+
+  .field select{
+    max-width:100%;
+    cursor:pointer;
+  }
+
+  /* Foco visible con teclado (misma convención que base.css). */
+  .field select:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  .field-hint{
+    font-family:var(--sans);
+    font-weight:300;
+    font-size:.85rem;
+    color:var(--ink-soft);
+    line-height:1.5;
   }
 
   .field textarea{
@@ -299,6 +320,30 @@
 
 
         <div class="field">
+          <label for="f-tipo">Project type (optional)</label>
+          <select id="f-tipo"
+                  name="tipo"
+                  aria-describedby="f-tipo-hint">
+            <option value="">Select an option</option>
+            <option value="Exhibition stand / exhibition space"
+                    data-slug="exhibition">Exhibition stand / exhibition space</option>
+            <option value="Fair or major event"
+                    data-slug="event">Fair or major event</option>
+            <option value="Contract interior"
+                    data-slug="contract">Contract interior</option>
+            <option value="Brand space"
+                    data-slug="brand">Brand space</option>
+            <option value="Other physical project"
+                    data-slug="other">Other physical project</option>
+          </select>
+          <p class="field-hint"
+             id="f-tipo-hint">
+            Useful for your brief: fair, venue, dates, floor area and scope.
+          </p>
+        </div>
+
+
+        <div class="field">
           <label for="f-mensaje">Message</label>
           <textarea id="f-mensaje"
                     name="mensaje"
@@ -457,6 +502,42 @@
   const status =
     document.getElementById('form-status');
 
+  const tipoSelect =
+    document.getElementById('f-tipo');
+
+
+  // Preselección del tipo de proyecto desde ?project=.
+  // Solo valores de la allowlist; cualquier otro se ignora.
+  const PROJECT_PRESETS = Object.freeze({
+    exhibition: 'exhibition'
+  });
+
+  const projectParam =
+    new URLSearchParams(window.location.search)
+      .get('project');
+
+  if (
+    projectParam !== null &&
+    Object.prototype.hasOwnProperty.call(
+      PROJECT_PRESETS,
+      projectParam
+    )
+  ) {
+    const preset =
+      Array.from(tipoSelect.options).find(
+        opt =>
+          opt.dataset.slug ===
+          PROJECT_PRESETS[projectParam]
+      );
+
+    // Sin defaultSelected: tras un envío correcto, form.reset()
+    // devuelve el selector a vacío y no arrastra la categoría
+    // a una consulta posterior distinta.
+    if (preset) {
+      preset.selected = true;
+    }
+  }
+
 
   form.addEventListener('submit', async (e) => {
 
@@ -476,6 +557,24 @@
       Object.fromEntries(
         new FormData(form).entries()
       );
+
+    // tipo es opcional: solo se envía si corresponde
+    // a una de las opciones del selector.
+    const selectedTipo =
+      Array.from(tipoSelect.options).find(
+        opt =>
+          opt.value !== '' &&
+          opt.value === payload.tipo
+      );
+
+    if (!selectedTipo) {
+      delete payload.tipo;
+    }
+
+    const projectType =
+      selectedTipo
+        ? selectedTipo.dataset.slug
+        : 'unspecified';
 
     const btn =
       form.querySelector('.form-submit');
@@ -510,7 +609,8 @@
           {
             form_name: 'contact-en',
             form_location:
-              window.location.pathname
+              window.location.pathname,
+            project_type: projectType
           }
         );
       }

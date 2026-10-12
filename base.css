@@ -110,6 +110,8 @@ footer{background:var(--ink);color:var(--paper);padding:56px 0 28px;}
 .footer-col a{font-size:.9rem;color:rgba(255,255,255,.85);}
 .footer-col a:hover{color:var(--gold);}
 .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:.72rem;color:rgba(255,255,255,.45);}
+.footer-bottom a{color:rgba(255,255,255,.75);text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px;}
+.footer-bottom a:hover{color:var(--gold);}
 
 section{padding:96px 0;}
 @media (max-width:900px){section{padding:64px 0;}}

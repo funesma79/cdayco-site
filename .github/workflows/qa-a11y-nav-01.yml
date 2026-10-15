@@ -1,0 +1,57 @@
+# QA temporal de A11Y-NAV-01 (fases B y C). Solo para la rama qa/a11y-nav-01-remote; no fusionar en main.
+name: QA A11Y-NAV-01 (temporal)
+
+on:
+  push:
+    branches: [qa/a11y-nav-01-remote]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: qa-a11y-nav-01
+  cancel-in-progress: true
+
+jobs:
+  qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # hace falta el commit base 1c6321f para reconstruir el baseline
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Localizar Chrome del runner
+        run: |
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)"
+          test -n "$CHROME" || { echo "Chrome no disponible en el runner"; exit 2; }
+          echo "CHROME=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+
+      - name: Integridad del candidato (sin navegador)
+        run: node qa-remote/run-remote.mjs --verify-only
+
+      - name: Comprobación sin navegador (servidor + SEO)
+        run: node qa-remote/run-remote.mjs --dry-run
+
+      - name: Fases B y C
+        env:
+          # Ubuntu 24.04 restringe los namespaces sin privilegios y el sandbox de Chrome no arranca; runner efímero y sitio local.
+          EXTRA_CHROME_ARGS: --no-sandbox
+        run: node qa-remote/run-remote.mjs
+
+      - name: Comparación con baseline y veredicto
+        run: node qa-remote/compare.mjs
+
+      - name: Subir resultados
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-a11y-nav-01-results
+          path: qa-remote/results
+          retention-days: 14

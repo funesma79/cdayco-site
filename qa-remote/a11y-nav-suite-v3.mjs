@@ -37,11 +37,12 @@ const load = async (p, width, height = 900, { reducedMotion = false } = {}) => {
 const errorsNow = () => events.filter(e => e.method === 'Runtime.exceptionThrown' || (e.method === 'Log.entryAdded' && e.params.entry.level === 'error' && !/favicon\.ico/.test(e.params.entry.url || e.params.entry.text))).map(e => e.params.exceptionDetails?.exception?.description || e.params.exceptionDetails?.text || e.params.entry?.text);
 const ST = `(() => { const n = document.getElementById('primary-nav'), t = document.getElementById('menu-toggle'), de = document.documentElement, a = document.activeElement;
   const hit = (el) => { if (!el) return null; const r = el.getBoundingClientRect(); if (!r.width) return false; const x = r.left + r.width/2, y = r.top + r.height/2; if (x < 0 || y < 0 || x >= innerWidth || y >= innerHeight) return false; const h = document.elementFromPoint(x, y); return !!h && (el === h || el.contains(h)); };
+  const occluder = (el) => { const r = el.getBoundingClientRect(); if (!r.width) return 'NO_BOX'; const x = r.left + r.width/2, y = r.top + r.height/2; if (x < 0 || y < 0 || x >= innerWidth || y >= innerHeight) return 'OFFSCREEN'; const h = document.elementFromPoint(x, y); if (!h) return 'NONE'; if (el === h || el.contains(h)) return null; const idEl = h.closest('[id]'); return idEl ? '#' + idEl.id : h.tagName.toLowerCase() + (h.classList.length ? '.' + h.classList[0] : ''); };
   const ar = a.getBoundingClientRect(); const banner = document.getElementById('cda-consent'); const bTop = banner ? banner.getBoundingClientRect().top : innerHeight;
   return { exp: t && t.getAttribute('aria-expanded'), open: n && n.classList.contains('is-open'), vis: n && getComputedStyle(n).visibility, tf: n && getComputedStyle(n).transform,
     sx: Math.max(scrollX, de.scrollLeft, document.body.scrollLeft), vw: de.clientWidth,
     active: a === document.body ? 'BODY' : a.tagName + '|' + (a.id || a.getAttribute('aria-label') || (a.textContent||'').trim().replace(/\\s+/g,' ').slice(0,28)),
-    activeInNav: !!(n && n.contains(a)), activeIsToggle: a === t, activeHit: a === document.body ? null : hit(a), activeFocusVisible: a.matches(':focus-visible'), activeOutline: getComputedStyle(a).outlineStyle,
+    activeInNav: !!(n && n.contains(a)), activeIsToggle: a === t, activeHit: a === document.body ? null : hit(a), activeOccluder: a === document.body ? null : occluder(a), activeFocusVisible: a.matches(':focus-visible'), activeOutline: getComputedStyle(a).outlineStyle,
     activeFullyAboveBanner: ar.top >= 0 && ar.bottom <= bTop, activeTop: Math.round(ar.top), activeBottom: Math.round(ar.bottom),
     toggleHit: t ? hit(t) : null, toggleDisplay: t ? getComputedStyle(t).display : null,
     banner: !!banner, bannerTop: banner ? Math.round(bTop) : null,
@@ -125,9 +126,9 @@ if (phase === 'B') {
     for (let i = 0; i < nLinks; i++) await tab(true);
     await sleep(50); x = await st(); chk(x.activeIsToggle && x.open, 'Shift+Tab no vuelve al botón: ' + x.active); chk(x.activeFocusVisible && x.activeOutline !== 'none', 'foco del botón no visible');
     for (let i = 0; i < nLinks + 1; i++) await tab();
-    await sleep(450); x = await st(); R.afterLast = { active: x.active, hit: x.activeHit };
+    await sleep(450); x = await st(); R.afterLast = { active: x.active, hit: x.activeHit, occluder: x.activeOccluder };
     chk(!x.activeInNav && !x.open && x.exp === 'false' && x.vis === 'hidden', 'Tab tras el último enlace no cierra: ' + JSON.stringify([x.active, x.open, x.exp, x.vis]));
-    chk(x.activeHit !== false, 'foco tapado tras salir del menú: ' + x.active); chk(x.sx === 0, 'scroll horizontal al salir');
+    chk(x.activeHit !== false, 'foco tapado tras salir del menú: ' + x.active + ' [tapado por ' + x.activeOccluder + ']'); chk(x.sx === 0, 'scroll horizontal al salir');
     await ev(`document.getElementById('menu-toggle').focus()`); await press('Enter', 'Enter', 13); await sleep(450);
     await tab(true); await sleep(450); x = await st(); chk(!x.open && x.exp === 'false' && !x.activeInNav, 'Shift+Tab desde el botón no cierra: ' + x.active);
     await ev(`document.getElementById('menu-toggle').focus()`); await press('Enter', 'Enter', 13); await sleep(450);
@@ -170,9 +171,9 @@ if (phase === 'C') {
     await load(p, width);
     const shot = await s('Page.captureScreenshot', { format: 'png' });
     const shotHash = crypto.createHash('sha256').update(shot.data).digest('hex').slice(0, 16);
-    const seq = []; let maxSx = 0, first = null;
-    for (let i = 0; i < 300; i++) { await tab(); const x = await st(); if (x.active === first || (x.active === 'BODY' && i > 0)) break; if (i === 0) first = x.active; seq.push(x.active + (x.activeInNav ? ' [NAV]' : '')); maxSx = Math.max(maxSx, x.sx); }
-    const rec = { shotHash, seq, maxSx, errors: errorsNow(), csp: await ev('window.__csp') };
+    const seq = [], occluded = []; let maxSx = 0, first = null;
+    for (let i = 0; i < 300; i++) { await tab(); const x = await st(); if (x.active === first || (x.active === 'BODY' && i > 0)) break; if (i === 0) first = x.active; seq.push(x.active + (x.activeInNav ? ' [NAV]' : '')); if (x.activeHit === false) occluded.push({ active: x.active, inNav: x.activeInNav, occluder: x.activeOccluder }); maxSx = Math.max(maxSx, x.sx); }
+    const rec = { shotHash, seq, occluded, maxSx, errors: errorsNow(), csp: await ev('window.__csp') };
     const hasNav = await ev(`!!document.getElementById('primary-nav')`);
     if (hasNav && width === 1440) { const x = await st(); rec.desktop = { toggleDisplay: x.toggleDisplay, vis: x.vis }; }
     if (hasNav && width < 1440) {

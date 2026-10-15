@@ -61,7 +61,9 @@ Se devuelve `qa-remote/results/` (o al menos `SUMMARY.json`, `run.log` e `integr
 - **SEO** idéntico al baseline.
 - Las capturas distintas son informativas: hay ruido de carga.
 
-**Fallo conocido y preexistente:** el banner de cookies puede tapar contenido enfocado de la página («foco tapado tras salir del menú»). Si aparece, hay que confirmar que lo tapa `#cda-consent`; es un defecto del banner, no de este cambio.
+**Clasificación de `compare.mjs`:** PREEXISTING solo si el baseline tiene la misma oclusión en página, viewport, elemento enfocado y elemento que lo tapa (`occluded[]` de la fase C). AGGRAVATED si el mismo elemento lo tapa otro, o si hay más paradas tapadas. NEW si no existe en el baseline. UNVERIFIED si faltan datos. Solo PREEXISTING permite PASS, y aun así se informa. Tests: `node --test qa-remote/compare.test.mjs`.
+
+**Fallo conocido (incidencia A11Y-BANNER-01):** el banner de cookies puede tapar contenido enfocado de la página («foco tapado tras salir del menú»). Si aparece, hay que confirmar que lo tapa `#cda-consent`; es un defecto del banner, no de este cambio.
 
 ## Efectos del push que hay que conocer
 

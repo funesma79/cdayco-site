@@ -163,7 +163,7 @@
         position: fixed;
         left: 18px;
         right: 18px;
-        bottom: 18px;
+        bottom: max(18px, env(safe-area-inset-bottom));
         max-width: 760px;
         margin: 0 auto;
         padding: 20px;
@@ -206,8 +206,10 @@
       #cda-cookie-settings {
         position: fixed;
         left: 16px;
-        bottom: 16px;
+        bottom: max(16px, env(safe-area-inset-bottom));
         z-index: 99998;
+        min-width: 44px;
+        min-height: 44px;
         padding: 8px 12px;
         border: 1px solid #14140f;
         background: #f5f5f3;
@@ -216,9 +218,39 @@
         font-size: 12px;
       }
 
+      footer #cda-cookie-settings {
+        position: static;
+        margin-top: 18px;
+        border-color: rgba(255,255,255,.55);
+        background: transparent;
+        color: #f5f5f3;
+      }
+
       @media (max-width: 560px) {
+        #cda-consent {
+          left: 8px;
+          right: 8px;
+          bottom: max(8px, env(safe-area-inset-bottom));
+          padding: 14px;
+          font-size: 13px;
+          line-height: 1.45;
+        }
+
+        #cda-consent p {
+          margin-bottom: 10px;
+        }
+
+        .cda-consent-actions {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+        }
+
         .cda-consent-btn {
-          width: 100%;
+          width: auto;
+          min-width: 0;
+          min-height: 44px;
+          padding: 9px 8px;
         }
       }
     `;
@@ -245,7 +277,32 @@
       showBanner();
     });
 
-    document.body.appendChild(button);
+    const footer = document.querySelector('footer');
+    const host = footer && (footer.querySelector('.wrap') || footer);
+
+    (host || document.body).appendChild(button);
+  }
+
+  function keepFocusedContentVisible(event) {
+    const banner = document.getElementById('cda-consent');
+    const target = event.target;
+
+    if (!banner || !target || banner.contains(target)) return;
+
+    window.requestAnimationFrame(() => {
+      if (!document.body.contains(target)) return;
+
+      const targetRect = target.getBoundingClientRect();
+      const bannerRect = banner.getBoundingClientRect();
+
+      if (targetRect.top < 0 || targetRect.bottom > bannerRect.top) {
+        target.scrollIntoView({
+          block: 'center',
+          inline: 'nearest',
+          behavior: 'auto'
+        });
+      }
+    });
   }
 
   function showBanner() {
@@ -314,6 +371,7 @@
 
   function init() {
     addStyles();
+    document.addEventListener('focusin', keepFocusedContentVisible);
 
     const choice = readChoice();
 

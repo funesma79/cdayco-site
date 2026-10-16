@@ -8,11 +8,12 @@ const css = fs.readFileSync(path.join(root, 'base.css'), 'utf8');
 const consent = fs.readFileSync(path.join(root, 'analytics-consent.js'), 'utf8');
 
 const contracts = [
-  [css, /\.menu-toggle\{[^}]*min-width:44px;[^}]*min-height:44px;/, 'menu toggle keeps a 44px touch target'],
+  [css, /\.menu-toggle\{[^}]*position:relative;[^}]*z-index:2;[^}]*min-width:44px;[^}]*min-height:44px;/, 'menu toggle stays above the drawer with a 44px target'],
   [css, /nav\.primary-nav\{[\s\S]*?height:100dvh;[\s\S]*?overflow-y:auto;/, 'mobile drawer fits short viewports'],
   [css, /nav\.primary-nav\.is-open\{[^}]*visibility:visible;[^}]*pointer-events:auto;/, 'closed drawer is not interactive'],
   [css, /body:has\(nav\.primary-nav\.is-open\)\{overflow:hidden;/, 'open drawer locks background scroll'],
   [css, /\.lang-switch a\{[^}]*min-width:44px;[^}]*min-height:44px;/, 'language targets are touch friendly'],
+  [css, /@media \(max-width:560px\)\{[\s\S]*?nav\.primary-nav\{width:100vw;border-left:0;/, 'narrow mobile drawer covers the viewport cleanly'],
   [consent, /grid-template-columns: repeat\(2, minmax\(0, 1fr\)\)/, 'mobile consent actions stay compact'],
   [consent, /footer #cda-cookie-settings \{[\s\S]*?position: static;/, 'cookie settings no longer overlays page content'],
   [consent, /function keepFocusedContentVisible\(event\)/, 'consent banner protects focused content'],
